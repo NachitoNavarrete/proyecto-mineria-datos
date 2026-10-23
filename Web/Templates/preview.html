@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Vista Previa: <small class="text-muted">{{ filename }}</small></h3>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Subir otro</a>
+</div>
+
+<div class="alert alert-success">
+    El archivo tiene un total de <strong>{{ total_filas }}</strong> filas. Mostrando las primeras 50.
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark">
+            <tr>
+                {% for col in columnas %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for col in columnas %}
+                        <td>{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
