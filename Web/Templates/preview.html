@@ -1,33 +1,83 @@
+<!--VISTA PREVIA DEL ARCHIVO (preview.html) ¿Qué hace este archivo?
+  Muestra los resultados después de que el usuario sube un CSV.
+  Usa Jinja2 (el motor de plantillas de Flask) para mezclar 
+  código HTML con datos reales de Python.-->
+
+<!-- 1. HERENCIA: Le decimos a Jinja2 que use 'base.html' como esqueleto -->
 {% extends "base.html" %}
 
+<!-- 2. BLOQUE: Insertamos este contenido dentro del bloque 'content' de base.html -->
 {% block content %}
+
+<!-- CABECERA DE LA PÁGINA -->
 <div class="d-flex justify-content-between align-items-center mb-3">
+    <!-- {{ filename }} imprime el nombre del archivo que viene desde app.py -->
     <h3>Vista Previa: <small class="text-muted">{{ filename }}</small></h3>
+    <!-- url_for('index') genera automáticamente el enlace a la ruta principal -->
     <a href="{{ url_for('index') }}" class="btn btn-secondary">Subir otro</a>
 </div>
 
+<!-- ALERTA VERDE (Semana 1) -->
 <div class="alert alert-success">
+    <!-- {{ total_filas }} imprime el número total de filas del DataFrame -->
     El archivo tiene un total de <strong>{{ total_filas }}</strong> filas. Mostrando las primeras 50.
 </div>
 
+
+<!-- NUEVO 05-11-2026 CUADRO DE RESUMEN DE LIMPIEZA -->
+<!--  ¿Cómo funciona? 
+  {% if resumen %} significa: "Si la variable 'resumen' existe (no está vacía), 
+  dibuja todo lo que está hasta el {% endif %}".
+  ¿De dónde viene 'resumen'? De app.py, cuando hicimos session.get('resumen'). -->
+{% if resumen %}
+<div class="alert alert-warning shadow-sm mb-4">
+    <h5 class="alert-heading">🧹 Resumen de Limpieza Automática</h5>
+    <hr>
+    <div class="row text-center">
+        <!-- Para acceder a un dato del diccionario usamos un punto: resumen.filas_antes -->
+        <div class="col-md-3"><strong>Filas antes:</strong> <br>{{ resumen.filas_antes }}</div>
+        <div class="col-md-3"><strong>Filas después:</strong> <br>{{ resumen.filas_despues }}</div>
+        <div class="col-md-3"><strong>Duplicados eliminados:</strong> <br>{{ resumen.duplicados_eliminados }}</div>
+        <div class="col-md-3"><strong>Outliers tratados:</strong> <br>{{ resumen.outliers_tratados }}</div>
+    </div>
+</div>
+{% endif %}
+
+
+<!-- TABLA DE DATOS -->
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-sm">
+        
+        <!-- ENCABEZADOS DE LA TABLA -->
         <thead class="table-dark">
             <tr>
+                <!-- {% for col in columnas %} es un bucle.
+                  'columnas' es una lista de Python enviada desde app.py.
+                  Por cada columna en la lista, crea un <th> (table header).-->
                 {% for col in columnas %}
                     <th>{{ col }}</th>
                 {% endfor %}
             </tr>
         </thead>
+        
+        <!-- CUERPO DE LA TABLA (Los datos) -->
         <tbody>
+            <!-- 'data' es una lista de diccionarios enviada desde app.py.
+              Por cada fila en los datos, crea un <tr> (table row). -->
             {% for row in data %}
                 <tr>
+                    <!--  Por cada fila, volvemos a recorrer las 'columnas'.
+                      row[col] significa: "Dame el valor de esta fila para esta columna".
+                      Ejemplo: row['Nombre Completo'] devuelve "Juan Pérez". -->
                     {% for col in columnas %}
                         <td>{{ row[col] }}</td>
                     {% endfor %}
                 </tr>
             {% endfor %}
         </tbody>
+        
     </table>
 </div>
+
+<!-- 3. FIN DEL BLOQUE CONTENT -->
 {% endblock %}

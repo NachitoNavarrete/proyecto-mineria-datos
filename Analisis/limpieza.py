@@ -2,43 +2,96 @@
 # MODULO DE LIMPIEZA AUTOMATICA
 # ============================================================
 # ¿Qué hace este archivo?
-#   Carga un CSV y lo limpia automáticamente antes de
-#   cualquier análisis.
+#   Carga un CSV y lo prepara para análisis limpio y seguro.
 #
 # ¿Por qué está separado de app.py?
 #   Porque la lógica de datos no debe mezclarse con la web.
-#   Si cambiamos de Flask a Django, este archivo no se toca.
+#   Si mañana cambias de Flask a otra tecnología, este archivo sigue
+#   siendo útil sin tocar la parte visual.
 # ============================================================
+
+import csv
+import re
 
 import pandas as pd        # Manipulación de datos tabulares
 import numpy as np         # Operaciones numéricas
 
+# ------------------------------------------------------------
+# FUNCIÓN PRINCIPAL: cargar_csv
+# ------------------------------------------------------------
+# Cambios realizados:
+# 23-10-2026
+# - se agregó lectura más robusta para CSVs con BOM invisible
+# - se arreglan filas que vienen entre comillas y con espacios raros
+# - se corrigen columnas con nombres desordenados o vacíos
+# - se convierten columnas numéricas a tipo número cuando es posible
+#
+# ¿Cómo funciona?
+# 1) Lee el archivo en binario para conservar caracteres especiales.
+# 2) Prueba varias codificaciones (UTF-8 / UTF-16 / Latin-1).
+# 3) Quita el BOM y normaliza saltos de línea.
+# 4) Si una fila viene como una sola cadena con comas, la divide.
+# 5) Genera un DataFrame limpio y preparado para análisis.
 
 def cargar_csv(filepath):
-    """
-    Carga un CSV detectando codificación y separador.
+    """Carga un CSV robustamente aunque venga con BOM, comillas o espacios raros."""
+    try:
+        with open(filepath, 'rb') as f:
+            raw = f.read()
+    except FileNotFoundError as exc:
+        raise ValueError(f'No se encontró el archivo: {filepath}') from exc
 
-    ¿Por qué probar varias codificaciones?
-        Un CSV puede venir en UTF-8, Latin-1, ISO-8859-1.
-        Si no detectamos bien, los acentos salen como "MÃ©xico".
-
-    ¿Por qué sep=None?
-        Le dice a pandas que adivine el separador
-        (coma, punto y coma, tabulación).
-
-    Devuelve:
-        DataFrame de pandas.
-    """
-    encodings = ['utf-8', 'latin-1', 'iso-8859-1']
-
-    for enc in encodings:
+    for enc in ['utf-8-sig', 'utf-16', 'utf-16-le', 'utf-16-be', 'latin-1', 'cp1252']:
         try:
-            df = pd.read_csv(filepath, encoding=enc, sep=None, engine='python')
-            return df
-        except Exception:
-            continue
+            text = raw.decode(enc)
+            break
+        except (UnicodeDecodeError, LookupError):
+            text = None
 
-    raise ValueError("No se pudo leer el CSV. Verifica codificación y separador.")
+    if text is None:
+        raise ValueError('No se pudo decodificar el CSV.')
+
+    text = text.replace('\ufeff', '').replace('\r\n', '\n').replace('\r', '\n')
+    lines = [line.strip() for line in text.split('\n') if line.strip()]
+    rows = []
+    for line in lines:
+        try:
+            parsed = next(csv.reader([line], skipinitialspace=True))
+        except csv.Error:
+            parsed = [line]
+
+        if len(parsed) == 1 and ',' in parsed[0]:
+            parsed = [part.strip().strip('"') for part in parsed[0].split(',')]
+
+        rows.append([str(cell).strip().strip('"') for cell in parsed])
+
+    if not rows:
+        raise ValueError('El archivo está vacío.')
+
+    max_cols = max(len(row) for row in rows)
+    rows = [row + [''] * (max_cols - len(row)) for row in rows]
+    header = rows[0]
+    clean_header = []
+    seen = {}
+    for index, name in enumerate(header):
+        base = re.sub(r'[^a-zA-Z0-9]+', ' ', str(name).strip())
+        base = base.strip() or f'columna_{index + 1}'
+        if base in seen:
+            seen[base] += 1
+            clean_header.append(f'{base}_{seen[base]}')
+        else:
+            seen[base] = 0
+            clean_header.append(base)
+
+    df = pd.DataFrame(rows[1:], columns=clean_header)
+    df = df.replace(r'^\s*$', pd.NA, regex=True)
+    for col in df.columns:
+        if col.lower() not in {'nombre completo', 'ciudad'}:
+            try:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+            except Exception:
+                pass
+    return df
 
 
 def limpiar_datos(df):
