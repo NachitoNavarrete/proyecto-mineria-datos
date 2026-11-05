@@ -25,10 +25,12 @@
 
 
 <!-- NUEVO 05-11-2026 CUADRO DE RESUMEN DE LIMPIEZA -->
+{% raw %}
 <!--  ¿Cómo funciona? 
   {% if resumen %} significa: "Si la variable 'resumen' existe (no está vacía), 
   dibuja todo lo que está hasta el {% endif %}".
   ¿De dónde viene 'resumen'? De app.py, cuando hicimos session.get('resumen'). -->
+{% endraw %}
 {% if resumen %}
 <div class="alert alert-warning shadow-sm mb-4">
     <h5 class="alert-heading">🧹 Resumen de Limpieza Automática</h5>
@@ -51,9 +53,11 @@
         <!-- ENCABEZADOS DE LA TABLA -->
         <thead class="table-dark">
             <tr>
+                {% raw %}
                 <!-- {% for col in columnas %} es un bucle.
                   'columnas' es una lista de Python enviada desde app.py.
                   Por cada columna en la lista, crea un <th> (table header).-->
+                {% endraw %}
                 {% for col in columnas %}
                     <th>{{ col }}</th>
                 {% endfor %}
@@ -62,13 +66,17 @@
         
         <!-- CUERPO DE LA TABLA (Los datos) -->
         <tbody>
+            {% raw %}
             <!-- 'data' es una lista de diccionarios enviada desde app.py.
               Por cada fila en los datos, crea un <tr> (table row). -->
+            {% endraw %}
             {% for row in data %}
                 <tr>
+                    {% raw %}
                     <!--  Por cada fila, volvemos a recorrer las 'columnas'.
                       row[col] significa: "Dame el valor de esta fila para esta columna".
                       Ejemplo: row['Nombre Completo'] devuelve "Juan Pérez". -->
+                    {% endraw %}
                     {% for col in columnas %}
                         <td>{{ row[col] }}</td>
                     {% endfor %}

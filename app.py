@@ -250,21 +250,28 @@ def upload_file():
         file.save(filepath)
 
         try:
-            # Llamamos a nuestra función mágica
-            df = leer_csv_robusto(filepath)
+            # 1. Leemos el archivo (Datos crudos)
+            df_crudo = leer_csv_robusto(filepath)
+            
+            # 05-11-2026 Integración de limpieza automática
+            # Pasamos los datos sucios por la función de limpieza
+            df_limpio, resumen_limpieza = limpiar_datos(df_crudo)
 
-            # Preparamos los datos para la vista
-            preview_data = df.head(50).to_dict(orient='records')
-            columnas = list(df.columns)
-            total_filas = len(df)
+            # 3. Preparamos los datos LIMPIOS para la vista
+            preview_data = df_limpio.head(50).to_dict(orient='records')
+            columnas = list(df_limpio.columns)
+            total_filas = len(df_limpio)
 
             # Guardamos en sesión
             session['preview_data'] = preview_data
             session['columnas'] = columnas
             session['total_filas'] = total_filas
             session['filename'] = filename
+            
+            #05-11-2026 Guardamos el resumen en sesión
+            session['resumen'] = resumen_limpieza 
 
-            flash('¡Archivo cargado y validado correctamente!')
+            flash('¡Archivo procesado y limpiado automáticamente!')
             return redirect(url_for('preview'))
 
         except Exception as e:
@@ -276,21 +283,25 @@ def upload_file():
 
 @app.route('/preview')
 def preview():
-    """Muestra la tabla con los datos crudos."""
     preview_data = session.get('preview_data')
     columnas = session.get('columnas')
     total_filas = session.get('total_filas')
     filename = session.get('filename')
+    
+    #05-11-2026 Recuperamos el resumen de limpieza
+    resumen = session.get('resumen') 
 
     if not preview_data:
         flash('No hay datos para mostrar. Sube un archivo primero.')
         return redirect(url_for('index'))
 
+    #05-11-2026 Enviamos el resumen al HTML
     return render_template('preview.html', 
                            data=preview_data, 
                            columnas=columnas, 
                            total_filas=total_filas,
-                           filename=filename)
+                           filename=filename,
+                           resumen=resumen) 
 
 if __name__ == '__main__':
     app.run(debug=True)
