@@ -13,8 +13,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from werkzeug.utils import secure_filename
 
 # Se agrega la función de limpieza de datos desde el módulo Analisis.limpieza 05-11-2026
-# [NUEVO - 05-11-2026] Importamos la función del árbol
-# NOTA: Respetando que tu carpeta se llama 'Analisis' con A mayúscula.
+# [NUEVO - 05-11-2026] se importa la función del árbol
 from Analisis.limpieza import limpiar_datos
 from Analisis.arbol_decision import entrenar_arbol
 
@@ -25,7 +24,6 @@ from Analisis.arbol_decision import entrenar_arbol
 # donde se guardarán los CSVs subidos por el usuario.
 # Esto evita errores de rutas relativas cuando el proyecto se ejecuta
 # desde otra carpeta o desde Windows/Linux con distinta estructura.
-# NOTA: Respetando tus mayúsculas en Web, Templates, Static, Data y Uploads.
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'Web', 'Templates'), static_folder=os.path.join(BASE_DIR, 'Web', 'Static'))
 app.secret_key = 'clave_secreta_mineria'
@@ -47,7 +45,7 @@ def allowed_file(filename):
 # ------------------------------------------------------------
 # 3) LECTURA ROBUSTA DEL CSV
 # ------------------------------------------------------------
-# ¿Qué problema teníamos antes?
+# ¿Qué problema se tenía antes?
 # - El archivo venía con BOM invisible al principio.
 # - Las filas estaban entre comillas.
 # - Algunos nombres tenían espacios raros: " Ciudad ".
