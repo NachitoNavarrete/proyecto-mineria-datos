@@ -21,7 +21,7 @@ Aplicación web desarrollada con Flask y Python que permite la carga, validació
 3. Ejecutar: `python app.py`
 4. Ir a `http://127.0.0.1:5000`
 
-## Estado del Avance (Nota 1)
+## Estado del Avance 
 - [x] Carga y validación de CSV.
 - [x] Limpieza automática (nulos, duplicados, outliers).
 - [x] Entrenamiento de Árbol de Decisión y métricas.
