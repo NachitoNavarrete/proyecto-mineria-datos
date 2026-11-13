@@ -1,0 +1,73 @@
+# MÓDULO DE ÁRBOL DE DECISIÓN (05-11-2026)
+# ¿Qué hace este archivo?
+#   Toma un DataFrame (los datos limpios), entrena un modelo de 
+#   árbol de decisión y devuelve las métricas y una imagen.
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.preprocessing import LabelEncoder
+import io
+import base64
+
+def entrenar_arbol(df, variable_objetivo, variables_predictoras, profundidad, test_size):
+    """
+    Entrena el árbol y devuelve un diccionario con todo lo necesario.
+    """
+    
+    # 1. Separar los datos en X (predictoras) e y (lo que queremos predecir)
+    X = df[variables_predictoras].copy()
+    y = df[variable_objetivo].copy()
+
+    # 2. Scikit-learn no entiende texto, solo números.
+    # get_dummies convierte columnas de texto (ej: Ciudad: "Santiago") en columnas de 0 y 1.
+    X = pd.get_dummies(X, drop_first=True)
+    
+    # LabelEncoder convierte la respuesta (ej: "Rojo", "Azul") a números (0, 1).
+    le = LabelEncoder()
+    y = le.fit_transform(y)
+
+    # 3. División de entrenamiento y prueba (Train/Test split)
+    # Le damos el 80% de los datos para entrenar y guardamos el 20% para tomarle examen.
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+
+    # 4. Crear y entrenar el modelo
+    # max_depth controla qué tan profundo es el árbol (evita que se memorice todo).
+    modelo = DecisionTreeClassifier(max_depth=profundidad, criterion='gini', random_state=42)
+    modelo.fit(X_train, y_train)
+
+    # 5. Hacer predicciones con el examen (X_test)
+    y_pred = modelo.predict(X_test)
+
+    # 6. Calcular métricas de evaluación
+    exactitud = accuracy_score(y_test, y_pred)
+    matriz = confusion_matrix(y_test, y_pred).tolist() # tolist() para enviarlo al HTML
+
+    # 7. GENERAR LA IMAGEN DEL ÁRBOL
+    plt.figure(figsize=(12, 8)) # Tamaño del lienzo
+    plot_tree(modelo, 
+              feature_names=X.columns, 
+              class_names=[str(c) for c in le.classes_], 
+              filled=True, 
+              rounded=True, 
+              fontsize=10)
+    
+    # Guardamos la imagen en la memoria RAM, no en el disco
+    img_buffer = io.BytesIO()
+    plt.savefig(img_buffer, format='png', bbox_inches='tight')
+    img_buffer.seek(0)
+    
+    # Convertimos la imagen a un texto Base64 para poder mostrarla en HTML
+    img_base64 = base64.b64encode(img_buffer.read()).decode('utf-8')
+    plt.close() # Cerramos para no consumir memoria
+
+    # 8. Empaquetar todo y devolverlo a app.py
+    return {
+        'exactitud': round(exactitud * 100, 2), # Lo pasamos a porcentaje (ej: 85.5)
+        'matriz_confusion': matriz,
+        'imagen_base64': img_base64,
+        'clases': list(le.classes_) 
+    }
