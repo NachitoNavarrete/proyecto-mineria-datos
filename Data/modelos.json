@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1794537372.454318",
+        "fecha": "12-11-2026 23:36",
+        "variable_objetivo": "alcohol",
+        "exactitud": "7.35",
+        "filas_entrenadas": 1359
+    },
+    {
+        "id": "1794537629.191163",
+        "fecha": "12-11-2026 23:40",
+        "variable_objetivo": "alcohol",
+        "exactitud": "8.09",
+        "filas_entrenadas": 1359
+    },
+    {
+        "id": "1794537706.417054",
+        "fecha": "12-11-2026 23:41",
+        "variable_objetivo": "density",
+        "exactitud": "2.94",
+        "filas_entrenadas": 1359
+    }
+]
