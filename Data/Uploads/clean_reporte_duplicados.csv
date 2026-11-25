@@ -1,0 +1,51 @@
+id_paciente,sexo,edad,caso_contagio,region,fecha_confirmacion,fecha_alta,fecha_fallecimiento,estado,edad_min,edad_max
+2000000019,masculino,40 a 49,iglesia,Antofagasta,2020-04-16,2020-05-19,2020-03-19,recuperado,40.0,49.0
+2000000028,femenino,30 a 39,otro,Antofagasta,2020-03-11,2020-04-05,2020-03-19,recuperado,30.0,39.0
+2000000038,masculino,10 a 19,contacto con paciente,Tarapacá,2020-04-14,2020-05-05,2020-03-19,recuperado,10.0,19.0
+2000000046,masculino,20 a 29,contacto con paciente,Antofagasta,2020-03-25,2020-04-25,2020-03-19,recuperado,20.0,29.0
+2000000057,masculino,30 a 39,otro,Valparaíso,2020-02-02,2020-02-26,2020-03-19,recuperado,30.0,39.0
+2000000072,femenino,50 a 59,viaje al extranjero,Valparaíso,2020-03-30,2020-04-21,2020-03-19,recuperado,50.0,59.0
+2000000109,masculino,50 a 59,otro,Santiago,2020-04-13,2020-03-31,2020-04-17,fallecido,50.0,59.0
+2000000124,masculino,20 a 29,otro,Biobío,2020-02-23,2020-03-12,2020-03-19,recuperado,20.0,29.0
+2000000128,femenino,20 a 29,otro,Antofagasta,2020-03-28,2020-04-16,2020-03-19,recuperado,20.0,29.0
+2000000129,femenino,40 a 49,discoteca,Biobío,2020-02-22,2020-03-31,2020-03-19,aislado,40.0,49.0
+2000000132,masculino,40 a 49,iglesia,Biobío,2020-04-10,2020-04-29,2020-03-19,recuperado,40.0,49.0
+2000000140,masculino,40 a 49,viaje al extranjero,Tarapacá,2020-02-11,2020-03-31,2020-02-25,fallecido,40.0,49.0
+2000000147,femenino,30 a 39,otro,Santiago,2020-02-19,2020-03-09,2020-03-19,recuperado,30.0,39.0
+2000000151,femenino,40 a 49,iglesia,Biobío,2020-03-24,2020-04-10,2020-03-19,recuperado,40.0,49.0
+2000000174,masculino,30 a 39,contacto con paciente,Santiago,2020-03-05,2020-03-18,2020-03-19,recuperado,30.0,39.0
+2000000206,femenino,50 a 59,discoteca,Biobío,2020-04-04,2020-03-31,2020-04-11,fallecido,50.0,59.0
+2000000224,femenino,30 a 39,contacto con paciente,Valparaíso,2020-03-18,2020-04-23,2020-03-19,recuperado,30.0,39.0
+2000000227,femenino,20 a 29,contacto con paciente,Biobío,2020-04-11,2020-05-09,2020-03-19,recuperado,20.0,29.0
+2000000232,femenino,80 o más,otro,Santiago,2020-03-01,2020-03-31,2020-03-06,fallecido,80.0,44.0
+2000000234,femenino,40 a 49,discoteca,Santiago,2020-03-09,2020-04-18,2020-03-19,recuperado,40.0,49.0
+2000000254,femenino,80 o más,discoteca,Los Lagos,2020-03-16,2020-03-31,2020-03-19,fallecido,80.0,44.0
+2000000260,masculino,50 a 59,contacto con paciente,Valparaíso,2020-03-27,2020-03-31,2020-04-11,fallecido,50.0,59.0
+2000000275,femenino,30 a 39,viaje al extranjero,Antofagasta,2020-02-10,2020-03-05,2020-03-19,recuperado,30.0,39.0
+2000000279,femenino,20 a 29,contacto con paciente,Santiago,2020-04-03,2020-04-26,2020-03-19,recuperado,20.0,29.0
+2000000303,masculino,20 a 29,otro,Biobío,2020-02-28,2020-04-07,2020-03-19,recuperado,20.0,29.0
+2000000308,femenino,80 o más,iglesia,Biobío,2020-02-08,2020-03-31,2020-02-11,fallecido,80.0,44.0
+2000000333,femenino,70 a 79,otro,Valparaíso,2020-04-04,2020-03-31,2020-04-09,fallecido,70.0,75.25
+2000000354,femenino,40 a 49,otro,Santiago,2020-03-02,2020-03-31,2020-03-19,fallecido,40.0,49.0
+2000000400,femenino,40 a 49,iglesia,Los Lagos,2020-02-27,2020-04-05,2020-03-19,recuperado,40.0,49.0
+2000000409,masculino,20 a 29,otro,Tarapacá,2020-02-04,2020-03-13,2020-03-19,recuperado,20.0,29.0
+2000000414,femenino,20 a 29,iglesia,Tarapacá,2020-03-22,2020-04-11,2020-03-19,recuperado,20.0,29.0
+2000000425,femenino,30 a 39,otro,Santiago,2020-03-01,2020-04-03,2020-03-19,recuperado,30.0,39.0
+2000000440,femenino,20 a 29,contacto con paciente,Santiago,2020-02-20,2020-03-22,2020-03-19,recuperado,20.0,29.0
+2000000452,masculino,30 a 39,contacto con paciente,Antofagasta,2020-04-09,2020-05-12,2020-03-19,recuperado,30.0,39.0
+2000000453,masculino,50 a 59,otro,Biobío,2020-04-06,2020-03-31,2020-04-13,fallecido,50.0,59.0
+2000000474,femenino,0 a 9,iglesia,Santiago,2020-02-19,2020-03-23,2020-03-19,recuperado,0.0,9.0
+2000000475,femenino,20 a 29,contacto con paciente,Antofagasta,2020-03-15,2020-04-17,2020-03-19,recuperado,20.0,29.0
+2000000482,femenino,40 a 49,contacto con paciente,Antofagasta,2020-03-11,2020-03-31,2020-03-19,recuperado,40.0,49.0
+2000000496,femenino,50 a 59,otro,Antofagasta,2020-03-11,2020-04-17,2020-03-19,recuperado,50.0,59.0
+2000000535,masculino,10 a 19,contacto con paciente,Santiago,2020-04-03,2020-03-31,2020-03-19,aislado,10.0,19.0
+2000000536,masculino,70 a 79,viaje al extranjero,Valparaíso,2020-03-09,2020-03-24,2020-03-19,recuperado,70.0,75.25
+2000000537,femenino,40 a 49,otro,Valparaíso,2020-02-07,2020-03-15,2020-03-19,recuperado,40.0,49.0
+2000000557,masculino,30 a 39,otro,Tarapacá,2020-03-30,2020-04-16,2020-03-19,recuperado,30.0,39.0
+2000000560,femenino,desconocido,viaje al extranjero,Antofagasta,2020-03-19,2020-03-31,2020-03-26,fallecido,40.0,44.0
+2000000568,masculino,60 a 69,discoteca,Antofagasta,2020-03-19,2020-04-02,2020-03-19,recuperado,60.0,69.0
+2000000594,femenino,60 a 69,call center,Valparaíso,2020-03-20,2020-04-08,2020-03-19,recuperado,60.0,69.0
+2000000621,desconocido,40 a 49,otro,Biobío,2020-04-16,2020-03-31,2020-04-24,fallecido,40.0,49.0
+2000000633,masculino,30 a 39,iglesia,Antofagasta,2020-02-21,2020-03-31,2020-03-19,aislado,30.0,39.0
+2000000672,masculino,60 a 69,iglesia,Antofagasta,2020-02-18,2020-03-31,2020-03-02,fallecido,60.0,69.0
+2000000684,masculino,40 a 49,otro,Los Lagos,2020-03-06,2020-03-31,2020-03-19,recuperado,40.0,49.0

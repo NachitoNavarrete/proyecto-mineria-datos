@@ -1,0 +1,88 @@
+<!-- 
+  Vista para el módulo de Asociación. 
+  Tiene un formulario a la izquierda para ajustar parámetros y 
+  una tabla a la derecha para mostrar las reglas calculadas.
+-->
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <!-- PANEL DE CONFIGURACIÓN (Izquierda) -->
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0"><i class="fa-solid fa-sliders me-2"></i> Parámetros (RF4)</h5>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('generar_asociacion') }}" method="POST">
+                    
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Soporte Mínimo (%)</label>
+                        <input type="number" name="min_support" class="form-control" value="5" min="1" max="100" required>
+                        <small class="text-muted">Frecuencia mínima con la que aparece una regla.</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Confianza Mínima (%)</label>
+                        <input type="number" name="min_confidence" class="form-control" value="50" min="1" max="100" required>
+                        <small class="text-muted">Probabilidad de que se cumpla el consecuente.</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fa-solid fa-bolt me-2"></i> Generar Reglas
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLA DE RESULTADOS (Derecha) -->
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0"><i class="fa-solid fa-network-wired me-2"></i> Reglas Encontradas</h5>
+                <span class="badge bg-primary">{{ reglas|length }} reglas</span>
+            </div>
+            <div class="card-body p-0">
+                {% if reglas %}
+                <div class="table-responsive" style="max-height: 600px;">
+                    <table class="table table-hover table-striped mb-0 text-center">
+                        <thead class="table-light" style="position: sticky; top: 0;">
+                            <tr>
+                                <th>Antecedente (Si...)</th>
+                                <th>Consecuente (Entonces...)</th>
+                                <th>Soporte</th>
+                                <th>Confianza</th>
+                                <th>Lift (Fuerza)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for regla in reglas %}
+                            <tr>
+                                <td class="text-start"><span class="badge bg-secondary">{{ regla.antecedentes }}</span></td>
+                                <td class="text-start"><span class="badge bg-success">{{ regla.consecuentes }}</span></td>
+                                <td>{{ regla.soporte }}%</td>
+                                <td>{{ regla.confianza }}%</td>
+                                <!-- Pinto el lift de verde si es mayor a 1 (regla fuerte) -->
+                                <td>
+                                    <span class="badge {% if regla.lift > 1 %}bg-primary{% else %}bg-danger{% endif %}">
+                                        {{ regla.lift }}
+                                    </span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center p-5 text-muted">
+                    <i class="fa-solid fa-magnifying-glass fa-3x mb-3"></i>
+                    <p>Aún no hay reglas generadas. Ajusta los parámetros y haz clic en "Generar Reglas".</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

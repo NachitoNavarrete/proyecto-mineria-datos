@@ -5,6 +5,10 @@
 
 import pandas as pd
 import numpy as np
+import matplotlib
+# Le digo a matplotlib que use el backend 'Agg' (sin interfaz gráfica).
+# Esto es OBLIGATORIO en Flask, si no, se cae el servidor al dibujar.
+matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier, plot_tree
@@ -30,8 +34,9 @@ def entrenar_arbol(df, variable_objetivo, variables_predictoras, profundidad, te
     le = LabelEncoder()
     y = le.fit_transform(y)
 
-    # 3. División de entrenamiento y prueba (Train/Test split)
-    # Le damos el 80% de los datos para entrenar y guardamos el 20% para tomarle examen.
+        # 3. División de entrenamiento y prueba (Train/Test split)
+    # Agrego stratify=y para asegurar que haya una proporción justa de clases en la prueba
+        # [CAMBIO 25-11-2026] Quito stratify=y porque la clase '3' tiene solo 1 vino y lanza error [winecsv]
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
 
     # 4. Crear y entrenar el modelo
@@ -44,7 +49,8 @@ def entrenar_arbol(df, variable_objetivo, variables_predictoras, profundidad, te
 
     # 6. Calcular métricas de evaluación
     exactitud = accuracy_score(y_test, y_pred)
-    matriz = confusion_matrix(y_test, y_pred).tolist() # tolist() para enviarlo al HTML
+        # [CAMBIO 25-11-2026] Le paso 'labels' para que la matriz siempre tenga el tamaño correcto
+    matriz = confusion_matrix(y_test, y_pred, labels=range(len(le.classes_))).tolist()  # tolist() para enviarlo al HTML
 
     # 7. GENERAR LA IMAGEN DEL ÁRBOL
     plt.figure(figsize=(12, 8)) # Tamaño del lienzo

@@ -12,12 +12,18 @@
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Resultados: Predecir <span class="text-primary">{{ variable_objetivo }}</span></h2>
-    <a href="{{ url_for('arbol') }}" class="btn btn-secondary">Configurar otro árbol</a>
-    <form action="{{ url_for('guardar_modelo') }}" method="POST" class="d-inline">
-    <input type="hidden" name="exactitud" value="{{ resultado.exactitud }}">
-    <input type="hidden" name="variable_objetivo" value="{{ variable_objetivo }}">
-    <button type="submit" class="btn btn-primary">💾 Guardar este Modelo</button>
-</form>
+    <div>
+        <a href="{{ url_for('arbol') }}" class="btn btn-secondary">Configurar otro árbol</a>
+        
+        <!-- Botón único para guardar -->
+        <form action="{{ url_for('guardar_modelo') }}" method="POST" class="d-inline">
+            <input type="hidden" name="exactitud" value="{{ resultado.exactitud }}">
+            <input type="hidden" name="variable_objetivo" value="{{ variable_objetivo }}">
+            <button type="submit" class="btn btn-primary ms-2">
+                <i class="fa-solid fa-floppy-disk me-1"></i> Guardar Modelo
+            </button>
+        </form>
+    </div>
 </div>
 
 <div class="row mb-4">

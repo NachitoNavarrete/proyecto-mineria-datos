@@ -1,0 +1,701 @@
+id_paciente,sexo,edad,caso_contagio,region,fecha_confirmacion,fecha_alta,fecha_fallecimiento,estado
+2000000161,femenino,20 a 29,contacto con paciente,los lagos,2020-02-09,2020-02-22,2020-03-19,recuperado
+2000000358,femenino,70 a 79,call center,valparaíso,2020-02-18,2020-03-22,2020-02-20,recuperado
+2000000353,femenino,40 a 49,viaje al extranjero,biobío,2020-02-15,2020-03-06,2020-03-19,recuperado
+2000000449,femenino,10 a 19,contacto con paciente,biobío,2020-04-11,2020-05-09,2020-03-19,recuperado
+2000000654,masculino,30 a 39,call center,valparaíso,2020-03-16,2020-03-22,2020-03-19,fallecido
+2000000094,masculino,20 a 29,otro,santiago,2020-02-11,2020-03-15,2020-03-19,recuperado
+2000000691,masculino,60 a 69,contacto con paciente,santiago,2020-03-01,2020-03-25,2020-03-19,recuperado
+2000000031,femenino,20 a 29,iglesia,antofagasta,2020-04-10,2020-05-12,2020-03-19,recuperado
+2000000121,masculino,40 a 49,contacto con paciente,antofagasta,2020-02-12,2020-03-07,2020-03-19,recuperado
+2000000100,masculino,60 a 69,otro,biobío,2020-02-05,2020-03-22,2020-03-19,aislado
+2000000140,masculino,40 a 49,viaje al extranjero,tarapacá,2020-02-11,2020-03-22,2020-02-25,fallecido
+2000000136,femenino,30 a 39,contacto con paciente,los lagos,2020-04-09,2020-05-06,2020-03-19,recuperado
+2000000656,femenino,50 a 59,otro,tarapacá,2020-03-05,2020-03-22,2020-03-15,fallecido
+2000000390,masculino,20 a 29,viaje al extranjero,valparaíso,2020-03-15,2020-03-22,2020-03-20,fallecido
+2000000265,masculino,30 a 39,iglesia,valparaíso,2020-03-31,2020-04-30,2020-03-19,recuperado
+2000000148,femenino,60 a 69,otro,los lagos,2020-02-29,2020-03-24,2020-03-19,recuperado
+2000000054,femenino,60 a 69,iglesia,antofagasta,2020-03-20,2020-04-25,2020-03-19,recuperado
+2000000081,masculino,20 a 29,otro,tarapacá,2020-04-07,2020-05-17,2020-03-19,recuperado
+2000000163,femenino,30 a 39,iglesia,antofagasta,2020-02-25,2020-03-11,2020-03-19,recuperado
+2000000593,femenino,20 a 29,discoteca,antofagasta,2020-03-01,2020-03-15,2020-03-19,recuperado
+2000000028,femenino,30 a 39,otro,antofagasta,2020-03-11,2020-04-05,2020-03-19,recuperado
+2000000273,masculino,70 a 79,viaje al extranjero,biobío,2020-04-05,2020-03-22,2020-03-19,aislado
+2000000232,femenino,80 o más,otro,santiago,2020-03-01,2020-03-22,2020-03-06,fallecido
+2000000607,masculino,70 a 79,contacto con paciente,tarapacá,2020-02-19,2020-03-22,2020-03-06,fallecido
+2000000693,femenino,60 a 69,otro,biobío,2020-04-10,2020-03-22,2020-04-14,fallecido
+2000000004,femenino,30 a 39,otro,los lagos,2020-04-06,2020-04-19,2020-03-19,recuperado
+2000000197,masculino,20 a 29,otro,santiago,2020-03-12,2020-03-22,2020-03-29,fallecido
+2000000622,masculino,10 a 19,call center,valparaíso,2020-04-06,2020-05-10,2020-03-19,recuperado
+2000000212,femenino,20 a 29,contacto con paciente,los lagos,2020-02-21,2020-03-26,2020-03-19,recuperado
+2000000465,masculino,20 a 29,iglesia,los lagos,2020-02-29,2020-03-22,2020-03-11,fallecido
+2000000663,femenino,20 a 29,call center,tarapacá,2020-04-15,2020-05-10,2020-03-19,recuperado
+2000000509,masculino,60 a 69,otro,antofagasta,2020-02-26,2020-03-21,2020-03-19,recuperado
+2000000024,masculino,40 a 49,contacto con paciente,tarapacá,2020-02-27,2020-03-28,2020-03-19,recuperado
+2000000248,masculino,10 a 19,otro,valparaíso,2020-02-22,2020-03-04,2020-03-19,recuperado
+2000000013,femenino,40 a 49,otro,tarapacá,2020-02-05,2020-03-16,2020-03-19,recuperado
+2000000683,femenino,60 a 69,iglesia,biobío,2020-02-09,2020-03-22,2020-02-22,fallecido
+2000000067,femenino,40 a 49,contacto con paciente,valparaíso,2020-04-12,2020-05-11,2020-03-19,recuperado
+2000000143,masculino,20 a 29,otro,tarapacá,2020-04-03,2020-04-16,2020-03-19,recuperado
+2000000300,femenino,60 a 69,discoteca,biobío,2020-03-31,2020-03-22,2020-04-07,fallecido
+2000000228,femenino,50 a 59,otro,biobío,2020-03-04,2020-03-16,2020-03-19,recuperado
+2000000284,femenino,50 a 59,viaje al extranjero,tarapacá,2020-02-15,2020-03-22,2020-02-25,fallecido
+2000000595,masculino,30 a 39,contacto con paciente,los lagos,2020-04-03,2020-05-12,2020-03-19,recuperado
+2000000464,masculino,20 a 29,otro,santiago,2020-03-08,2020-03-22,2020-03-19,aislado
+2000000333,femenino,70 a 79,otro,valparaíso,2020-04-04,2020-03-22,2020-04-09,fallecido
+2000000160,femenino,30 a 39,contacto con paciente,tarapacá,2020-04-09,2020-04-29,2020-03-19,recuperado
+2000000091,masculino,20 a 29,discoteca,antofagasta,2020-02-26,2020-03-15,2020-03-19,recuperado
+2000000635,femenino,60 a 69,contacto con paciente,valparaíso,2020-02-16,2020-03-23,2020-03-19,recuperado
+2000000513,femenino,40 a 49,contacto con paciente,tarapacá,2020-04-09,2020-05-19,2020-03-19,recuperado
+2000000046,masculino,20 a 29,contacto con paciente,antofagasta,2020-03-25,2020-04-25,2020-03-19,recuperado
+2000000469,masculino,50 a 59,iglesia,antofagasta,2020-02-29,2020-03-22,2020-03-18,fallecido
+2000000107,masculino,10 a 19,viaje al extranjero,santiago,2020-04-08,2020-04-26,2020-03-19,recuperado
+2000000418,femenino,70 a 79,otro,santiago,2020-03-02,2020-03-22,2020-03-19,aislado
+2000000009,femenino,20 a 29,discoteca,antofagasta,2020-03-01,2020-04-03,2020-03-19,recuperado
+2000000303,masculino,20 a 29,otro,biobío,2020-02-28,2020-04-07,2020-03-19,recuperado
+2000000675,femenino,30 a 39,viaje al extranjero,santiago,2020-02-26,2020-04-04,2020-03-19,recuperado
+2000000002,femenino,50 a 59,otro,tarapacá,2020-03-28,2020-03-25,2020-03-19,recuperado
+2000000417,femenino,60 a 69,iglesia,los lagos,2020-02-05,2020-03-22,2020-02-22,fallecido
+2000000083,femenino,40 a 49,otro,los lagos,2020-04-03,2020-05-11,2020-03-19,recuperado
+2000000202,masculino,0 a 9,contacto con paciente,valparaíso,2020-02-05,2020-03-22,2020-03-19,aislado
+2000000580,femenino,40 a 49,contacto con paciente,santiago,2020-04-11,2020-04-26,2020-03-19,recuperado
+2000000290,femenino,10 a 19,viaje al extranjero,biobío,2020-04-08,2020-05-17,2020-03-19,recuperado
+2000000416,masculino,20 a 29,otro,biobío,2020-03-18,2020-04-04,2020-03-19,recuperado
+2000000174,masculino,30 a 39,contacto con paciente,santiago,2020-03-05,2020-03-18,2020-03-19,recuperado
+2000000573,femenino,30 a 39,contacto con paciente,tarapacá,2020-04-03,2020-04-16,2020-03-19,recuperado
+2000000587,masculino,30 a 39,otro,antofagasta,2020-03-17,2020-03-22,2020-03-23,fallecido
+2000000014,femenino,60 a 69,call center,tarapacá,2020-03-05,2020-03-29,2020-03-19,recuperado
+2000000074,masculino,20 a 29,call center,santiago,2020-04-13,2020-05-12,2020-03-19,recuperado
+2000000518,masculino,30 a 39,otro,santiago,2020-02-01,2020-03-04,2020-03-19,recuperado
+2000000343,femenino,50 a 59,viaje al extranjero,biobío,2020-03-26,2020-04-30,2020-03-19,recuperado
+2000000017,masculino,40 a 49,iglesia,valparaíso,2020-03-03,2020-03-22,2020-03-13,fallecido
+2000000666,masculino,70 a 79,otro,los lagos,2020-02-03,2020-03-22,2020-02-19,fallecido
+2000000658,masculino,50 a 59,discoteca,valparaíso,2020-03-25,2020-03-22,2020-03-31,fallecido
+2000000548,femenino,50 a 59,contacto con paciente,tarapacá,2020-02-28,2020-03-22,2020-03-08,fallecido
+2000000244,femenino,30 a 39,otro,tarapacá,2020-02-08,2020-02-20,2020-03-19,recuperado
+2000000425,femenino,30 a 39,otro,santiago,2020-03-01,2020-04-03,2020-03-19,recuperado
+2000000151,femenino,40 a 49,iglesia,biobío,2020-03-24,2020-04-10,2020-03-19,recuperado
+2000000362,masculino,30 a 39,contacto con paciente,biobío,2020-02-24,2020-03-17,2020-03-19,recuperado
+2000000294,femenino,40 a 49,contacto con paciente,valparaíso,2020-02-07,2020-02-28,2020-03-19,recuperado
+2000000519,femenino,40 a 49,contacto con paciente,antofagasta,2020-02-18,2020-03-09,2020-03-19,recuperado
+2000000180,femenino,50 a 59,contacto con paciente,biobío,2020-04-12,2020-05-05,2020-03-19,recuperado
+2000000169,femenino,30 a 39,iglesia,santiago,2020-04-10,2020-03-22,2020-03-19,aislado
+2000000376,masculino,10 a 19,otro,biobío,2020-04-05,2020-03-27,2020-03-19,recuperado
+2000000630,femenino,20 a 29,contacto con paciente,antofagasta,2020-03-11,2020-04-18,2020-03-19,recuperado
+2000000668,femenino,20 a 29,contacto con paciente,santiago,2020-03-22,2020-04-19,2020-03-19,recuperado
+2000000670,femenino,50 a 59,iglesia,antofagasta,2020-03-09,2020-04-15,2020-03-19,recuperado
+2000000047,masculino,50 a 59,iglesia,los lagos,2020-04-06,2020-05-03,2020-03-19,recuperado
+2000000655,masculino,30 a 39,contacto con paciente,santiago,2020-03-17,2020-03-10,2020-03-19,recuperado
+2000000167,femenino,20 a 29,contacto con paciente,santiago,2020-02-25,2020-03-19,2020-03-19,recuperado
+2000000237,femenino,70 a 79,contacto con paciente,los lagos,2020-03-28,2020-03-22,2020-04-13,fallecido
+2000000554,femenino,30 a 39,contacto con paciente,los lagos,2020-04-01,2020-04-17,2020-03-19,recuperado
+2000000502,femenino,20 a 29,otro,biobío,2020-03-26,2020-04-12,2020-03-19,recuperado
+2000000372,femenino,30 a 39,otro,los lagos,2020-03-01,2020-03-22,2020-03-19,recuperado
+2000000286,femenino,20 a 29,iglesia,valparaíso,2020-03-14,2020-03-22,2020-03-21,fallecido
+2000000397,femenino,20 a 29,otro,tarapacá,2020-04-14,2020-04-26,2020-03-19,recuperado
+2000000350,masculino,60 a 69,discoteca,tarapacá,2020-02-21,2020-03-14,2020-03-19,recuperado
+2000000644,femenino,40 a 49,contacto con paciente,biobío,2020-04-04,2020-05-12,2020-03-19,recuperado
+2000000128,femenino,20 a 29,otro,antofagasta,2020-03-28,2020-04-16,2020-03-19,recuperado
+2000000098,femenino,40 a 49,discoteca,tarapacá,2020-04-16,2020-03-22,2020-03-19,aislado
+2000000329,masculino,40 a 49,iglesia,tarapacá,2020-03-16,2020-04-02,2020-03-19,recuperado
+2000000474,femenino,0 a 9,iglesia,santiago,2020-02-19,2020-03-23,2020-03-19,recuperado
+2000000475,femenino,20 a 29,contacto con paciente,antofagasta,2020-03-15,2020-04-17,2020-03-19,recuperado
+2000000685,masculino,30 a 39,contacto con paciente,tarapacá,2020-04-09,2020-04-25,2020-03-19,recuperado
+2000000142,masculino,0 a 9,otro,los lagos,2020-02-20,2020-03-22,2020-03-19,recuperado
+2000000505,masculino,60 a 69,contacto con paciente,antofagasta,2020-02-16,2020-03-22,2020-03-19,recuperado
+2000000346,femenino,70 a 79,contacto con paciente,antofagasta,2020-04-16,2020-04-29,2020-03-19,recuperado
+2000000145,femenino,20 a 29,discoteca,santiago,2020-03-28,2020-04-19,2020-03-19,recuperado
+2000000210,femenino,40 a 49,contacto con paciente,antofagasta,2020-03-01,2020-03-27,2020-03-19,recuperado
+2000000508,femenino,60 a 69,viaje al extranjero,biobío,2020-02-11,2020-03-17,2020-03-19,recuperado
+2000000430,masculino,40 a 49,contacto con paciente,valparaíso,2020-03-11,2020-04-16,2020-03-19,recuperado
+2000000504,femenino,50 a 59,otro,antofagasta,2020-03-03,2020-03-29,2020-03-19,recuperado
+2000000183,masculino,60 a 69,contacto con paciente,valparaíso,2020-03-26,2020-03-22,2020-04-03,fallecido
+2000000104,femenino,80 o más,call center,biobío,2020-04-01,2020-03-22,2020-04-17,fallecido
+2000000507,masculino,20 a 29,call center,biobío,2020-03-20,2020-04-23,2020-03-19,recuperado
+2000000225,masculino,10 a 19,otro,los lagos,2020-04-03,2020-05-13,2020-03-19,recuperado
+2000000582,femenino,40 a 49,contacto con paciente,los lagos,2020-03-20,2020-04-15,2020-03-19,recuperado
+2000000382,masculino,30 a 39,otro,santiago,2020-02-11,2020-03-08,2020-03-19,recuperado
+2000000260,masculino,50 a 59,contacto con paciente,valparaíso,2020-03-27,2020-03-22,2020-04-11,fallecido
+2000000544,femenino,80 o más,iglesia,santiago,2020-04-04,2020-03-22,2020-04-21,fallecido
+2000000088,femenino,50 a 59,otro,santiago,2020-03-10,2020-04-07,2020-03-19,recuperado
+2000000342,masculino,80 o más,discoteca,antofagasta,2020-04-02,2020-03-22,2020-04-19,fallecido
+2000000347,masculino,40 a 49,iglesia,los lagos,2020-03-07,2020-03-22,2020-03-15,fallecido
+2000000639,femenino,30 a 39,contacto con paciente,los lagos,2020-02-02,2020-02-25,2020-03-19,recuperado
+2000000574,masculino,50 a 59,contacto con paciente,biobío,2020-02-02,2020-02-28,2020-03-19,recuperado
+2000000156,femenino,60 a 69,otro,biobío,2020-04-02,2020-03-22,2020-03-19,aislado
+2000000072,femenino,50 a 59,viaje al extranjero,valparaíso,2020-03-30,2020-04-21,2020-03-19,recuperado
+2000000219,femenino,70 a 79,otro,valparaíso,2020-04-01,2020-04-16,2020-03-19,recuperado
+2000000254,femenino,80 o más,discoteca,los lagos,2020-03-16,2020-03-22,2020-03-19,fallecido
+2000000010,femenino,40 a 49,call center,tarapacá,2020-03-04,2020-03-24,2020-03-19,recuperado
+2000000280,femenino,20 a 29,iglesia,santiago,2020-04-09,2020-03-22,2020-03-19,aislado
+2000000409,masculino,20 a 29,otro,tarapacá,2020-02-04,2020-03-13,2020-03-19,recuperado
+2000000073,masculino,20 a 29,iglesia,santiago,2020-02-13,2020-03-09,2020-03-19,recuperado
+2000000605,femenino,40 a 49,otro,antofagasta,2020-03-30,2020-04-23,2020-03-19,recuperado
+2000000012,femenino,10 a 19,otro,antofagasta,2020-03-18,2020-04-13,2020-03-19,recuperado
+2000000594,femenino,60 a 69,call center,valparaíso,2020-03-20,2020-04-08,2020-03-19,recuperado
+2000000241,femenino,20 a 29,contacto con paciente,biobío,2020-03-23,2020-04-29,2020-03-19,recuperado
+2000000320,femenino,40 a 49,discoteca,antofagasta,2020-02-07,2020-03-10,2020-03-19,recuperado
+2000000608,femenino,10 a 19,contacto con paciente,biobío,2020-03-10,2020-04-18,2020-03-19,recuperado
+2000000250,masculino,40 a 49,call center,los lagos,2020-02-20,2020-03-04,2020-03-19,recuperado
+2000000584,masculino,50 a 59,contacto con paciente,antofagasta,2020-03-06,2020-03-22,2020-03-19,aislado
+2000000694,femenino,30 a 39,iglesia,los lagos,2020-03-09,2020-03-20,2020-03-19,recuperado
+2000000526,masculino,40 a 49,otro,santiago,2020-02-22,2020-03-27,2020-03-19,recuperado
+2000000546,femenino,30 a 39,viaje al extranjero,los lagos,2020-04-13,2020-03-22,2020-04-17,fallecido
+2000000155,femenino,70 a 79,otro,antofagasta,2020-04-15,2020-03-22,2020-04-17,fallecido
+2000000205,masculino,20 a 29,viaje al extranjero,santiago,2020-04-06,2020-04-03,2020-03-19,recuperado
+2000000247,masculino,40 a 49,contacto con paciente,tarapacá,2020-04-07,2020-05-09,2020-03-19,recuperado
+2000000308,femenino,80 o más,iglesia,biobío,2020-02-08,2020-03-22,2020-02-11,fallecido
+2000000242,masculino,10 a 19,discoteca,santiago,2020-03-12,2020-04-19,2020-03-19,recuperado
+2000000523,masculino,80 o más,iglesia,biobío,2020-02-15,2020-03-22,2020-02-25,fallecido
+2000000661,masculino,30 a 39,otro,valparaíso,2020-03-07,2020-04-11,2020-03-19,recuperado
+2000000481,femenino,60 a 69,viaje al extranjero,valparaíso,2020-02-28,2020-03-22,2020-03-01,fallecido
+2000000330,masculino,40 a 49,iglesia,los lagos,2020-02-04,2020-02-16,2020-03-19,recuperado
+2000000003,masculino,30 a 39,discoteca,los lagos,2020-04-03,2020-04-22,2020-03-19,recuperado
+2000000459,femenino,30 a 39,contacto con paciente,antofagasta,2020-03-12,2020-03-22,2020-03-16,fallecido
+2000000489,masculino,20 a 29,otro,biobío,2020-03-05,2020-03-26,2020-03-19,recuperado
+2000000682,femenino,20 a 29,contacto con paciente,tarapacá,2020-03-17,2020-04-16,2020-03-19,recuperado
+2000000099,femenino,50 a 59,otro,los lagos,2020-02-11,2020-03-19,2020-03-19,recuperado
+2000000106,masculino,20 a 29,discoteca,santiago,2020-04-16,2020-05-13,2020-03-19,recuperado
+2000000432,femenino,10 a 19,contacto con paciente,valparaíso,2020-03-17,2020-04-08,2020-03-19,recuperado
+2000000625,femenino,30 a 39,iglesia,biobío,2020-04-15,2020-05-06,2020-03-19,recuperado
+2000000117,masculino,20 a 29,contacto con paciente,antofagasta,2020-04-12,2020-03-22,2020-03-19,aislado
+2000000263,femenino,10 a 19,iglesia,los lagos,2020-04-07,2020-05-05,2020-03-19,recuperado
+2000000049,femenino,40 a 49,otro,antofagasta,2020-03-18,2020-04-24,2020-03-19,recuperado
+2000000292,masculino,20 a 29,contacto con paciente,biobío,2020-04-07,2020-04-26,2020-03-19,recuperado
+2000000285,femenino,50 a 59,contacto con paciente,valparaíso,2020-02-19,2020-03-01,2020-03-19,recuperado
+2000000606,masculino,10 a 19,viaje al extranjero,tarapacá,2020-03-31,2020-04-27,2020-03-19,recuperado
+2000000466,masculino,30 a 39,contacto con paciente,valparaíso,2020-03-29,2020-04-14,2020-03-19,recuperado
+2000000533,masculino,40 a 49,viaje al extranjero,biobío,2020-02-04,2020-02-22,2020-03-19,recuperado
+2000000700,masculino,30 a 39,iglesia,valparaíso,2020-02-03,2020-03-22,2020-03-19,aislado
+2000000671,femenino,30 a 39,otro,santiago,2020-04-09,2020-03-22,2020-03-19,aislado
+2000000535,masculino,10 a 19,contacto con paciente,santiago,2020-04-03,2020-03-22,2020-03-19,aislado
+2000000560,femenino,20 a 29,viaje al extranjero,antofagasta,2020-03-19,2020-03-22,2020-03-26,fallecido
+2000000478,masculino,20 a 29,discoteca,valparaíso,2020-02-22,2020-03-21,2020-03-19,recuperado
+2000000699,femenino,20 a 29,otro,santiago,2020-02-09,2020-03-22,2020-03-19,aislado
+2000000217,masculino,40 a 49,contacto con paciente,biobío,2020-02-16,2020-03-24,2020-03-19,recuperado
+2000000653,masculino,60 a 69,viaje al extranjero,santiago,2020-02-05,2020-03-22,2020-02-22,fallecido
+2000000133,femenino,30 a 39,contacto con paciente,tarapacá,2020-03-10,2020-03-22,2020-03-19,aislado
+2000000650,masculino,30 a 39,viaje al extranjero,santiago,2020-03-19,2020-03-22,2020-03-19,aislado
+2000000640,femenino,20 a 29,iglesia,los lagos,2020-02-04,2020-02-18,2020-03-19,recuperado
+2000000033,femenino,20 a 29,iglesia,tarapacá,2020-02-28,2020-03-31,2020-03-19,recuperado
+2000000471,masculino,10 a 19,iglesia,los lagos,2020-02-20,2020-03-25,2020-03-19,recuperado
+2000000221,femenino,30 a 39,contacto con paciente,valparaíso,2020-04-08,2020-05-03,2020-03-19,recuperado
+2000000448,masculino,40 a 49,iglesia,tarapacá,2020-03-15,2020-03-22,2020-03-19,aislado
+2000000550,femenino,30 a 39,otro,los lagos,2020-04-15,2020-05-22,2020-03-19,recuperado
+2000000672,masculino,60 a 69,iglesia,antofagasta,2020-02-18,2020-03-22,2020-03-02,fallecido
+2000000087,femenino,30 a 39,contacto con paciente,los lagos,2020-02-07,2020-03-02,2020-03-19,recuperado
+2000000039,masculino,60 a 69,otro,biobío,2020-02-28,2020-03-22,2020-03-04,fallecido
+2000000589,femenino,70 a 79,otro,los lagos,2020-03-02,2020-03-22,2020-03-19,aislado
+2000000316,masculino,40 a 49,otro,biobío,2020-04-04,2020-04-17,2020-03-19,recuperado
+2000000470,masculino,30 a 39,otro,biobío,2020-03-13,2020-04-06,2020-03-19,recuperado
+2000000321,masculino,60 a 69,otro,los lagos,2020-04-01,2020-03-22,2020-04-10,fallecido
+2000000374,femenino,30 a 39,viaje al extranjero,valparaíso,2020-03-26,2020-04-24,2020-03-19,recuperado
+2000000684,masculino,40 a 49,otro,los lagos,2020-03-06,2020-03-31,2020-03-19,recuperado
+2000000110,femenino,40 a 49,viaje al extranjero,santiago,2020-02-14,2020-02-25,2020-03-19,recuperado
+2000000696,femenino,20 a 29,contacto con paciente,antofagasta,2020-04-13,2020-05-16,2020-03-19,recuperado
+2000000279,femenino,20 a 29,contacto con paciente,santiago,2020-04-03,2020-04-26,2020-03-19,recuperado
+2000000335,femenino,20 a 29,otro,tarapacá,2020-03-25,2020-04-10,2020-03-19,recuperado
+2000000146,masculino,60 a 69,viaje al extranjero,antofagasta,2020-02-09,2020-02-27,2020-03-19,recuperado
+2000000165,femenino,80 o más,otro,antofagasta,2020-02-19,2020-03-22,2020-02-24,fallecido
+2000000328,femenino,30 a 39,call center,valparaíso,2020-03-24,2020-03-22,2020-03-19,aislado
+2000000393,femenino,30 a 39,iglesia,antofagasta,2020-02-03,2020-02-24,2020-03-19,recuperado
+2000000334,femenino,40 a 49,call center,los lagos,2020-02-08,2020-02-05,2020-03-19,recuperado
+2000000496,femenino,50 a 59,otro,antofagasta,2020-03-11,2020-04-17,2020-03-19,recuperado
+2000000551,femenino,70 a 79,call center,valparaíso,2020-03-27,2020-03-22,2020-04-02,fallecido
+2000000132,masculino,40 a 49,iglesia,biobío,2020-04-10,2020-04-29,2020-03-19,recuperado
+2000000008,masculino,40 a 49,iglesia,valparaíso,2020-02-07,2020-03-10,2020-03-19,recuperado
+2000000568,masculino,60 a 69,discoteca,antofagasta,2020-03-19,2020-04-02,2020-03-19,recuperado
+2000000450,femenino,30 a 39,contacto con paciente,biobío,2020-04-04,2020-04-18,2020-03-19,recuperado
+2000000327,masculino,30 a 39,otro,valparaíso,2020-02-10,2020-03-07,2020-03-19,recuperado
+2000000545,masculino,70 a 79,viaje al extranjero,santiago,2020-03-12,2020-03-22,2020-03-16,fallecido
+2000000572,femenino,20 a 29,iglesia,antofagasta,2020-02-24,2020-03-31,2020-03-19,recuperado
+2000000561,femenino,20 a 29,discoteca,antofagasta,2020-02-18,2020-03-22,2020-03-19,aislado
+2000000170,femenino,20 a 29,otro,valparaíso,2020-02-22,2020-03-25,2020-03-19,recuperado
+2000000044,femenino,40 a 49,viaje al extranjero,antofagasta,2020-03-02,2020-04-06,2020-03-19,recuperado
+2000000041,femenino,30 a 39,contacto con paciente,santiago,2020-03-10,2020-04-18,2020-03-19,recuperado
+2000000443,masculino,50 a 59,otro,valparaíso,2020-03-12,2020-03-22,2020-03-19,aislado
+2000000431,masculino,20 a 29,viaje al extranjero,los lagos,2020-03-30,2020-04-11,2020-03-19,recuperado
+2000000532,masculino,70 a 79,viaje al extranjero,los lagos,2020-03-24,2020-03-22,2020-03-19,aislado
+2000000534,masculino,50 a 59,discoteca,los lagos,2020-04-10,2020-03-22,2020-04-14,fallecido
+2000000147,femenino,30 a 39,otro,santiago,2020-02-19,2020-03-09,2020-03-19,recuperado
+2000000223,femenino,20 a 29,contacto con paciente,valparaíso,2020-02-17,2020-03-26,2020-03-19,recuperado
+2000000243,femenino,70 a 79,viaje al extranjero,los lagos,2020-02-01,2020-03-22,2020-02-15,fallecido
+2000000209,femenino,70 a 79,otro,los lagos,2020-03-23,2020-03-22,2020-04-02,fallecido
+2000000446,femenino,60 a 69,otro,biobío,2020-02-12,2020-03-21,2020-03-19,recuperado
+2000000318,masculino,60 a 69,discoteca,los lagos,2020-02-25,2020-03-22,2020-03-04,fallecido
+2000000319,femenino,50 a 59,contacto con paciente,los lagos,2020-03-03,2020-03-22,2020-03-18,recuperado
+2000000021,femenino,40 a 49,otro,tarapacá,2020-02-26,2020-03-20,2020-03-19,recuperado
+2000000043,femenino,20 a 29,iglesia,los lagos,2020-03-10,2020-03-22,2020-03-19,aislado
+2000000338,femenino,30 a 39,call center,valparaíso,2020-02-02,2020-02-21,2020-03-19,recuperado
+2000000410,masculino,40 a 49,contacto con paciente,antofagasta,2020-03-02,2020-03-26,2020-03-19,recuperado
+2000000266,femenino,30 a 39,contacto con paciente,santiago,2020-02-10,2020-03-22,2020-03-19,aislado
+2000000648,femenino,20 a 29,iglesia,biobío,2020-02-16,2020-03-22,2020-03-19,recuperado
+2000000552,masculino,30 a 39,viaje al extranjero,antofagasta,2020-03-21,2020-03-22,2020-03-19,aislado
+2000000006,femenino,30 a 39,contacto con paciente,tarapacá,2020-04-11,2020-05-08,2020-03-19,recuperado
+2000000436,masculino,50 a 59,iglesia,valparaíso,2020-03-08,2020-03-22,2020-03-19,aislado
+2000000462,femenino,10 a 19,discoteca,biobío,2020-04-03,2020-05-05,2020-03-19,recuperado
+2000000272,masculino,40 a 49,viaje al extranjero,biobío,2020-03-08,2020-03-27,2020-03-19,recuperado
+2000000116,masculino,20 a 29,discoteca,santiago,2020-04-10,2020-05-05,2020-03-19,recuperado
+2000000274,femenino,30 a 39,iglesia,biobío,2020-03-27,2020-05-01,2020-03-19,recuperado
+2000000673,femenino,30 a 39,iglesia,santiago,2020-03-02,2020-03-19,2020-03-19,recuperado
+2000000531,femenino,70 a 79,call center,antofagasta,2020-04-07,2020-05-09,2020-03-19,recuperado
+2000000093,femenino,40 a 49,call center,biobío,2020-03-28,2020-04-23,2020-03-19,recuperado
+2000000270,masculino,20 a 29,iglesia,tarapacá,2020-02-08,2020-02-26,2020-03-19,recuperado
+2000000651,masculino,30 a 39,viaje al extranjero,los lagos,2020-03-12,2020-03-22,2020-03-24,fallecido
+2000000095,masculino,20 a 29,contacto con paciente,antofagasta,2020-02-25,2020-03-20,2020-03-19,recuperado
+2000000053,femenino,30 a 39,contacto con paciente,los lagos,2020-02-13,2020-03-22,2020-02-21,fallecido
+2000000220,femenino,70 a 79,call center,los lagos,2020-04-06,2020-05-05,2020-03-19,recuperado
+2000000583,femenino,20 a 29,contacto con paciente,biobío,2020-02-22,2020-03-22,2020-03-19,recuperado
+2000000359,masculino,50 a 59,otro,santiago,2020-04-14,2020-05-03,2020-03-19,recuperado
+2000000082,masculino,50 a 59,contacto con paciente,valparaíso,2020-02-27,2020-03-13,2020-03-19,recuperado
+2000000061,femenino,20 a 29,otro,santiago,2020-04-12,2020-05-14,2020-03-19,recuperado
+2000000239,femenino,30 a 39,contacto con paciente,antofagasta,2020-02-07,2020-02-25,2020-03-19,recuperado
+2000000567,femenino,20 a 29,contacto con paciente,santiago,2020-02-28,2020-03-22,2020-03-19,aislado
+2000000141,femenino,20 a 29,iglesia,los lagos,2020-02-13,2020-03-23,2020-03-19,recuperado
+2000000485,femenino,40 a 49,contacto con paciente,biobío,2020-02-11,2020-02-23,2020-03-19,recuperado
+2000000096,masculino,10 a 19,iglesia,los lagos,2020-03-06,2020-03-17,2020-03-19,recuperado
+2000000262,femenino,30 a 39,otro,los lagos,2020-04-09,2020-05-19,2020-03-19,recuperado
+2000000313,femenino,20 a 29,contacto con paciente,santiago,2020-04-07,2020-04-25,2020-03-19,recuperado
+2000000059,masculino,70 a 79,otro,santiago,2020-03-19,2020-03-22,2020-03-28,fallecido
+2000000236,femenino,40 a 49,otro,santiago,2020-02-21,2020-03-23,2020-03-19,recuperado
+2000000571,femenino,20 a 29,contacto con paciente,antofagasta,2020-03-08,2020-03-22,2020-03-19,aislado
+2000000275,femenino,30 a 39,viaje al extranjero,antofagasta,2020-02-10,2020-03-05,2020-03-19,recuperado
+2000000057,masculino,30 a 39,otro,valparaíso,2020-02-02,2020-02-26,2020-03-19,recuperado
+2000000249,femenino,70 a 79,otro,valparaíso,2020-04-07,2020-03-22,2020-04-24,fallecido
+2000000482,femenino,40 a 49,contacto con paciente,antofagasta,2020-03-11,2020-03-31,2020-03-19,recuperado
+2000000258,femenino,20 a 29,contacto con paciente,valparaíso,2020-02-08,2020-03-02,2020-03-19,recuperado
+2000000566,masculino,50 a 59,iglesia,los lagos,2020-02-09,2020-03-09,2020-03-19,recuperado
+2000000152,femenino,50 a 59,contacto con paciente,tarapacá,2020-03-11,2020-04-18,2020-03-19,recuperado
+2000000261,femenino,20 a 29,viaje al extranjero,santiago,2020-02-10,2020-03-22,2020-02-21,fallecido
+2000000076,femenino,80 o más,iglesia,biobío,2020-03-15,2020-03-22,2020-03-25,fallecido
+2000000579,femenino,20 a 29,otro,biobío,2020-02-26,2020-03-20,2020-03-19,recuperado
+2000000078,femenino,30 a 39,contacto con paciente,biobío,2020-04-06,2020-04-23,2020-03-19,recuperado
+2000000689,femenino,40 a 49,discoteca,santiago,2020-04-13,2020-03-22,2020-03-19,aislado
+2000000036,femenino,30 a 39,contacto con paciente,biobío,2020-02-09,2020-03-22,2020-03-19,aislado
+2000000062,femenino,60 a 69,contacto con paciente,santiago,2020-04-04,2020-03-22,2020-04-13,fallecido
+2000000384,masculino,70 a 79,contacto con paciente,valparaíso,2020-02-13,2020-03-22,2020-02-27,fallecido
+2000000364,femenino,40 a 49,discoteca,tarapacá,2020-04-09,2020-05-12,2020-03-19,recuperado
+2000000040,femenino,50 a 59,viaje al extranjero,biobío,2020-02-08,2020-02-19,2020-03-19,recuperado
+2000000556,femenino,50 a 59,contacto con paciente,los lagos,2020-04-10,2020-05-07,2020-03-19,recuperado
+2000000129,femenino,40 a 49,discoteca,biobío,2020-02-22,2020-03-22,2020-03-19,aislado
+2000000599,femenino,20 a 29,contacto con paciente,antofagasta,2020-02-01,2020-03-08,2020-03-19,recuperado
+2000000105,femenino,50 a 59,contacto con paciente,biobío,2020-03-25,2020-03-22,2020-03-19,aislado
+2000000402,femenino,30 a 39,iglesia,biobío,2020-02-13,2020-03-04,2020-03-19,recuperado
+2000000171,femenino,20 a 29,iglesia,antofagasta,2020-03-18,2020-04-09,2020-03-19,recuperado
+2000000027,masculino,20 a 29,otro,tarapacá,2020-02-18,2020-03-12,2020-03-19,recuperado
+2000000503,masculino,20 a 29,iglesia,los lagos,2020-02-29,2020-03-19,2020-03-19,recuperado
+2000000487,femenino,40 a 49,contacto con paciente,antofagasta,2020-02-13,2020-03-13,2020-03-19,recuperado
+2000000620,femenino,20 a 29,contacto con paciente,biobío,2020-03-10,2020-04-12,2020-03-19,recuperado
+2000000391,femenino,60 a 69,viaje al extranjero,santiago,2020-02-06,2020-03-22,2020-02-24,fallecido
+2000000687,femenino,60 a 69,otro,tarapacá,2020-03-26,2020-05-04,2020-03-19,recuperado
+2000000452,masculino,30 a 39,contacto con paciente,antofagasta,2020-04-09,2020-05-12,2020-03-19,recuperado
+2000000305,femenino,40 a 49,contacto con paciente,biobío,2020-04-09,2020-05-10,2020-03-19,recuperado
+2000000192,femenino,20 a 29,contacto con paciente,santiago,2020-04-07,2020-04-28,2020-03-19,recuperado
+2000000375,masculino,20 a 29,contacto con paciente,los lagos,2020-03-21,2020-04-06,2020-03-19,recuperado
+2000000227,femenino,20 a 29,contacto con paciente,biobío,2020-04-11,2020-05-09,2020-03-19,recuperado
+2000000291,femenino,50 a 59,discoteca,tarapacá,2020-04-10,2020-04-27,2020-03-19,recuperado
+2000000633,masculino,30 a 39,iglesia,antofagasta,2020-02-21,2020-03-22,2020-03-19,aislado
+2000000198,masculino,10 a 19,iglesia,santiago,2020-03-28,2020-05-03,2020-03-19,recuperado
+2000000453,masculino,50 a 59,otro,biobío,2020-04-06,2020-03-22,2020-04-13,fallecido
+2000000159,masculino,0 a 9,contacto con paciente,valparaíso,2020-02-23,2020-03-22,2020-03-19,aislado
+2000000426,femenino,60 a 69,call center,antofagasta,2020-03-15,2020-04-08,2020-03-19,recuperado
+2000000311,femenino,40 a 49,otro,biobío,2020-03-18,2020-04-03,2020-03-19,recuperado
+2000000060,femenino,20 a 29,discoteca,los lagos,2020-02-10,2020-03-12,2020-03-19,recuperado
+2000000512,masculino,70 a 79,contacto con paciente,valparaíso,2020-04-06,2020-05-12,2020-03-19,recuperado
+2000000613,femenino,70 a 79,iglesia,santiago,2020-04-14,2020-03-22,2020-05-02,fallecido
+2000000537,femenino,40 a 49,otro,valparaíso,2020-02-07,2020-03-15,2020-03-19,recuperado
+2000000414,femenino,20 a 29,iglesia,tarapacá,2020-03-22,2020-04-11,2020-03-19,recuperado
+2000000423,femenino,20 a 29,contacto con paciente,santiago,2020-03-28,2020-04-30,2020-03-19,recuperado
+2000000354,femenino,40 a 49,otro,santiago,2020-03-02,2020-03-22,2020-03-19,fallecido
+2000000387,femenino,80 o más,contacto con paciente,tarapacá,2020-03-11,2020-03-22,2020-03-16,fallecido
+2000000144,masculino,30 a 39,discoteca,santiago,2020-04-11,2020-04-26,2020-03-19,recuperado
+2000000445,femenino,30 a 39,otro,santiago,2020-02-23,2020-03-22,2020-03-19,recuperado
+2000000264,masculino,20 a 29,contacto con paciente,valparaíso,2020-02-09,2020-02-21,2020-03-19,recuperado
+2000000113,femenino,10 a 19,otro,tarapacá,2020-02-05,2020-02-22,2020-03-19,recuperado
+2000000102,femenino,10 a 19,contacto con paciente,santiago,2020-03-22,2020-03-22,2020-03-19,aislado
+2000000208,masculino,50 a 59,discoteca,santiago,2020-03-19,2020-03-22,2020-03-24,fallecido
+2000000412,masculino,20 a 29,viaje al extranjero,antofagasta,2020-03-15,2020-03-22,2020-03-19,aislado
+2000000139,femenino,60 a 69,contacto con paciente,valparaíso,2020-02-23,2020-03-22,2020-03-01,fallecido
+2000000204,femenino,80 o más,discoteca,biobío,2020-03-16,2020-03-22,2020-03-19,fallecido
+2000000438,femenino,30 a 39,otro,santiago,2020-04-15,2020-05-22,2020-03-19,recuperado
+2000000029,femenino,40 a 49,contacto con paciente,valparaíso,2020-03-13,2020-04-09,2020-03-19,recuperado
+2000000547,femenino,30 a 39,contacto con paciente,biobío,2020-02-19,2020-03-14,2020-03-19,recuperado
+2000000406,femenino,20 a 29,otro,santiago,2020-04-03,2020-05-02,2020-03-19,recuperado
+2000000623,femenino,50 a 59,otro,antofagasta,2020-04-04,2020-05-07,2020-03-19,recuperado
+2000000598,femenino,20 a 29,otro,antofagasta,2020-02-14,2020-02-27,2020-03-19,recuperado
+2000000643,masculino,50 a 59,otro,biobío,2020-03-12,2020-04-05,2020-03-19,recuperado
+2000000196,masculino,30 a 39,iglesia,antofagasta,2020-04-12,2020-04-23,2020-03-19,recuperado
+2000000370,femenino,20 a 29,viaje al extranjero,santiago,2020-02-05,2020-02-18,2020-03-19,recuperado
+2000000231,masculino,60 a 69,contacto con paciente,tarapacá,2020-02-03,2020-03-22,2020-02-11,fallecido
+2000000278,masculino,50 a 59,iglesia,los lagos,2020-02-27,2020-04-07,2020-03-19,recuperado
+2000000259,femenino,80 o más,iglesia,valparaíso,2020-04-01,2020-03-22,2020-03-19,aislado
+2000000306,masculino,40 a 49,viaje al extranjero,valparaíso,2020-02-04,2020-03-06,2020-03-19,recuperado
+2000000157,masculino,30 a 39,iglesia,los lagos,2020-03-09,2020-03-21,2020-03-19,recuperado
+2000000649,femenino,20 a 29,contacto con paciente,santiago,2020-02-11,2020-03-13,2020-03-19,recuperado
+2000000215,femenino,20 a 29,contacto con paciente,valparaíso,2020-04-07,2020-04-18,2020-03-19,recuperado
+2000000138,femenino,40 a 49,otro,valparaíso,2020-04-12,2020-05-16,2020-03-19,recuperado
+2000000288,femenino,40 a 49,discoteca,tarapacá,2020-04-14,2020-05-16,2020-03-19,recuperado
+2000000125,masculino,50 a 59,iglesia,tarapacá,2020-04-02,2020-03-22,2020-04-20,fallecido
+2000000389,masculino,50 a 59,otro,biobío,2020-02-04,2020-03-08,2020-03-19,recuperado
+2000000601,masculino,10 a 19,contacto con paciente,valparaíso,2020-02-17,2020-03-11,2020-03-19,recuperado
+2000000629,masculino,60 a 69,otro,santiago,2020-03-08,2020-03-22,2020-03-14,fallecido
+2000000127,masculino,50 a 59,discoteca,santiago,2020-02-13,2020-03-20,2020-03-19,recuperado
+2000000166,femenino,60 a 69,contacto con paciente,los lagos,2020-03-31,2020-03-22,2020-04-12,fallecido
+2000000558,femenino,60 a 69,viaje al extranjero,valparaíso,2020-03-11,2020-03-22,2020-03-24,fallecido
+2000000357,femenino,40 a 49,otro,tarapacá,2020-02-17,2020-03-24,2020-03-19,recuperado
+2000000222,masculino,10 a 19,contacto con paciente,tarapacá,2020-03-23,2020-04-15,2020-03-19,recuperado
+2000000527,masculino,10 a 19,iglesia,antofagasta,2020-04-12,2020-05-08,2020-03-19,recuperado
+2000000458,femenino,40 a 49,otro,los lagos,2020-04-08,2020-03-22,2020-04-22,fallecido
+2000000224,femenino,30 a 39,contacto con paciente,valparaíso,2020-03-18,2020-04-23,2020-03-19,recuperado
+2000000400,femenino,40 a 49,iglesia,los lagos,2020-02-27,2020-04-05,2020-03-19,recuperado
+2000000042,femenino,10 a 19,contacto con paciente,santiago,2020-02-15,2020-02-27,2020-03-19,recuperado
+2000000463,masculino,30 a 39,contacto con paciente,tarapacá,2020-04-11,2020-05-18,2020-03-19,recuperado
+2000000510,femenino,30 a 39,contacto con paciente,santiago,2020-03-12,2020-04-07,2020-03-19,recuperado
+2000000158,femenino,20 a 29,discoteca,antofagasta,2020-03-10,2020-03-29,2020-03-19,recuperado
+2000000576,masculino,40 a 49,viaje al extranjero,antofagasta,2020-03-04,2020-03-22,2020-03-07,fallecido
+2000000569,femenino,20 a 29,discoteca,los lagos,2020-02-26,2020-03-18,2020-03-19,recuperado
+2000000480,femenino,20 a 29,otro,biobío,2020-03-13,2020-03-25,2020-03-19,recuperado
+2000000525,femenino,50 a 59,contacto con paciente,tarapacá,2020-04-02,2020-04-19,2020-03-19,recuperado
+2000000692,masculino,30 a 39,iglesia,tarapacá,2020-02-05,2020-03-11,2020-03-19,recuperado
+2000000282,femenino,10 a 19,iglesia,biobío,2020-03-26,2020-04-14,2020-03-19,recuperado
+2000000396,masculino,20 a 29,contacto con paciente,antofagasta,2020-02-18,2020-03-22,2020-03-05,fallecido
+2000000168,masculino,80 o más,viaje al extranjero,los lagos,2020-02-12,2020-03-22,2020-02-24,fallecido
+2000000604,masculino,30 a 39,iglesia,biobío,2020-04-15,2020-05-19,2020-03-19,recuperado
+2000000085,masculino,80 o más,contacto con paciente,los lagos,2020-04-14,2020-03-22,2020-03-19,aislado
+2000000511,masculino,50 a 59,iglesia,los lagos,2020-03-10,2020-03-25,2020-03-19,recuperado
+2000000565,femenino,10 a 19,contacto con paciente,antofagasta,2020-03-20,2020-04-02,2020-03-19,recuperado
+2000000521,femenino,30 a 39,contacto con paciente,antofagasta,2020-02-27,2020-03-23,2020-03-19,recuperado
+2000000344,femenino,40 a 49,otro,santiago,2020-02-11,2020-02-27,2020-03-19,recuperado
+2000000626,femenino,50 a 59,iglesia,biobío,2020-04-12,2020-03-22,2020-04-24,fallecido
+2000000597,femenino,20 a 29,contacto con paciente,antofagasta,2020-02-22,2020-03-22,2020-03-19,aislado
+2000000451,femenino,20 a 29,iglesia,biobío,2020-02-26,2020-03-27,2020-03-19,recuperado
+2000000562,femenino,40 a 49,otro,santiago,2020-02-17,2020-03-03,2020-03-19,recuperado
+2000000499,femenino,40 a 49,otro,antofagasta,2020-03-22,2020-04-17,2020-03-19,recuperado
+2000000089,femenino,20 a 29,contacto con paciente,biobío,2020-02-19,2020-03-01,2020-03-19,recuperado
+2000000596,masculino,30 a 39,iglesia,santiago,2020-04-01,2020-05-11,2020-03-19,recuperado
+2000000524,masculino,20 a 29,discoteca,biobío,2020-03-20,2020-04-29,2020-03-19,recuperado
+2000000234,femenino,40 a 49,discoteca,santiago,2020-03-09,2020-04-18,2020-03-19,recuperado
+2000000277,femenino,30 a 39,contacto con paciente,tarapacá,2020-03-08,2020-04-08,2020-03-19,recuperado
+2000000172,masculino,40 a 49,iglesia,biobío,2020-04-09,2020-03-22,2020-03-19,aislado
+2000000516,masculino,80 o más,contacto con paciente,valparaíso,2020-03-27,2020-03-22,2020-04-07,fallecido
+2000000296,femenino,50 a 59,discoteca,santiago,2020-02-04,2020-02-27,2020-03-19,recuperado
+2000000181,masculino,40 a 49,iglesia,santiago,2020-03-27,2020-04-27,2020-03-19,recuperado
+2000000611,femenino,10 a 19,contacto con paciente,santiago,2020-03-27,2020-04-21,2020-03-19,recuperado
+2000000486,femenino,70 a 79,contacto con paciente,antofagasta,2020-04-05,2020-03-22,2020-03-19,aislado
+2000000332,masculino,30 a 39,viaje al extranjero,antofagasta,2020-04-02,2020-04-21,2020-03-19,recuperado
+2000000135,masculino,40 a 49,iglesia,los lagos,2020-02-05,2020-03-04,2020-03-19,recuperado
+2000000069,femenino,60 a 69,otro,los lagos,2020-04-10,2020-03-22,2020-04-22,fallecido
+2000000182,femenino,50 a 59,contacto con paciente,los lagos,2020-04-01,2020-05-02,2020-03-19,recuperado
+2000000667,masculino,20 a 29,contacto con paciente,tarapacá,2020-03-10,2020-04-10,2020-03-19,recuperado
+2000000077,femenino,40 a 49,otro,santiago,2020-04-03,2020-04-25,2020-03-19,recuperado
+2000000642,femenino,50 a 59,viaje al extranjero,antofagasta,2020-03-15,2020-04-04,2020-03-19,recuperado
+2000000621,femenino,40 a 49,otro,biobío,2020-04-16,2020-03-22,2020-04-24,fallecido
+2000000246,femenino,50 a 59,viaje al extranjero,biobío,2020-03-03,2020-04-02,2020-03-19,recuperado
+2000000189,masculino,50 a 59,otro,tarapacá,2020-03-24,2020-04-12,2020-03-19,recuperado
+2000000361,femenino,20 a 29,viaje al extranjero,santiago,2020-03-27,2020-04-07,2020-03-19,recuperado
+2000000553,femenino,70 a 79,contacto con paciente,valparaíso,2020-04-03,2020-05-06,2020-03-19,recuperado
+2000000467,femenino,30 a 39,contacto con paciente,santiago,2020-04-03,2020-05-08,2020-03-19,recuperado
+2000000045,masculino,20 a 29,call center,tarapacá,2020-04-12,2020-04-27,2020-03-19,recuperado
+2000000019,masculino,40 a 49,iglesia,antofagasta,2020-04-16,2020-05-19,2020-03-19,recuperado
+2000000190,femenino,60 a 69,call center,los lagos,2020-02-06,2020-03-02,2020-03-19,recuperado
+2000000080,masculino,80 o más,otro,tarapacá,2020-03-13,2020-03-22,2020-03-26,fallecido
+2000000660,masculino,50 a 59,iglesia,biobío,2020-03-14,2020-04-18,2020-03-19,recuperado
+2000000638,masculino,80 o más,call center,santiago,2020-02-21,2020-03-10,2020-03-19,recuperado
+2000000600,femenino,30 a 39,otro,santiago,2020-02-19,2020-03-22,2020-03-19,aislado
+2000000662,femenino,20 a 29,otro,santiago,2020-02-22,2020-03-07,2020-03-19,recuperado
+2000000665,masculino,40 a 49,otro,santiago,2020-04-01,2020-04-15,2020-03-19,recuperado
+2000000399,masculino,0 a 9,discoteca,los lagos,2020-03-06,2020-03-22,2020-03-19,aislado
+2000000434,femenino,30 a 39,contacto con paciente,santiago,2020-02-04,2020-03-22,2020-03-19,aislado
+2000000065,femenino,60 a 69,otro,tarapacá,2020-03-20,2020-03-22,2020-03-26,fallecido
+2000000697,masculino,20 a 29,otro,antofagasta,2020-03-15,2020-04-15,2020-03-19,recuperado
+2000000216,femenino,60 a 69,contacto con paciente,santiago,2020-02-16,2020-03-19,2020-03-19,recuperado
+2000000184,masculino,40 a 49,contacto con paciente,los lagos,2020-04-08,2020-05-17,2020-03-19,recuperado
+2000000109,masculino,50 a 59,otro,santiago,2020-04-13,2020-03-22,2020-04-17,fallecido
+2000000255,masculino,60 a 69,contacto con paciente,valparaíso,2020-03-27,2020-03-22,2020-04-03,fallecido
+2000000570,masculino,20 a 29,call center,valparaíso,2020-02-06,2020-02-24,2020-03-19,recuperado
+2000000101,femenino,10 a 19,iglesia,antofagasta,2020-04-14,2020-05-12,2020-03-19,recuperado
+2000000530,masculino,40 a 49,otro,santiago,2020-02-15,2020-03-22,2020-02-27,fallecido
+2000000214,masculino,50 a 59,contacto con paciente,los lagos,2020-02-18,2020-03-20,2020-03-19,recuperado
+2000000488,femenino,20 a 29,contacto con paciente,antofagasta,2020-02-04,2020-02-21,2020-03-19,recuperado
+2000000616,femenino,50 a 59,contacto con paciente,los lagos,2020-02-27,2020-03-22,2020-03-12,fallecido
+2000000619,femenino,70 a 79,contacto con paciente,los lagos,2020-02-06,2020-02-18,2020-03-19,recuperado
+2000000373,masculino,80 o más,discoteca,los lagos,2020-02-07,2020-03-22,2020-03-19,aislado
+2000000477,femenino,40 a 49,otro,tarapacá,2020-03-19,2020-03-22,2020-03-19,aislado
+2000000056,masculino,30 a 39,otro,los lagos,2020-02-25,2020-03-24,2020-03-19,recuperado
+2000000695,femenino,50 a 59,contacto con paciente,santiago,2020-02-18,2020-03-24,2020-03-19,recuperado
+2000000615,femenino,80 o más,contacto con paciente,biobío,2020-03-20,2020-03-22,2020-04-02,fallecido
+2000000092,femenino,50 a 59,contacto con paciente,valparaíso,2020-04-09,2020-05-03,2020-03-19,recuperado
+2000000271,femenino,70 a 79,contacto con paciente,antofagasta,2020-03-01,2020-03-22,2020-03-17,fallecido
+2000000557,masculino,30 a 39,otro,tarapacá,2020-03-30,2020-04-16,2020-03-19,recuperado
+2000000492,femenino,30 a 39,viaje al extranjero,valparaíso,2020-04-03,2020-03-22,2020-03-19,aislado
+2000000408,masculino,30 a 39,contacto con paciente,los lagos,2020-03-06,2020-03-22,2020-03-18,fallecido
+2000000178,femenino,30 a 39,iglesia,tarapacá,2020-02-29,2020-03-22,2020-03-19,aislado
+2000000112,masculino,20 a 29,contacto con paciente,los lagos,2020-04-12,2020-05-14,2020-03-19,recuperado
+2000000055,masculino,50 a 59,otro,santiago,2020-02-11,2020-03-10,2020-03-19,recuperado
+2000000420,femenino,40 a 49,iglesia,biobío,2020-02-22,2020-03-27,2020-03-19,recuperado
+2000000322,masculino,40 a 49,otro,antofagasta,2020-03-13,2020-04-16,2020-03-19,recuperado
+2000000614,femenino,20 a 29,otro,santiago,2020-03-04,2020-02-23,2020-03-19,recuperado
+2000000177,masculino,30 a 39,iglesia,biobío,2020-02-13,2020-03-21,2020-03-19,recuperado
+2000000371,masculino,20 a 29,call center,antofagasta,2020-03-26,2020-04-26,2020-03-19,recuperado
+2000000440,femenino,20 a 29,contacto con paciente,santiago,2020-02-20,2020-03-22,2020-03-19,recuperado
+2000000563,masculino,60 a 69,otro,los lagos,2020-02-26,2020-03-22,2020-03-13,fallecido
+2000000005,femenino,40 a 49,contacto con paciente,valparaíso,2020-04-14,2020-05-06,2020-03-19,recuperado
+2000000176,masculino,20 a 29,iglesia,tarapacá,2020-02-02,2020-03-22,2020-03-19,aislado
+2000000506,masculino,50 a 59,viaje al extranjero,valparaíso,2020-04-03,2020-03-22,2020-03-19,aislado
+2000000079,femenino,40 a 49,otro,los lagos,2020-04-06,2020-04-26,2020-03-19,recuperado
+2000000617,masculino,50 a 59,otro,los lagos,2020-04-06,2020-05-08,2020-03-19,recuperado
+2000000164,masculino,30 a 39,iglesia,los lagos,2020-02-07,2020-03-22,2020-03-19,aislado
+2000000386,masculino,10 a 19,contacto con paciente,santiago,2020-04-09,2020-05-17,2020-03-19,recuperado
+2000000590,femenino,40 a 49,iglesia,tarapacá,2020-03-06,2020-04-01,2020-03-19,recuperado
+2000000064,femenino,40 a 49,contacto con paciente,antofagasta,2020-02-29,2020-04-04,2020-03-19,recuperado
+2000000130,masculino,40 a 49,contacto con paciente,los lagos,2020-03-09,2020-04-01,2020-03-19,recuperado
+2000000314,femenino,40 a 49,contacto con paciente,biobío,2020-04-16,2020-03-22,2020-05-01,fallecido
+2000000252,femenino,40 a 49,otro,antofagasta,2020-02-21,2020-03-22,2020-03-19,aislado
+2000000520,femenino,20 a 29,otro,tarapacá,2020-02-29,2020-03-22,2020-03-19,recuperado
+2000000193,femenino,60 a 69,otro,biobío,2020-03-06,2020-03-22,2020-03-19,aislado
+2000000289,femenino,20 a 29,iglesia,los lagos,2020-03-16,2020-04-09,2020-03-19,recuperado
+2000000297,masculino,40 a 49,otro,valparaíso,2020-04-08,2020-05-04,2020-03-19,recuperado
+2000000424,femenino,20 a 29,otro,valparaíso,2020-02-11,2020-02-24,2020-03-19,recuperado
+2000000097,femenino,40 a 49,otro,biobío,2020-04-03,2020-04-18,2020-03-19,recuperado
+2000000679,femenino,10 a 19,contacto con paciente,biobío,2020-04-09,2020-03-22,2020-03-19,aislado
+2000000235,femenino,20 a 29,discoteca,biobío,2020-03-08,2020-04-12,2020-03-19,recuperado
+2000000676,femenino,30 a 39,viaje al extranjero,antofagasta,2020-04-02,2020-03-22,2020-03-19,aislado
+2000000515,femenino,60 a 69,contacto con paciente,santiago,2020-03-10,2020-03-22,2020-03-22,fallecido
+2000000392,masculino,30 a 39,otro,biobío,2020-02-05,2020-02-19,2020-03-19,recuperado
+2000000317,femenino,50 a 59,otro,los lagos,2020-03-18,2020-04-17,2020-03-19,recuperado
+2000000048,femenino,60 a 69,contacto con paciente,santiago,2020-03-03,2020-04-04,2020-03-19,recuperado
+2000000588,femenino,40 a 49,contacto con paciente,santiago,2020-02-13,2020-03-07,2020-03-19,recuperado
+2000000134,masculino,50 a 59,viaje al extranjero,antofagasta,2020-04-15,2020-05-16,2020-03-19,recuperado
+2000000688,femenino,20 a 29,otro,valparaíso,2020-03-09,2020-03-22,2020-03-19,aislado
+2000000206,femenino,50 a 59,discoteca,biobío,2020-04-04,2020-03-22,2020-04-11,fallecido
+2000000257,femenino,20 a 29,otro,antofagasta,2020-02-12,2020-03-15,2020-03-19,recuperado
+2000000001,masculino,20 a 29,otro,tarapacá,2020-04-12,2020-05-19,2020-03-19,recuperado
+2000000070,femenino,20 a 29,otro,santiago,2020-03-06,2020-03-27,2020-03-19,recuperado
+2000000084,femenino,30 a 39,iglesia,los lagos,2020-04-10,2020-05-13,2020-03-19,recuperado
+2000000007,femenino,60 a 69,viaje al extranjero,tarapacá,2020-03-05,2020-03-31,2020-03-19,recuperado
+2000000468,femenino,30 a 39,otro,santiago,2020-02-22,2020-03-15,2020-03-19,recuperado
+2000000348,femenino,60 a 69,iglesia,antofagasta,2020-03-09,2020-03-24,2020-03-19,recuperado
+2000000543,femenino,60 a 69,contacto con paciente,santiago,2020-02-18,2020-03-29,2020-03-19,recuperado
+2000000415,masculino,40 a 49,discoteca,antofagasta,2020-04-07,2020-05-15,2020-03-19,recuperado
+2000000435,femenino,50 a 59,iglesia,santiago,2020-03-31,2020-03-22,2020-04-06,fallecido
+2000000111,masculino,20 a 29,contacto con paciente,valparaíso,2020-04-08,2020-04-27,2020-03-19,recuperado
+2000000427,masculino,20 a 29,viaje al extranjero,biobío,2020-04-11,2020-05-08,2020-03-19,recuperado
+2000000194,masculino,30 a 39,iglesia,biobío,2020-04-02,2020-05-07,2020-03-19,recuperado
+2000000669,femenino,30 a 39,otro,los lagos,2020-03-28,2020-03-22,2020-03-19,aislado
+2000000631,masculino,40 a 49,viaje al extranjero,valparaíso,2020-03-02,2020-03-22,2020-03-19,recuperado
+2000000340,femenino,70 a 79,viaje al extranjero,los lagos,2020-03-11,2020-03-22,2020-03-18,fallecido
+2000000659,masculino,40 a 49,contacto con paciente,los lagos,2020-02-28,2020-04-06,2020-03-19,recuperado
+2000000528,masculino,40 a 49,call center,valparaíso,2020-02-12,2020-02-29,2020-03-19,recuperado
+2000000411,femenino,60 a 69,discoteca,biobío,2020-03-30,2020-03-22,2020-04-12,fallecido
+2000000429,femenino,20 a 29,otro,biobío,2020-04-16,2020-05-26,2020-03-19,recuperado
+2000000385,femenino,40 a 49,viaje al extranjero,tarapacá,2020-03-04,2020-03-30,2020-03-19,recuperado
+2000000349,masculino,30 a 39,contacto con paciente,antofagasta,2020-02-15,2020-03-17,2020-03-19,recuperado
+2000000123,masculino,20 a 29,viaje al extranjero,valparaíso,2020-03-10,2020-04-08,2020-03-19,recuperado
+2000000484,masculino,20 a 29,contacto con paciente,tarapacá,2020-04-13,2020-04-26,2020-03-19,recuperado
+2000000536,masculino,70 a 79,viaje al extranjero,valparaíso,2020-03-09,2020-03-24,2020-03-19,recuperado
+2000000461,masculino,20 a 29,contacto con paciente,santiago,2020-04-04,2020-05-04,2020-03-19,recuperado
+2000000564,femenino,40 a 49,contacto con paciente,los lagos,2020-03-21,2020-04-01,2020-03-19,recuperado
+2000000226,femenino,70 a 79,contacto con paciente,los lagos,2020-02-16,2020-03-06,2020-03-19,recuperado
+2000000455,masculino,50 a 59,contacto con paciente,antofagasta,2020-02-08,2020-02-27,2020-03-19,recuperado
+2000000497,femenino,20 a 29,otro,los lagos,2020-02-10,2020-02-21,2020-03-19,recuperado
+2000000150,masculino,40 a 49,otro,tarapacá,2020-04-08,2020-04-20,2020-03-19,recuperado
+2000000115,masculino,30 a 39,discoteca,biobío,2020-02-10,2020-02-26,2020-03-19,recuperado
+2000000302,masculino,30 a 39,contacto con paciente,santiago,2020-04-14,2020-05-11,2020-03-19,recuperado
+2000000032,femenino,20 a 29,viaje al extranjero,valparaíso,2020-03-17,2020-04-14,2020-03-19,recuperado
+2000000203,masculino,30 a 39,contacto con paciente,santiago,2020-03-11,2020-04-05,2020-03-19,recuperado
+2000000011,femenino,40 a 49,otro,antofagasta,2020-03-27,2020-04-07,2020-03-19,recuperado
+2000000137,femenino,30 a 39,otro,biobío,2020-03-21,2020-03-22,2020-04-08,fallecido
+2000000401,masculino,30 a 39,contacto con paciente,biobío,2020-03-20,2020-04-26,2020-03-19,recuperado
+2000000218,masculino,20 a 29,otro,valparaíso,2020-03-15,2020-04-06,2020-03-19,recuperado
+2000000368,masculino,40 a 49,contacto con paciente,biobío,2020-03-16,2020-04-25,2020-03-19,recuperado
+2000000304,masculino,60 a 69,otro,santiago,2020-03-09,2020-04-14,2020-03-19,recuperado
+2000000022,masculino,70 a 79,otro,los lagos,2020-03-17,2020-03-28,2020-03-19,recuperado
+2000000610,femenino,70 a 79,contacto con paciente,santiago,2020-02-24,2020-03-22,2020-03-02,fallecido
+2000000188,masculino,60 a 69,otro,los lagos,2020-03-06,2020-03-22,2020-03-15,fallecido
+2000000381,femenino,60 a 69,contacto con paciente,tarapacá,2020-03-13,2020-04-03,2020-03-19,recuperado
+2000000575,femenino,30 a 39,discoteca,biobío,2020-03-06,2020-03-29,2020-03-19,recuperado
+2000000473,masculino,30 a 39,otro,biobío,2020-02-20,2020-03-22,2020-02-27,fallecido
+2000000677,masculino,50 a 59,discoteca,tarapacá,2020-03-22,2020-03-22,2020-03-19,aislado
+2000000345,masculino,30 a 39,discoteca,antofagasta,2020-02-27,2020-03-21,2020-03-19,recuperado
+2000000030,femenino,60 a 69,otro,valparaíso,2020-03-01,2020-03-22,2020-03-19,aislado
+2000000207,masculino,20 a 29,otro,valparaíso,2020-02-26,2020-03-23,2020-03-19,recuperado
+2000000541,masculino,30 a 39,viaje al extranjero,biobío,2020-03-06,2020-03-31,2020-03-19,recuperado
+2000000433,masculino,20 a 29,call center,tarapacá,2020-02-11,2020-03-14,2020-03-19,recuperado
+2000000191,masculino,30 a 39,otro,tarapacá,2020-04-06,2020-04-19,2020-03-19,recuperado
+2000000153,masculino,50 a 59,otro,tarapacá,2020-03-15,2020-04-15,2020-03-19,recuperado
+2000000337,femenino,80 o más,discoteca,valparaíso,2020-02-28,2020-03-22,2020-03-08,fallecido
+2000000122,femenino,50 a 59,discoteca,biobío,2020-02-11,2020-03-13,2020-03-19,recuperado
+2000000628,masculino,20 a 29,otro,santiago,2020-02-24,2020-03-22,2020-03-19,aislado
+2000000175,femenino,40 a 49,contacto con paciente,los lagos,2020-02-07,2020-03-02,2020-03-19,recuperado
+2000000312,masculino,50 a 59,otro,tarapacá,2020-04-09,2020-03-22,2020-04-16,fallecido
+2000000632,femenino,40 a 49,viaje al extranjero,tarapacá,2020-03-27,2020-04-15,2020-03-19,recuperado
+2000000690,femenino,60 a 69,discoteca,los lagos,2020-02-19,2020-03-22,2020-03-19,aislado
+2000000591,masculino,30 a 39,viaje al extranjero,antofagasta,2020-03-25,2020-04-10,2020-03-19,recuperado
+2000000351,masculino,70 a 79,viaje al extranjero,tarapacá,2020-04-04,2020-04-24,2020-03-19,recuperado
+2000000355,masculino,50 a 59,viaje al extranjero,los lagos,2020-02-18,2020-03-09,2020-03-19,recuperado
+2000000540,femenino,20 a 29,discoteca,biobío,2020-02-07,2020-02-24,2020-03-19,recuperado
+2000000016,femenino,60 a 69,contacto con paciente,santiago,2020-02-12,2020-03-22,2020-03-19,aislado
+2000000363,masculino,20 a 29,viaje al extranjero,valparaíso,2020-04-03,2020-05-07,2020-03-19,recuperado
+2000000581,femenino,10 a 19,contacto con paciente,santiago,2020-03-28,2020-04-14,2020-03-19,recuperado
+2000000686,masculino,60 a 69,iglesia,antofagasta,2020-02-19,2020-03-22,2020-02-22,fallecido
+2000000383,femenino,50 a 59,contacto con paciente,santiago,2020-03-13,2020-03-27,2020-03-19,recuperado
+2000000366,masculino,70 a 79,contacto con paciente,biobío,2020-03-06,2020-03-22,2020-03-23,fallecido
+2000000522,masculino,30 a 39,otro,santiago,2020-02-18,2020-03-05,2020-03-19,recuperado
+2000000307,femenino,20 a 29,otro,santiago,2020-03-21,2020-04-20,2020-03-19,recuperado
+2000000369,femenino,70 a 79,contacto con paciente,tarapacá,2020-02-13,2020-03-22,2020-03-19,recuperado
+2000000310,masculino,30 a 39,otro,los lagos,2020-04-06,2020-03-22,2020-04-09,fallecido
+2000000641,femenino,20 a 29,iglesia,los lagos,2020-03-06,2020-04-14,2020-03-19,recuperado
+2000000173,masculino,40 a 49,call center,antofagasta,2020-02-05,2020-03-01,2020-03-19,recuperado
+2000000476,masculino,40 a 49,contacto con paciente,los lagos,2020-02-21,2020-03-10,2020-03-19,recuperado
+2000000154,femenino,20 a 29,viaje al extranjero,antofagasta,2020-03-31,2020-04-22,2020-03-19,recuperado
+2000000052,femenino,60 a 69,otro,los lagos,2020-02-23,2020-03-22,2020-03-19,aislado
+2000000500,masculino,40 a 49,contacto con paciente,biobío,2020-04-05,2020-03-22,2020-04-13,fallecido
+2000000652,femenino,30 a 39,call center,valparaíso,2020-03-02,2020-04-10,2020-03-19,recuperado
+2000000119,masculino,30 a 39,discoteca,santiago,2020-03-16,2020-03-22,2020-03-19,aislado
+2000000529,femenino,40 a 49,iglesia,antofagasta,2020-03-03,2020-04-10,2020-03-19,recuperado
+2000000025,masculino,20 a 29,iglesia,santiago,2020-02-26,2020-03-28,2020-03-19,recuperado
+2000000377,femenino,40 a 49,otro,los lagos,2020-02-25,2020-03-24,2020-03-19,recuperado
+2000000229,femenino,20 a 29,contacto con paciente,biobío,2020-02-01,2020-02-17,2020-03-19,recuperado
+2000000538,femenino,30 a 39,otro,valparaíso,2020-02-25,2020-03-18,2020-03-19,recuperado
+2000000120,masculino,60 a 69,otro,antofagasta,2020-02-20,2020-03-22,2020-03-08,fallecido
+2000000298,femenino,70 a 79,viaje al extranjero,santiago,2020-03-07,2020-03-21,2020-03-19,recuperado
+2000000483,masculino,20 a 29,otro,santiago,2020-03-28,2020-04-20,2020-03-19,recuperado
+2000000549,femenino,50 a 59,viaje al extranjero,los lagos,2020-04-10,2020-05-08,2020-03-19,recuperado
+2000000309,femenino,80 o más,contacto con paciente,antofagasta,2020-03-17,2020-03-22,2020-03-19,fallecido
+2000000038,masculino,10 a 19,contacto con paciente,tarapacá,2020-04-14,2020-05-05,2020-03-19,recuperado
+2000000495,masculino,80 o más,iglesia,antofagasta,2020-03-03,2020-04-08,2020-03-19,recuperado
+2000000647,femenino,80 o más,contacto con paciente,tarapacá,2020-03-25,2020-03-22,2020-03-30,fallecido
+2000000395,masculino,20 a 29,otro,santiago,2020-02-15,2020-03-16,2020-03-19,recuperado
+2000000276,femenino,50 a 59,contacto con paciente,biobío,2020-03-23,2020-03-22,2020-03-19,aislado
+2000000441,masculino,20 a 29,discoteca,biobío,2020-02-02,2020-03-01,2020-03-19,recuperado
+2000000413,femenino,50 a 59,viaje al extranjero,santiago,2020-03-28,2020-03-22,2020-03-19,aislado
+2000000428,masculino,30 a 39,contacto con paciente,los lagos,2020-04-12,2020-05-18,2020-03-19,recuperado
+2000000398,masculino,30 a 39,iglesia,valparaíso,2020-02-12,2020-03-22,2020-02-14,fallecido
+2000000577,femenino,20 a 29,otro,los lagos,2020-02-17,2020-03-18,2020-03-19,recuperado
+2000000388,femenino,50 a 59,contacto con paciente,biobío,2020-04-02,2020-05-01,2020-03-19,recuperado
+2000000585,femenino,0 a 9,contacto con paciente,los lagos,2020-02-07,2020-03-01,2020-03-19,recuperado
+2000000618,masculino,40 a 49,contacto con paciente,tarapacá,2020-03-18,2020-03-22,2020-03-25,fallecido
+2000000555,femenino,40 a 49,call center,tarapacá,2020-02-29,2020-03-24,2020-03-19,recuperado
+2000000539,femenino,60 a 69,contacto con paciente,tarapacá,2020-03-12,2020-03-22,2020-03-16,fallecido
+2000000367,masculino,20 a 29,discoteca,antofagasta,2020-02-21,2020-03-25,2020-03-19,recuperado
+2000000037,femenino,60 a 69,viaje al extranjero,santiago,2020-02-08,2020-03-22,2020-03-19,aislado
+2000000199,femenino,50 a 59,contacto con paciente,valparaíso,2020-02-05,2020-03-22,2020-02-08,fallecido
+2000000657,femenino,30 a 39,otro,santiago,2020-04-02,2020-04-14,2020-03-19,recuperado
+2000000213,femenino,80 o más,otro,tarapacá,2020-02-22,2020-03-31,2020-03-19,recuperado
+2000000124,masculino,20 a 29,otro,biobío,2020-02-23,2020-03-12,2020-03-19,recuperado
+2000000315,masculino,20 a 29,contacto con paciente,antofagasta,2020-03-19,2020-04-08,2020-03-19,recuperado
+2000000612,femenino,20 a 29,contacto con paciente,valparaíso,2020-03-08,2020-04-05,2020-03-19,recuperado
+2000000664,femenino,20 a 29,discoteca,santiago,2020-02-28,2020-04-02,2020-03-19,recuperado
+2000000380,femenino,50 a 59,contacto con paciente,tarapacá,2020-03-03,2020-03-28,2020-03-19,recuperado
+2000000646,femenino,10 a 19,contacto con paciente,santiago,2020-02-11,2020-02-25,2020-03-19,recuperado
+2000000627,masculino,40 a 49,call center,valparaíso,2020-03-06,2020-04-01,2020-03-19,recuperado
+2000000403,masculino,20 a 29,contacto con paciente,santiago,2020-04-04,2020-04-19,2020-03-19,recuperado
+2000000472,masculino,80 o más,contacto con paciente,los lagos,2020-03-06,2020-03-22,2020-03-08,fallecido
+2000000269,masculino,10 a 19,viaje al extranjero,tarapacá,2020-02-05,2020-03-13,2020-03-19,recuperado
+2000000339,masculino,30 a 39,contacto con paciente,tarapacá,2020-03-02,2020-03-18,2020-03-19,recuperado
+2000000066,femenino,40 a 49,otro,biobío,2020-03-06,2020-03-21,2020-03-19,recuperado
+2000000211,masculino,30 a 39,otro,biobío,2020-04-15,2020-05-19,2020-03-19,recuperado
+2000000542,masculino,40 a 49,viaje al extranjero,biobío,2020-02-05,2020-03-02,2020-03-19,recuperado
+2000000195,masculino,50 a 59,otro,valparaíso,2020-03-06,2020-03-22,2020-03-19,recuperado
+2000000108,femenino,60 a 69,contacto con paciente,antofagasta,2020-04-15,2020-03-22,2020-03-19,aislado
+2000000678,masculino,80 o más,discoteca,tarapacá,2020-03-16,2020-03-22,2020-03-31,fallecido
+2000000444,femenino,60 a 69,otro,tarapacá,2020-03-31,2020-05-02,2020-03-19,recuperado
+2000000456,masculino,60 a 69,contacto con paciente,valparaíso,2020-04-04,2020-04-30,2020-03-19,recuperado
+2000000058,masculino,30 a 39,otro,santiago,2020-02-23,2020-03-05,2020-03-19,recuperado
+2000000187,femenino,20 a 29,contacto con paciente,biobío,2020-03-02,2020-04-09,2020-03-19,recuperado
+2000000681,femenino,20 a 29,otro,valparaíso,2020-03-26,2020-04-07,2020-03-19,recuperado
+2000000034,masculino,40 a 49,otro,santiago,2020-03-27,2020-05-01,2020-03-19,recuperado
+2000000352,masculino,10 a 19,viaje al extranjero,santiago,2020-04-13,2020-05-01,2020-03-19,recuperado
+2000000447,femenino,30 a 39,iglesia,los lagos,2020-02-04,2020-02-23,2020-03-19,recuperado
+2000000200,femenino,30 a 39,discoteca,tarapacá,2020-02-13,2020-03-07,2020-03-19,recuperado
+2000000240,femenino,20 a 29,otro,los lagos,2020-02-22,2020-03-18,2020-03-19,recuperado
+2000000578,femenino,70 a 79,contacto con paciente,biobío,2020-02-04,2020-02-29,2020-03-19,recuperado
+2000000419,femenino,40 a 49,contacto con paciente,santiago,2020-03-05,2020-04-02,2020-03-19,recuperado
+2000000602,masculino,60 a 69,discoteca,biobío,2020-03-05,2020-04-02,2020-03-19,recuperado
+2000000490,femenino,50 a 59,contacto con paciente,santiago,2020-03-27,2020-04-14,2020-03-19,recuperado
+2000000494,masculino,30 a 39,otro,valparaíso,2020-03-16,2020-03-22,2020-04-02,fallecido
+2000000394,masculino,30 a 39,contacto con paciente,santiago,2020-02-03,2020-02-21,2020-03-19,recuperado
+2000000086,masculino,50 a 59,contacto con paciente,biobío,2020-02-23,2020-03-27,2020-03-19,recuperado
+2000000379,masculino,20 a 29,otro,valparaíso,2020-02-16,2020-03-13,2020-03-19,recuperado
+2000000162,femenino,80 o más,contacto con paciente,antofagasta,2020-04-12,2020-03-22,2020-04-23,fallecido
+2000000493,femenino,0 a 9,contacto con paciente,santiago,2020-02-13,2020-02-27,2020-03-19,recuperado
+2000000075,masculino,40 a 49,contacto con paciente,antofagasta,2020-02-06,2020-02-24,2020-03-19,recuperado
+2000000118,masculino,50 a 59,contacto con paciente,valparaíso,2020-04-12,2020-05-05,2020-03-19,recuperado
+2000000326,masculino,10 a 19,discoteca,antofagasta,2020-02-12,2020-02-28,2020-03-19,recuperado
+2000000179,femenino,60 a 69,otro,antofagasta,2020-03-26,2020-03-22,2020-03-19,aislado
+2000000068,femenino,40 a 49,viaje al extranjero,tarapacá,2020-03-14,2020-04-15,2020-03-19,recuperado
+2000000637,masculino,20 a 29,otro,tarapacá,2020-02-09,2020-03-10,2020-03-19,recuperado
+2000000634,femenino,70 a 79,contacto con paciente,los lagos,2020-04-06,2020-03-22,2020-04-09,fallecido
+2000000645,femenino,40 a 49,otro,biobío,2020-03-02,2020-03-22,2020-03-19,aislado
+2000000023,femenino,20 a 29,call center,antofagasta,2020-03-13,2020-04-07,2020-03-19,recuperado
+2000000514,femenino,30 a 39,otro,los lagos,2020-04-10,2020-05-17,2020-03-19,recuperado
+2000000251,femenino,20 a 29,contacto con paciente,antofagasta,2020-03-06,2020-03-20,2020-03-19,recuperado
+2000000405,masculino,10 a 19,contacto con paciente,valparaíso,2020-03-09,2020-03-30,2020-03-19,recuperado
+2000000404,femenino,50 a 59,otro,biobío,2020-03-18,2020-03-22,2020-03-21,fallecido
+2000000126,femenino,30 a 39,otro,santiago,2020-03-28,2020-04-20,2020-03-19,recuperado
+2000000295,masculino,10 a 19,discoteca,antofagasta,2020-03-31,2020-04-21,2020-03-19,recuperado
+2000000293,masculino,40 a 49,viaje al extranjero,biobío,2020-02-06,2020-03-22,2020-02-10,fallecido
+2000000378,masculino,30 a 39,otro,valparaíso,2020-04-13,2020-05-03,2020-03-19,recuperado
+2000000238,femenino,20 a 29,viaje al extranjero,santiago,2020-03-18,2020-04-10,2020-03-19,recuperado
+2000000301,femenino,80 o más,viaje al extranjero,tarapacá,2020-04-03,2020-03-22,2020-04-19,fallecido
+2000000454,masculino,30 a 39,viaje al extranjero,antofagasta,2020-03-06,2020-04-08,2020-03-19,recuperado
+2000000149,masculino,70 a 79,iglesia,tarapacá,2020-03-05,2020-04-12,2020-03-19,recuperado
+2000000071,femenino,40 a 49,otro,antofagasta,2020-04-02,2020-03-22,2020-04-11,fallecido
+2000000050,masculino,30 a 39,viaje al extranjero,antofagasta,2020-03-30,2020-05-05,2020-03-19,recuperado
+2000000186,femenino,30 a 39,iglesia,valparaíso,2020-02-12,2020-03-21,2020-03-19,recuperado
+2000000103,femenino,40 a 49,contacto con paciente,santiago,2020-02-10,2020-03-15,2020-03-19,recuperado
+2000000281,femenino,60 a 69,contacto con paciente,antofagasta,2020-02-09,2020-03-22,2020-02-19,fallecido
+2000000365,masculino,20 a 29,contacto con paciente,valparaíso,2020-02-18,2020-03-22,2020-03-19,aislado
+2000000624,masculino,20 a 29,contacto con paciente,biobío,2020-02-20,2020-03-22,2020-03-06,fallecido
+2000000501,masculino,40 a 49,viaje al extranjero,los lagos,2020-02-10,2020-03-05,2020-03-19,recuperado
+2000000020,masculino,40 a 49,viaje al extranjero,valparaíso,2020-02-18,2020-03-09,2020-03-19,recuperado
+2000000407,masculino,30 a 39,viaje al extranjero,biobío,2020-02-28,2020-03-22,2020-03-19,recuperado
+2000000356,masculino,40 a 49,call center,los lagos,2020-02-04,2020-03-09,2020-03-19,recuperado
+2000000324,masculino,30 a 39,discoteca,valparaíso,2020-02-17,2020-03-09,2020-03-19,recuperado
+2000000460,femenino,80 o más,otro,antofagasta,2020-03-01,2020-03-22,2020-03-07,fallecido
+2000000323,masculino,60 a 69,contacto con paciente,santiago,2020-04-13,2020-03-22,2020-03-19,aislado
+2000000287,femenino,50 a 59,otro,los lagos,2020-03-28,2020-04-20,2020-03-19,recuperado
+2000000063,femenino,20 a 29,discoteca,biobío,2020-03-13,2020-04-20,2020-03-19,recuperado
+2000000090,femenino,20 a 29,iglesia,los lagos,2020-03-04,2020-03-22,2020-03-22,fallecido
+2000000674,femenino,70 a 79,viaje al extranjero,tarapacá,2020-03-10,2020-03-22,2020-03-15,fallecido
+2000000586,masculino,40 a 49,contacto con paciente,santiago,2020-02-10,2020-03-22,2020-02-16,fallecido
+2000000230,masculino,0 a 9,contacto con paciente,tarapacá,2020-02-18,2020-03-03,2020-03-19,recuperado
+2000000325,femenino,20 a 29,otro,antofagasta,2020-04-11,2020-04-25,2020-03-19,recuperado
+2000000051,femenino,50 a 59,contacto con paciente,los lagos,2020-03-24,2020-04-15,2020-03-19,recuperado
+2000000185,masculino,60 a 69,otro,los lagos,2020-03-10,2020-03-30,2020-03-19,recuperado
+2000000253,femenino,20 a 29,otro,valparaíso,2020-03-09,2020-04-08,2020-03-19,recuperado
+2000000341,femenino,20 a 29,contacto con paciente,tarapacá,2020-03-08,2020-03-25,2020-03-19,recuperado
+2000000609,femenino,50 a 59,contacto con paciente,los lagos,2020-03-30,2020-05-01,2020-03-19,recuperado
+2000000498,femenino,40 a 49,otro,tarapacá,2020-03-05,2020-03-26,2020-03-19,recuperado
+2000000114,femenino,50 a 59,contacto con paciente,santiago,2020-02-22,2020-03-04,2020-03-19,recuperado
+2000000517,femenino,60 a 69,otro,los lagos,2020-04-09,2020-03-22,2020-04-13,fallecido
+2000000439,masculino,60 a 69,contacto con paciente,biobío,2020-03-18,2020-04-20,2020-03-19,recuperado
+2000000035,masculino,30 a 39,iglesia,santiago,2020-04-05,2020-04-18,2020-03-19,recuperado
+2000000636,femenino,60 a 69,contacto con paciente,antofagasta,2020-04-15,2020-05-16,2020-03-19,recuperado
+2000000299,masculino,30 a 39,discoteca,tarapacá,2020-03-29,2020-05-03,2020-03-19,recuperado
+2000000457,femenino,20 a 29,otro,los lagos,2020-02-22,2020-03-30,2020-03-19,recuperado
+2000000360,masculino,20 a 29,iglesia,antofagasta,2020-02-20,2020-03-19,2020-03-19,recuperado
+2000000491,femenino,0 a 9,iglesia,biobío,2020-02-27,2020-03-18,2020-03-19,recuperado
+2000000331,masculino,50 a 59,otro,antofagasta,2020-03-15,2020-04-23,2020-03-19,recuperado
+2000000592,femenino,60 a 69,iglesia,antofagasta,2020-02-13,2020-03-22,2020-02-17,fallecido
+2000000268,femenino,80 o más,viaje al extranjero,los lagos,2020-03-03,2020-03-22,2020-03-07,fallecido
+2000000603,femenino,40 a 49,iglesia,santiago,2020-02-22,2020-03-29,2020-03-19,recuperado
+2000000026,masculino,40 a 49,discoteca,los lagos,2020-02-25,2020-03-07,2020-03-19,recuperado
+2000000256,masculino,80 o más,discoteca,santiago,2020-02-29,2020-03-14,2020-03-19,recuperado
+2000000479,masculino,20 a 29,contacto con paciente,antofagasta,2020-03-13,2020-04-17,2020-03-19,recuperado
+2000000422,masculino,80 o más,otro,valparaíso,2020-02-18,2020-03-22,2020-02-26,fallecido
+2000000131,femenino,20 a 29,contacto con paciente,santiago,2020-03-01,2020-04-01,2020-03-19,recuperado
+2000000015,femenino,60 a 69,otro,los lagos,2020-03-06,2020-03-22,2020-03-14,fallecido
+2000000680,masculino,60 a 69,otro,valparaíso,2020-03-15,2020-04-06,2020-03-19,recuperado
+2000000698,femenino,50 a 59,otro,valparaíso,2020-04-06,2020-05-02,2020-03-19,recuperado
+2000000421,masculino,50 a 59,otro,biobío,2020-02-25,2020-03-23,2020-03-19,recuperado
+2000000201,masculino,60 a 69,viaje al extranjero,valparaíso,2020-03-17,2020-03-22,2020-03-19,aislado
+2000000336,masculino,40 a 49,otro,biobío,2020-03-06,2020-03-27,2020-03-19,recuperado
+2000000245,masculino,50 a 59,iglesia,valparaíso,2020-02-24,2020-03-22,2020-03-19,aislado
+2000000437,femenino,40 a 49,contacto con paciente,antofagasta,2020-03-08,2020-04-04,2020-03-19,recuperado
+2000000267,femenino,40 a 49,call center,biobío,2020-03-05,2020-03-22,2020-03-10,fallecido
+2000000018,femenino,50 a 59,contacto con paciente,biobío,2020-04-15,2020-05-23,2020-03-19,recuperado
+2000000283,femenino,20 a 29,otro,los lagos,2020-03-23,2020-04-04,2020-03-19,recuperado
+2000000442,masculino,40 a 49,contacto con paciente,los lagos,2020-02-06,2020-03-07,2020-03-19,recuperado
+2000000559,masculino,30 a 39,contacto con paciente,valparaíso,2020-02-17,2020-03-20,2020-03-19,recuperado
+2000000233,masculino,70 a 79,contacto con paciente,valparaíso,2020-04-07,2020-03-22,2020-04-15,fallecido

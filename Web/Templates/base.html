@@ -1,29 +1,170 @@
+<!-- 
+  Plantilla base principal.
+  Decidí limpiar la barra superior, quitando el logo de texto y dejando
+  un botón de menú (3 barras) a la izquierda. Al hacer clic, se desliza
+  un panel (Offcanvas) con todos los pasos del flujo de trabajo.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minería de Datos</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Barra superior muy limpia, solo con el botón de menú y el estado del archivo */
+        .custom-navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 10px 20px;
+        }
+
+        /* Estilo para el botón de las 3 barras */
+        .menu-btn {
+            font-size: 1.5rem;
+            color: #1e1e2f;
+            background: none;
+            border: none;
+            transition: transform 0.2s;
+        }
+        .menu-btn:hover {
+            transform: scale(1.1);
+            color: #0d6efd;
+        }
+
+        /* Panel lateral que se desliza (Offcanvas) */
+        .offcanvas {
+            background-color: #1e1e2f;
+            color: white;
+        }
+        
+        /* Enlaces dentro del panel lateral */
+        .offcanvas .nav-link {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            padding: 15px 20px;
+            border-bottom: 1px solid #2d2d44;
+            transition: 0.3s;
+        }
+        
+        .offcanvas .nav-link:hover, .offcanvas .nav-link.active {
+            color: white;
+            background-color: #0d6efd;
+            padding-left: 30px;
+        }
+
+        .offcanvas .nav-link i {
+            width: 30px;
+        }
+
+        /* Indicador del archivo cargado */
+        .file-badge {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            border-radius: 20px;
+            padding: 6px 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #bae6fd;
+        }
+
+        .main-container {
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        /* Tarjetas con sombras suaves */
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url_for('index') }}">Proyecto Minería de Datos</a>
+
+    <!-- BARRA SUPERIOR MINIMALISTA -->
+    <nav class="navbar custom-navbar fixed-top">
+        <div class="container-fluid">
+            
+            <!-- Botón de 3 barras a la izquierda -->
+            <button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- A la derecha, muestro el archivo activo si existe -->
+            <div class="ms-auto d-flex align-items-center">
+                {% if session.get('filename') %}
+                    <span class="file-badge"><i class="fa-solid fa-file-csv me-2"></i> {{ session.get('filename') }}</span>
+                {% endif %}
+            </div>
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Aquí se mostrarán los mensajes de éxito o error -->
+    <!-- MENÚ DESLIZANTE (Offcanvas) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" style="width: 280px;">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title fw-bold"><i class="fa-solid fa-layer-group text-primary me-2"></i> Módulos</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}"><i class="fa-solid fa-cloud-arrow-up"></i> 1. Carga de Datos</a>
+                </li>
+
+                <!-- Solo muestro los demás pasos si ya subí un archivo -->
+                {% if session.get('filename') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('preview') }}"><i class="fa-solid fa-broom"></i> 2. Limpieza y Vista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('arbol') }}"><i class="fa-solid fa-sitemap"></i> 3. Árbol de Decisión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('listar_modelos') }}"><i class="fa-solid fa-floppy-disk"></i> 4. Modelos Guardados</a>
+                    </li>
+                    
+                    <!-- Aquí irán los próximos módulos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('asociacion') }}"><i class="fa-solid fa-diagram-project"></i> 5. Asociación</a>
+                    </li>
+                    <li class="nav-item">
+<a class="nav-link" href="{{ url_for('dashboard') }}"><i class="fa-solid fa-chart-line"></i> 6. Dashboard</a>
+                    </li>
+                <a class="nav-link" href="{{ url_for('informe') }}"><i class="fa-solid fa-file-invoice"></i> 7. Informes (RF5)</a>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container main-container" style="margin-top: 80px;">
+        
+        <!-- Alertas de éxito o error -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="alert alert-info">{{ message }}</div>
+                    <div class="alert alert-primary alert-dismissible fade show shadow-sm border-0" role="alert">
+                        <i class="fa-solid fa-circle-info me-2"></i> {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
 
-        <!-- El contenido de las otras páginas se inyecta aquí -->
         {% block content %}{% endblock %}
+        
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

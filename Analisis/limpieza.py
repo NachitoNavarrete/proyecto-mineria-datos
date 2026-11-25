@@ -94,22 +94,23 @@ def cargar_csv(filepath):
     return df
 
 
-def limpiar_datos(df):
+def limpiar_datos(df, opciones, reemplazos_custom=None):
     """
-    Aplica limpieza automática sobre un DataFrame.
+    Aplica limpieza automática sobre un DataFrame según las opciones del usuario.
 
     Pasos:
         1. Normaliza nombres de columnas.
-        2. Elimina duplicados.
-        3. Imputa valores nulos.
-        4. Corrige tipos de datos.
-        5. Acota outliers (IQR).
+        2. Estandariza texto y aplica reemplazos personalizados.
+        3. Elimina duplicados (opcional).
+        4. Corrige incoherencias lógicas (opcional).
+        5. Imputa valores nulos (opcional).
+        6. Corrige tipos de datos.
+        7. Acota outliers (IQR) (opcional).
 
     ¿Por qué este orden?
-        Primero nombres (consistencia), luego duplicados
-        (no imputar filas que vamos a borrar), después
-        nulos y tipos, y al final outliers (necesitan
-        datos numéricos limpios).
+        Primero nombres (consistencia), luego texto (para que no hayan duplicados por mayúsculas).
+        Después duplicados e incoherencias (no imputar filas que vamos a borrar).
+        Luego nulos y tipos, y al final outliers (necesitan datos numéricos limpios).
 
     Devuelve:
         (df_limpio, resumen) -> tupla.
@@ -134,54 +135,94 @@ def limpiar_datos(df):
     resumen['columnas'] = list(df.columns)
 
     # --------------------------------------------------------
-    # 2. ELIMINAR DUPLICADOS
+    # 2. ESTANDARIZAR TEXTO Y APLICAR REEMPLAZOS
+    # --------------------------------------------------------
+    # 25-11-2026: Convierto todo a minúsculas para que "Masculino" y "masculino" 
+    # sean lo mismo. Esto ayuda a que el modelo no se confunda.
+    for col in df.select_dtypes(include=['object']).columns:
+        df[col] = df[col].astype(str).str.strip().str.lower()
+
+    # 25-11-2026: Si el usuario escribió reemplazos manuales (como "f=femenino"), 
+    # los aplico aquí a todas las columnas de texto.
+    if reemplazos_custom:
+        for col in df.select_dtypes(include=['object']).columns:
+            df[col] = df[col].replace(reemplazos_custom)
+
+    # --------------------------------------------------------
+    # 3. ELIMINAR DUPLICADOS (Condicional)
     # --------------------------------------------------------
     # Duplicados sesgan métricas (mismo registro contado 2 veces).
-    duplicados = df.duplicated().sum()
-    df = df.drop_duplicates()
+    # Solo se borran si el usuario marcó la casilla.
+    duplicados = 0
+    if opciones.get('duplicados'):
+        duplicados = df.duplicated().sum()
+        df = df.drop_duplicates()
     resumen['duplicados_eliminados'] = int(duplicados)
 
     # --------------------------------------------------------
-    # 3. IMPUTAR VALORES NULOS
+    # 4. CORREGIR INCOHERENCIAS LÓGICAS (Condicional)
+    # --------------------------------------------------------
+    # 25-11-2026: Si el usuario lo pide, elimino registros que no tienen 
+    # sentido. Por ejemplo, un paciente "fallecido" no puede tener "fecha_alta".
+    incoherencias = 0
+    if opciones.get('incoherencias'):
+        if 'estado' in df.columns and 'fecha_alta' in df.columns and 'fecha_fallecimiento' in df.columns:
+            # Reviso si las fechas están vacías, nulas o tienen texto 'nan'
+            alta_vacia = df['fecha_alta'].isna() | (df['fecha_alta'] == '') | (df['fecha_alta'] == 'nan')
+            muerte_vacia = df['fecha_fallecimiento'].isna() | (df['fecha_fallecimiento'] == '') | (df['fecha_fallecimiento'] == 'nan')
+            
+            # Regla 1: Si está fallecido, NO debería tener fecha de alta.
+            c1 = (df['estado'] == 'fallecido') & (~alta_vacia)
+            
+            # Regla 2: Si NO está fallecido (recuperado, aislado), NO debería tener fecha de muerte.
+            c2 = (df['estado'] != 'fallecido') & (~muerte_vacia)
+            
+            # Me quedo con los datos que NO cumplen las condiciones de error
+            df = df[~(c1 | c2)]
+            incoherencias = c1.sum() + c2.sum()
+    resumen['incoherencias_eliminadas'] = int(incoherencias)
+
+    # --------------------------------------------------------
+    # 5. IMPUTAR VALORES NULOS (Condicional)
     # --------------------------------------------------------
     # Imputar = rellenar con un valor razonable.
     #   Numéricas: mediana (resistente a outliers).
     #   Categóricas: moda (valor más frecuente).
     nulos_antes = df.isnull().sum().sum()
 
-    # Columnas numéricas
-    for col in df.select_dtypes(include=[np.number]).columns:
-        if df[col].isnull().any():
-            df[col] = df[col].fillna(df[col].median())
+    if opciones.get('nulos'):
+        # Columnas numéricas
+        for col in df.select_dtypes(include=[np.number]).columns:
+            if df[col].isnull().any():
+                df[col] = df[col].fillna(df[col].median())
 
-    # Columnas de texto
-    for col in df.select_dtypes(include=['object']).columns:
-        if df[col].isnull().any():
-            moda = df[col].mode()
-            if not moda.empty:
-                df[col] = df[col].fillna(moda[0])
-            else:
-                df[col] = df[col].fillna('desconocido')
+        # Columnas de texto
+        for col in df.select_dtypes(include=['object']).columns:
+            if df[col].isnull().any():
+                moda = df[col].mode()
+                if not moda.empty:
+                    df[col] = df[col].fillna(moda[0])
+                else:
+                    df[col] = df[col].fillna('desconocido')
 
     nulos_despues = df.isnull().sum().sum()
     resumen['nulos_antes'] = int(nulos_antes)
     resumen['nulos_despues'] = int(nulos_despues)
 
     # --------------------------------------------------------
-    # 4. CORREGIR TIPOS DE DATOS
+    # 6. CORREGIR TIPOS DE DATOS
     # --------------------------------------------------------
-    # pandas a veces lee "1234" como texto.
-    # Intentamos convertir columnas de texto a número.
-    # Si falla (es texto real), se queda como está.
+    # Solo intento convertir a número si el texto parece numérico, 
+    # si tiene letras, lo dejo como texto (categoría).
     for col in df.columns:
         if df[col].dtype == 'object':
             try:
                 df[col] = pd.to_numeric(df[col])
             except (ValueError, TypeError):
-                pass
+                pass # Si falla (porque es texto), lo dejo intacto
 
     # --------------------------------------------------------
-    # 5. DETECTAR Y ACOTAR OUTLIERS
+    # 7. DETECTAR Y ACOTAR OUTLIERS (Condicional)
     # --------------------------------------------------------
     # Outlier = valor muy alejado del resto.
     # Detección con IQR:
@@ -190,19 +231,20 @@ def limpiar_datos(df):
     # Acotamos (capping): reemplazamos outliers por el límite
     # en lugar de borrar la fila completa.
     outliers_tratados = 0
-    for col in df.select_dtypes(include=[np.number]).columns:
-        Q1 = df[col].quantile(0.25)
-        Q3 = df[col].quantile(0.75)
-        IQR = Q3 - Q1
-        lower = Q1 - 1.5 * IQR
-        upper = Q3 + 1.5 * IQR
+    if opciones.get('outliers'):
+        for col in df.select_dtypes(include=[np.number]).columns:
+            Q1 = df[col].quantile(0.25)
+            Q3 = df[col].quantile(0.75)
+            IQR = Q3 - Q1
+            lower = Q1 - 1.5 * IQR
+            upper = Q3 + 1.5 * IQR
 
-        outliers = ((df[col] < lower) | (df[col] > upper)).sum()
+            outliers = ((df[col] < lower) | (df[col] > upper)).sum()
 
-        if outliers > 0:
-            df[col] = np.where(df[col] < lower, lower, df[col])
-            df[col] = np.where(df[col] > upper, upper, df[col])
-            outliers_tratados += outliers
+            if outliers > 0:
+                df[col] = np.where(df[col] < lower, lower, df[col])
+                df[col] = np.where(df[col] > upper, upper, df[col])
+                outliers_tratados += outliers
 
     resumen['outliers_tratados'] = int(outliers_tratados)
 

@@ -2,17 +2,59 @@
 
 {% block content %}
 <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-8">
         <div class="card shadow">
             <div class="card-body">
                 <h3 class="card-title">Subir Archivo CSV</h3>
-                <p class="text-muted">Validación de formato y vista previa.</p>
+                <p class="text-muted">Validación de formato y preprocesamiento.</p>
                 
                 <!-- enctype es OBLIGATORIO para enviar archivos -->
                 <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data">
+                    
                     <div class="mb-3">
                         <input class="form-control" type="file" name="file" accept=".csv" required>
                     </div>
+
+                    <!-- [NUEVO 25-11-2026] Opciones de Preprocesamiento -->
+                    <div class="card mb-4 border-0 bg-light shadow-sm">
+                        <div class="card-header bg-transparent border-bottom-0 pt-3 pb-0">
+                            <h6 class="mb-0 fw-bold text-secondary">
+                                <i class="fa-solid fa-sliders me-2"></i> Opciones de Limpieza
+                            </h6>
+                        </div>
+                        <div class="card-body pt-2">
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" name="opt_duplicados" id="opt_dup" checked>
+                                <label class="form-check-label small" for="opt_dup">Eliminar filas duplicadas exactas</label>
+                            </div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" name="opt_incoherencias" id="opt_inc" checked>
+                                <label class="form-check-label small" for="opt_inc">Corregir incoherencias lógicas</label>
+                            </div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" name="opt_nulos" id="opt_nul" checked>
+                                <label class="form-check-label small" for="opt_nul">Imputar valores nulos</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="opt_outliers" id="opt_out" checked>
+                                <label class="form-check-label small" for="opt_out">Acotar Outliers (IQR)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- [NUEVO 25-11-2026] Reemplazos Personalizados (Meter Mano) -->
+                    <!-- Aquí el usuario puede escribir "f=femenino, m=masculino" -->
+                    <div class="mb-4">
+                        <label for="reemplazos" class="form-label fw-bold small text-secondary">
+                            <i class="fa-solid fa-pen-to-square me-1"></i> Reemplazos Personalizados (Opcional)
+                        </label>
+                        <input type="text" class="form-control form-control-sm" name="reemplazos" id="reemplazos" 
+                               placeholder="Ej: f=femenino, m=masculino">
+                        <small class="text-muted" style="font-size: 0.75rem;">
+                            Separa con comas. Formato: <b>buscar=reemplazo</b>.
+                        </small>
+                    </div>
+
                     <button type="submit" class="btn btn-primary w-100">Cargar Archivo</button>
                 </form>
             </div>

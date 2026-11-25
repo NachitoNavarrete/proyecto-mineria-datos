@@ -11,12 +11,16 @@ import json
 import pandas as pd
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from werkzeug.utils import secure_filename
+from flask import Flask, render_template, request, redirect, url_for, flash, session, Response
 
 # Se agrega la función de limpieza de datos desde el módulo Analisis.limpieza 05-11-2026
 # [NUEVO - 05-11-2026] se importa la función del árbol
 from Analisis.limpieza import limpiar_datos
 from Analisis.arbol_decision import entrenar_arbol
-
+#Nuevo 25-11-2026 Se importa la función de reglas de asociación
+from Analisis.asociacion import generar_reglas
+#Nuevo 25-11-2026 se importa la función de dashboard
+from Analisis.dashboard import generar_graficos
 # ------------------------------------------------------------
 # 1) CONFIGURACIÓN BASE DE LA APLICACIÓN
 # ------------------------------------------------------------
@@ -62,27 +66,30 @@ def allowed_file(filename):
 # En pocas palabras: es como ponerle un paraguas al CSV para que no
 # se rompa por detalles de Windows o exportaciones extrañas.
 def leer_csv_robusto(filepath):
-    """Lee CSV con BOM, comillas, espacios y texturas extrañas."""
-    try:
-        with open(filepath, 'rb') as f:
-            raw = f.read()
-    except FileNotFoundError as exc:
-        raise ValueError(f'No se encontró el archivo: {filepath}') from exc
-
-    # Prueba distintas codificaciones porque el mismo CSV puede venir
-    # guardado como UTF-8, UTF-16 o Latin-1 dependiendo del editor/Windows.
-    encodings = ['utf-8-sig', 'utf-16', 'utf-16-le', 'utf-16-be', 'latin-1', 'cp1252']
-    text = None
-
-    for enc in encodings:
+    """Lee CSV de forma segura sin destruir el texto."""
+    codificaciones = ['utf-8-sig', 'utf-16', 'latin-1', 'cp1252']
+    
+    for enc in codificaciones:
         try:
-            text = raw.decode(enc)
-            break
-        except (UnicodeDecodeError, LookupError):
-            continue
-
-    if text is None:
-        raise ValueError('El archivo no parece ser un CSV válido.')
+            # Intento con separador automático
+            df = pd.read_csv(filepath, encoding=enc, sep=None, engine='python')
+            if len(df.columns) > 1:
+                return df
+        except:
+            pass
+        try:
+            # Intento con punto y coma (Excel en español)
+            df = pd.read_csv(filepath, encoding=enc, sep=';')
+            if len(df.columns) > 1:
+                return df
+        except:
+            pass
+            
+    # Plan de rescate
+    try:
+        return pd.read_csv(filepath, encoding='utf-8-sig', sep=',', on_bad_lines='skip')
+    except Exception as e:
+        raise ValueError(f"No se pudo interpretar el CSV: {e}")
 
     # Quitamos caracteres raros invisibles y uniformamos el texto.
     text = text.replace('\ufeff', '').replace('\r\n', '\n').replace('\r', '\n')
@@ -190,18 +197,43 @@ def upload_file():
         file.save(filepath)
 
         try:
-            # 1. Aquí se ejecuta la lectura robusta del CSV.
+            # 1. Leemos el archivo
             df_crudo = leer_csv_robusto(filepath)
             
-            # 05-11-2026 Integración de limpieza automática
-            # Pasamos los datos sucios por la función de limpieza
-            df_limpio, resumen_limpieza = limpiar_datos(df_crudo)
+            # [NUEVO 25-11-2026] Capturo las opciones que marcó el usuario.
+            # Si el checkbox está en el formulario, devuelve True. Si no está, False.
+            opciones_usuario = {
+                'duplicados': 'opt_duplicados' in request.form,
+                'incoherencias': 'opt_incoherencias' in request.form,
+                'nulos': 'opt_nulos' in request.form,
+                'outliers': 'opt_outliers' in request.form
+            }
+                        # [NUEVO 25-11-2026] PASO 3: Proceso los reemplazos personalizados.
+            # Recibo el texto del input (ej: "f=femenino, m=masculino")
+            texto_reemplazos = request.form.get('reemplazos', '')
+            reemplazos_dict = {}
+            
+            if texto_reemplazos:
+                # Separo por comas
+                pares = texto_reemplazos.split(',')
+                for par in pares:
+                    if '=' in par:
+                        buscar, reemplazar = par.split('=')
+                        # Limpio los espacios, paso todo a minúsculas y guardo en el diccionario
+                        reemplazos_dict[buscar.strip().lower()] = reemplazar.strip().lower()
 
-            # 3. Se toma una pequeña vista previa para mostrar sin saturar la UI.
+            # Y AHORA SÍ, LLAMO A LA FUNCIÓN DE LIMPIEZA CON EL DICCIONARIO INCLUIDO
+            df_limpio, resumen_limpieza = limpiar_datos(df_crudo, opciones_usuario, reemplazos_dict)
+
+            # 2. Llamo a la función de limpieza pasándole el diccionario
+            df_limpio, resumen_limpieza = limpiar_datos(df_crudo, opciones_usuario)
+
+            # 3. Preparamos los datos LIMPIOS para la vista
             preview_data = df_limpio.head(50).to_dict(orient='records')
             columnas = list(df_limpio.columns)
             total_filas = len(df_limpio)
 
+            # ... (el resto del código sigue exactamente igual)
             # [NUEVO - 05-11-2026] Guardar el CSV limpio en el disco duro
             # Para que el módulo del árbol pueda leerlo después sin volver a procesar todo.
             cleaned_filename = 'clean_' + filename
@@ -375,6 +407,181 @@ def eliminar_modelo(modelo_id):
             
     flash('Modelo eliminado.')
     return redirect(url_for('listar_modelos'))
+
+# ============================================================
+# RUTAS PARA REGLAS DE ASOCIACIÓN (RF4)
+# ============================================================
+
+@app.route('/asociacion')
+def asociacion():
+    """Muestra el formulario para configurar las reglas."""
+    columnas = session.get('columnas')
+    if not columnas:
+        flash('Primero debes subir un archivo CSV.')
+        return redirect(url_for('index'))
+    
+    # Le paso las reglas guardadas en sesión (si es que hay) para mostrarlas
+    reglas = session.get('reglas_asociacion', [])
+    return render_template('asociacion.html', columnas=columnas, reglas=reglas)
+
+
+@app.route('/generar_asociacion', methods=['POST'])
+def generar_asociacion():
+    """Recibe los parámetros y calcula las reglas."""
+    cleaned_filepath = session.get('cleaned_filepath')
+    if not cleaned_filepath or not os.path.exists(cleaned_filepath):
+        flash('No hay datos limpios. Sube el archivo nuevamente.')
+        return redirect(url_for('index'))
+
+    try:
+        # 1. Recupero los parámetros del formulario
+        min_support = float(request.form.get('min_support', 0.05)) / 100.0
+        min_confidence = float(request.form.get('min_confidence', 50)) / 100.0
+
+        # 2. Leo el CSV limpio
+        df_limpio = pd.read_csv(cleaned_filepath)
+
+                # 3. Llamo a la función
+        reglas = generar_reglas(df_limpio, min_support=min_support, min_confidence=min_confidence)
+
+        # 4. Si no hay reglas, aviso y vuelvo a cargar la página
+        if len(reglas) == 0:
+            flash('No se encontraron reglas con esos parámetros. Intenta bajarlos.')
+            return redirect(url_for('asociacion'))
+            
+        # [CAMBIO 25-11-2026] El navegador se congela con tantas reglas. 
+        # Guardo el total, pero solo me quedo con las 100 mejores para mostrar en pantalla.
+        total_reglas = len(reglas)
+        reglas_mostrar = reglas[:100] 
+
+        flash(f'¡Éxito! Se encontraron {total_reglas} reglas. Mostrando las 100 más fuertes (mayor Lift).')
+
+        # 5. Renderizo el HTML pasando solo las 100 reglas
+        columnas = session.get('columnas')
+        return render_template('asociacion.html', columnas=columnas, reglas=reglas_mostrar)
+
+    except Exception as e:
+        flash(f'Error al generar reglas: {str(e)}')
+        return redirect(url_for('asociacion'))
+
+        # ============================================================
+# RUTA PARA DESCARGAR REGLAS EN CSV (RF4)
+# ============================================================
+@app.route('/descargar_reglas', methods=['POST'])
+def descargar_reglas():
+    # Recupero los datos del formulario oculto
+    reglas_json = request.form.get('reglas_json')
+    if not reglas_json:
+        flash('No hay reglas para descargar.')
+        return redirect(url_for('asociacion'))
+
+    import json
+    reglas = json.loads(reglas_json)
+
+    # Genero el texto del CSV
+    csv_data = "Antecedente,Consecuente,Soporte (%),Confianza (%),Lift\n"
+    for r in reglas:
+        csv_data += f'"{r["antecedentes"]}","{r["consecuentes"]}",{r["soporte"]},{r["confianza"]},{r["lift"]}\n'
+
+    # Devuelvo el archivo para que el navegador lo descargue
+    return Response(
+        csv_data,
+        mimetype="text/csv",
+        headers={"Content-disposition": "attachment; filename=reglas_asociacion.csv"}
+    )
+# ============================================================
+# RUTA PARA EL DASHBOARD (RF6)
+# ============================================================
+@app.route('/dashboard')
+def dashboard():
+    """Muestra los gráficos interactivos."""
+    cleaned_filepath = session.get('cleaned_filepath')
+    if not cleaned_filepath or not os.path.exists(cleaned_filepath):
+        flash('Primero debes subir un archivo CSV.')
+        return redirect(url_for('index'))
+
+    try:
+        # Leo el CSV limpio
+        df_limpio = pd.read_csv(cleaned_filepath)
+        
+        # Genero los gráficos llamando a mi módulo
+        graficos = generar_graficos(df_limpio)
+        
+        return render_template('dashboard.html', graficos=graficos)
+        
+    except Exception as e:
+        flash(f'Error al generar el dashboard: {str(e)}')
+        return redirect(url_for('index'))
+
+# RUTA PARA DESCARGAR EL INFORME EN HTML (RF5)
+# ============================================================
+# RUTAS PARA EL INFORME (RF5)
+# ============================================================
+
+# 1. Ruta para VER el informe en el navegador
+@app.route('/informe')
+def informe():
+    """Muestra el informe en pantalla."""
+    cleaned_filepath = session.get('cleaned_filepath')
+    if not cleaned_filepath or not os.path.exists(cleaned_filepath):
+        flash('Primero debes subir un archivo CSV.')
+        return redirect(url_for('index'))
+
+    try:
+        df = pd.read_csv(cleaned_filepath)
+        info_dataset = {
+            'filas': len(df),
+            'columnas': len(df.columns),
+            'nombres_columnas': list(df.columns),
+            'nulos_restantes': int(df.isnull().sum().sum())
+        }
+        resumen_limpieza = session.get('resumen', {})
+
+        return render_template('informe.html', 
+                               info_dataset=info_dataset, 
+                               resumen=resumen_limpieza,
+                               filename=session.get('filename'))
+
+    except Exception as e:
+        flash(f'Error al generar el informe: {str(e)}')
+        return redirect(url_for('index'))
+
+
+# 2. Ruta para DESCARGAR el informe en HTML
+@app.route('/descargar_informe')
+def descargar_informe():
+    """Descarga el archivo HTML del informe."""
+    cleaned_filepath = session.get('cleaned_filepath')
+    if not cleaned_filepath or not os.path.exists(cleaned_filepath):
+        flash('Primero debes subir un archivo CSV.')
+        return redirect(url_for('index'))
+
+    try:
+        df = pd.read_csv(cleaned_filepath)
+        info_dataset = {
+            'filas': len(df),
+            'columnas': len(df.columns),
+            'nombres_columnas': list(df.columns),
+            'nulos_restantes': int(df.isnull().sum().sum())
+        }
+        resumen_limpieza = session.get('resumen', {})
+
+        # Renderizamos el HTML a texto y lo enviamos como descarga
+        html_content = render_template('informe.html', 
+                                       info_dataset=info_dataset, 
+                                       resumen=resumen_limpieza,
+                                       filename=session.get('filename'))
+
+        from flask import Response
+        return Response(
+            html_content,
+            mimetype="text/html",
+            headers={"Content-Disposition": "attachment; filename=Informe_Mineria.html"}
+        )
+
+    except Exception as e:
+        flash(f'Error al descargar el informe: {str(e)}')
+        return redirect(url_for('index'))
 # ------------------------------------------------------------
 # PUNTO DE ENTRADA
 # ------------------------------------------------------------

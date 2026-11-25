@@ -1,12 +1,5 @@
 [
     {
-        "id": "1794537372.454318",
-        "fecha": "12-11-2026 23:36",
-        "variable_objetivo": "alcohol",
-        "exactitud": "7.35",
-        "filas_entrenadas": 1359
-    },
-    {
         "id": "1794537629.191163",
         "fecha": "12-11-2026 23:40",
         "variable_objetivo": "alcohol",
@@ -19,5 +12,61 @@
         "variable_objetivo": "density",
         "exactitud": "2.94",
         "filas_entrenadas": 1359
+    },
+    {
+        "id": "1794610018.094523",
+        "fecha": "13-11-2026 19:46",
+        "variable_objetivo": "alcohol",
+        "exactitud": "9.19",
+        "filas_entrenadas": 1359
+    },
+    {
+        "id": "1795627989.167207",
+        "fecha": "25-11-2026 14:33",
+        "variable_objetivo": "ph",
+        "exactitud": "11.76",
+        "filas_entrenadas": 167
+    },
+    {
+        "id": "1795631685.650749",
+        "fecha": "25-11-2026 15:34",
+        "variable_objetivo": "richter",
+        "exactitud": "29.13",
+        "filas_entrenadas": 2177
+    },
+    {
+        "id": "1795632799.801083",
+        "fecha": "25-11-2026 15:53",
+        "variable_objetivo": "estado",
+        "exactitud": "70.0",
+        "filas_entrenadas": 50
+    },
+    {
+        "id": "1795634034.424519",
+        "fecha": "25-11-2026 16:13",
+        "variable_objetivo": "richter",
+        "exactitud": "29.13",
+        "filas_entrenadas": 2177
+    },
+    {
+        "id": "1795635533.868513",
+        "fecha": "25-11-2026 16:38",
+        "variable_objetivo": "alcohol",
+        "exactitud": "8.09",
+        "filas_entrenadas": 1359
+    },
+    {
+        "id": "1795636086.768297",
+        "fecha": "25-11-2026 16:48",
+        "variable_objetivo": "richter",
+        "exactitud": "27.98",
+        "filas_entrenadas": 2177
+    },
+    {
+        "id": "1795636286.451502",
+        "fecha": "25-11-2026 16:51",
+        "variable_objetivo": "alcohol",
+        "exactitud": "8.82",
+        "filas_entrenadas": 167
     }
 ]

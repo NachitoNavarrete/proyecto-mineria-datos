@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+    /* Estilos para que el reporte se vea como un documento formal (como un Word o PDF) */
+    .reporte-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    
+    /* 
+      PDF: 
+      Esta regla @media print le dice al navegador: "Cuando el usuario 
+      intente imprimir o guardar como PDF, oculta el menú de navegación 
+      y los botones, para que solo se vea el documento limpio".
+    */
+    @media print {
+        .no-print { display: none !important; }
+        .main-container { margin: 0 !important; padding: 0 !important; }
+        .navbar { display: none !important; }
+    }
+</style>
+
+<!-- BARRA DE BOTONES (No se imprime gracias a la clase 'no-print') -->
+<div class="d-flex justify-content-between align-items-center mb-4 no-print">
+    <h2><i class="fa-solid fa-file-invoice text-primary me-2"></i> Dossier de Minería de Datos (RF5)</h2>
+    <div>
+        <!-- Botón 1: Descarga el HTML -->
+        <a href="{{ url_for('descargar_informe') }}" class="btn btn-primary">
+            <i class="fa-solid fa-download me-1"></i> Descargar HTML
+        </a>
+        
+        <!-- Botón 2: Abre la ventana para guardar como PDF -->
+        <button onclick="descargarPDF()" class="btn btn-danger ms-2">
+    <i class="fa-solid fa-file-pdf me-1"></i> Descargar PDF
+</button>
+    </div>
+</div>
+
+<!-- CONTENEDOR DEL DOCUMENTO -->
+<div class="reporte-container">
+    
+    <!-- ENCABEZADO -->
+    <div class="text-center mb-5 border-bottom pb-4">
+        <h1 class="fw-bold">Informe Ejecutivo de Datos</h1>
+        <p class="text-muted mb-0">Generado automáticamente por DataMiner</p>
+        <p class="small text-muted">Archivo analizado: {{ filename }}</p>
+    </div>
+
+    <!-- SECCIÓN 1: RESUMEN DEL DATASET -->
+    <h4 class="text-primary border-bottom pb-2 mb-3">1. Información del Dataset</h4>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="p-3 bg-light rounded border">
+                <strong>Filas Totales:</strong> <br> {{ info_dataset.filas }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-light rounded border">
+                <strong>Columnas:</strong> <br> {{ info_dataset.columnas }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 bg-light rounded border">
+                <strong>Valores Nulos Restantes:</strong> <br> {{ info_dataset.nulos_restantes }}
+            </div>
+        </div>
+    </div>
+    
+    <p><strong>Variables detectadas:</strong> 
+        <span class="text-muted" style="font-size: 0.9rem;">{{ info_dataset.nombres_columnas | join(', ') }}</span>
+    </p>
+
+    <!-- SECCIÓN 2: BITÁCORA DE LIMPIEZA -->
+    <h4 class="text-primary border-bottom pb-2 mb-3 mt-5">2. Bitácora de Limpieza Automática</h4>
+    
+    {% if resumen %}
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Operación Realizada</th>
+                <th class="text-center">Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Filas iniciales del archivo original</td>
+                <td class="text-center">{{ resumen.filas_antes }}</td>
+            </tr>
+            <tr>
+                <td>Filas eliminadas (duplicados o incoherencias)</td>
+                <td class="text-center text-danger">{{ resumen.filas_eliminadas }}</td>
+            </tr>
+            <tr>
+                <td>Duplicados exactos eliminados</td>
+                <td class="text-center">{{ resumen.duplicados_eliminados }}</td>
+            </tr>
+            <tr>
+                <td>Incoherencias lógicas corregidas</td>
+                <td class="text-center">{{ resumen.incoherencias_eliminadas }}</td>
+            </tr>
+            <tr>
+                <td>Valores nulos imputados</td>
+                <td class="text-center">{{ resumen.nulos_antes - resumen.nulos_despues }}</td>
+            </tr>
+            <tr>
+                <td>Valores atípicos (outliers) tratados</td>
+                <td class="text-center">{{ resumen.outliers_tratados }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-muted">No se encontró bitácora de limpieza en esta sesión.</p>
+    {% endif %}
+
+    <!-- SECCIÓN 3: CONCLUSIONES -->
+    <h4 class="text-primary border-bottom pb-2 mb-3 mt-5">3. Conclusiones y Recomendaciones</h4>
+    <div class="alert alert-success">
+        <p class="mb-2"><strong>Calidad de los datos:</strong> El dataset ha pasado por un proceso de preprocesamiento y está listo para minería.</p>
+        <p class="mb-0"><strong>Siguientes pasos:</strong> Puedes utilizar estos datos en los módulos de Árbol de Decisión o Asociación para generar modelos predictivos.</p>
+    </div>
+    
+    <div class="text-center mt-5 text-muted small border-top pt-3">
+        <p>Fin del informe.</p>
+    </div>
+</div>
+
+<script>
+    function descargarPDF() {
+        // Selecciono el contenedor del reporte
+        const elemento = document.querySelector('.reporte-container');
+        
+        // Opciones de configuración para el PDF
+        const opciones = {
+            margin:       10, // Margen en milímetros
+            filename:     'Informe_Mineria.pdf', // Nombre del archivo
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 }, // Mayor escala = mejor resolución
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Muestro un mensaje de carga (opcional, pero se ve profesional)
+        Swal.fire({
+            title: 'Generando PDF...',
+            text: 'Por favor espera un momento',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading()
+            }
+        });
+
+        // Genero y descargo el PDF
+        html2pdf().set(opciones).from(elemento).save().then(() => {
+            // Cierro el mensaje de carga cuando termina
+            Swal.close();
+        });
+    }
+</script>
+<script>
+    function descargarPDF() {
+        const elemento = document.querySelector('.reporte-container');
+        const opciones = {
+            margin:       10,
+            filename:     'Informe_Mineria.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opciones).from(elemento).save();
+    }
+</script>
+{% endblock %}

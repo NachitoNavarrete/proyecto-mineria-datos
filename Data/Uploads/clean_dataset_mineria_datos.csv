@@ -1,0 +1,301 @@
+id_cliente,nombre,edad,genero,ciudad,carrera,ingreso_mensual,producto,precio_unitario,cantidad,metodo_pago,fecha_compra,calificacion_servicio
+279,isidora rodríguez,21.0,f,talca,ingeniería industrial,555000.0,mouse,9000.0,3.0,transferencia,2025-06-13,4.0
+287,amanda espinoza,25.0,f,puerto montt,arquitectura,602000.0,teclado,15000.0,1.0,débito,2025-09-26,3.0
+276,antonia espinoza,24.0,f,puerto montt,pedagogía,616000.0,monitor,120000.0,2.0,crédito,2025-06-20,5.0
+16,joaquín soto,20.0,masculino,santiago,arquitectura,1058000.0,disco externo,45000.0,1.0,debito,2025-02-24,5.0
+272,maximiliano araya,27.0,femenino,rancagua,arquitectura,967000.0,teclado,15000.0,2.0,transferencia,2025-04-05,4.0
+143,ignacio espinoza,24.0,f,temuco,arquitectura,221000.0,router,30000.0,3.0,efectivo,2025-08-21,4.0
+247,joaquín soto,24.0,f,rancagua,ingeniería industrial,461000.0,teclado,15000.0,3.0,efectivo,2025-01-20,1.0
+124,trinidad díaz,21.0,m,puerto montt,ingeniería civil informática,506000.0,audífonos,25000.0,2.0,débito,2025-10-24,5.0
+84,agustín contreras,28.0,femenino,valparaíso,pedagogía,1067000.0,teclado,15000.0,1.0,crédito,2025-09-05,5.0
+239,isidora flores,27.0,femenino,la serena,derecho,718000.0,audífonos,25000.0,3.0,crédito,2025-09-08,5.0
+25,sebastián díaz,26.0,f,rancagua,diseño,262000.0,impresora,95000.0,2.0,transferencia,2025-01-28,2.0
+141,tomás hernández,24.0,m,santiago,ingeniería civil informática,796000.0,webcam,20000.0,2.0,transferencia,2025-02-25,3.0
+300,josefa flores,21.0,f,puerto montt,arquitectura,635500.0,mouse,9000.0,1.0,débito,2025-07-01,4.0
+282,florencia silva,29.0,masculino,puerto montt,diseño,635500.0,audífonos,25000.0,2.0,credito,2025-09-09,3.0
+115,matías valenzuela,19.0,f,la serena,derecho,800000.0,monitor,120000.0,0.0,débito,2025-08-11,2.0
+75,felipe rodríguez,27.0,f,puerto montt,diseño,715000.0,notebook,270000.0,2.0,transferencia,2025-02-24,4.0
+152,gabriel pérez,28.0,f,puerto montt,arquitectura,784000.0,mouse,9000.0,1.0,credito,2025-01-16,2.0
+102,isidora morales,30.0,f,rancagua,pedagogía,882000.0,notebook,270000.0,3.0,débito,2025-08-25,4.0
+270,tomás pérez,30.0,m,puerto montt,enfermería,523000.0,impresora,95000.0,2.0,efectivo,2025-02-01,4.0
+137,sofía silva,30.0,femenino,concepción,medicina,652000.0,notebook,270000.0,2.0,crédito,2025-03-08,4.0
+271,florencia soto,29.0,m,puerto montt,arquitectura,401000.0,disco externo,45000.0,2.0,débito,2025-06-26,4.0
+128,cristóbal rojas,17.0,masculino,santiago,derecho,543000.0,disco externo,45000.0,1.0,transferencia,2025-07-08,5.0
+57,constanza lópez,24.0,masculino,rancagua,arquitectura,1192000.0,teclado,15000.0,3.0,débito,2025-01-03,2.0
+17,sofía araya,23.0,f,la serena,psicología,417000.0,tablet,180000.0,1.0,debito,2025-09-29,1.0
+113,gabriel pérez,21.0,f,talca,derecho,890000.0,tablet,180000.0,3.0,credito,2025-07-23,2.0
+38,rodrigo díaz,17.0,m,antofagasta,ingeniería comercial,831000.0,mouse,9000.0,3.0,debito,2025-03-21,5.0
+74,constanza sepúlveda,17.0,m,iquique,ingeniería comercial,359000.0,router,30000.0,1.0,efectivo,2025-09-30,4.0
+191,florencia fuentes,18.0,m,puerto montt,ingeniería comercial,518000.0,disco externo,45000.0,2.0,débito,2025-09-27,4.0
+222,sebastián muñoz,17.0,femenino,rancagua,medicina,630000.0,impresora,95000.0,1.0,crédito,2025-06-17,5.0
+32,catalina rojas,17.0,m,valparaíso,medicina,387000.0,mouse,9000.0,3.0,crédito,2025-07-26,2.0
+242,rodrigo hernández,17.0,m,antofagasta,ingeniería industrial,635500.0,monitor,120000.0,1.0,debito,2025-05-19,4.0
+240,diego rodríguez,37.5,f,antofagasta,derecho,896000.0,mouse,9000.0,3.0,credito,2025-10-06,4.0
+265,javiera silva,25.0,f,santiago,derecho,451000.0,webcam,20000.0,3.0,credito,2025-10-06,4.0
+218,amanda flores,33.0,femenino,puerto montt,derecho,666000.0,webcam,20000.0,1.0,credito,2025-07-27,5.0
+296,camila martínez,24.0,masculino,talca,enfermería,545000.0,tablet,180000.0,3.0,transferencia,2025-08-10,3.0
+235,sofía silva,20.0,f,iquique,ingeniería comercial,523000.0,monitor,120000.0,1.0,transferencia,2025-06-10,4.0
+245,camila flores,34.0,m,rancagua,ingeniería industrial,844000.0,webcam,20000.0,3.0,crédito,2025-05-28,5.0
+229,amanda espinoza,23.0,m,la serena,medicina,422000.0,disco externo,45000.0,2.0,debito,2025-01-21,1.0
+158,antonia pérez,31.0,femenino,antofagasta,diseño,655000.0,mouse,9000.0,1.0,transferencia,2025-08-09,3.0
+85,agustín espinoza,22.0,f,iquique,derecho,484000.0,mouse,9000.0,1.0,efectivo,2025-04-27,5.0
+238,rodrigo flores,33.0,femenino,puerto montt,diseño,635500.0,audífonos,25000.0,3.0,transferencia,2025-04-09,4.0
+62,amanda flores,32.0,f,concepción,psicología,342000.0,monitor,120000.0,2.0,credito,2025-03-20,4.0
+67,ignacio flores,17.0,f,rancagua,medicina,1217750.0,router,30000.0,3.0,débito,2025-02-12,4.0
+76,cristóbal hernández,25.0,m,concepción,arquitectura,726000.0,teclado,15000.0,3.0,debito,2025-05-19,4.0
+83,joaquín flores,24.0,femenino,temuco,ingeniería industrial,741000.0,audífonos,25000.0,2.0,efectivo,2025-04-29,2.0
+249,diego pérez,17.0,f,talca,arquitectura,608000.0,monitor,120000.0,1.0,efectivo,2025-03-25,3.0
+297,felipe espinoza,24.0,m,rancagua,ingeniería comercial,723000.0,router,30000.0,2.0,crédito,2025-02-07,2.0
+195,maximiliano pérez,29.0,f,talca,ingeniería civil informática,523000.0,audífonos,25000.0,1.0,débito,2025-04-13,1.0
+56,matías silva,17.0,masculino,iquique,ingeniería comercial,644000.0,webcam,20000.0,2.0,credito,2025-10-22,4.0
+167,valentina torres,24.0,masculino,puerto montt,derecho,501000.0,audífonos,25000.0,3.0,débito,2025-06-30,4.0
+106,trinidad pérez,27.0,masculino,antofagasta,pedagogía,900000.0,audífonos,25000.0,2.0,transferencia,2025-08-30,4.0
+200,valentina morales,23.0,m,antofagasta,derecho,922000.0,webcam,20000.0,3.0,credito,2025-08-07,3.0
+11,rodrigo espinoza,32.0,m,temuco,enfermería,600000.0,webcam,20000.0,2.0,credito,2025-08-23,3.0
+155,isidora hernández,27.0,m,rancagua,ingeniería industrial,635500.0,router,30000.0,2.0,transferencia,2025-05-20,4.0
+147,vicente muñoz,20.0,f,puerto montt,pedagogía,837000.0,tablet,180000.0,3.0,débito,2025-07-30,5.0
+81,emilia silva,18.0,m,talca,ingeniería industrial,823000.0,webcam,20000.0,1.0,débito,2025-05-31,4.0
+187,constanza pérez,32.0,m,talca,ingeniería industrial,861000.0,router,30000.0,1.0,débito,2025-01-10,5.0
+289,martina hernández,25.0,f,la serena,enfermería,820000.0,audífonos,25000.0,3.0,débito,2025-01-17,2.0
+277,rodrigo gonzález,31.0,m,la serena,ingeniería comercial,706000.0,webcam,20000.0,1.0,credito,2025-04-15,4.0
+291,diego fuentes,26.0,m,temuco,medicina,559000.0,mouse,9000.0,3.0,débito,2025-04-28,4.0
+99,emilia soto,18.0,masculino,puerto montt,ingeniería industrial,684000.0,audífonos,25000.0,1.0,debito,2025-08-12,3.0
+211,tomás lópez,36.0,m,talca,pedagogía,1036000.0,impresora,95000.0,2.0,debito,2025-02-07,3.0
+156,emilia araya,22.0,f,temuco,arquitectura,892000.0,mouse,9000.0,2.0,credito,2025-09-07,4.0
+127,amanda espinoza,36.0,masculino,valparaíso,psicología,877000.0,monitor,120000.0,3.0,credito,2025-07-23,4.0
+60,joaquín flores,30.0,masculino,concepción,ingeniería industrial,815000.0,webcam,20000.0,2.0,crédito,2025-05-22,4.0
+51,ignacio morales,17.0,m,valparaíso,derecho,557000.0,disco externo,45000.0,2.0,credito,2025-07-29,5.0
+39,tomás valenzuela,24.0,m,temuco,enfermería,584000.0,audífonos,25000.0,3.0,transferencia,2025-05-09,1.0
+163,gabriel sepúlveda,17.0,m,temuco,enfermería,383000.0,tablet,180000.0,1.0,débito,2025-09-19,2.0
+122,constanza sepúlveda,27.0,f,puerto montt,arquitectura,840000.0,audífonos,25000.0,1.0,debito,2025-01-26,3.0
+129,amanda espinoza,31.0,m,temuco,ingeniería comercial,494000.0,monitor,120000.0,2.0,débito,2025-10-15,5.0
+6,sebastián lópez,21.0,f,puerto montt,derecho,548000.0,router,30000.0,2.0,debito,2025-04-09,2.0
+15,amanda espinoza,20.0,m,valparaíso,arquitectura,586000.0,audífonos,25000.0,3.0,efectivo,2025-02-27,5.0
+48,camila díaz,21.0,femenino,concepción,medicina,328000.0,audífonos,25000.0,1.0,débito,2025-08-11,5.0
+47,fernanda martínez,19.0,f,antofagasta,diseño,578000.0,disco externo,45000.0,2.0,credito,2025-10-02,5.0
+264,valentina flores,17.0,m,puerto montt,diseño,661000.0,mouse,9000.0,1.0,debito,2025-07-21,4.0
+131,javiera muñoz,18.0,f,antofagasta,ingeniería industrial,637000.0,mouse,9000.0,1.0,crédito,2025-10-03,3.0
+80,vicente gonzález,17.0,f,la serena,ingeniería comercial,794000.0,monitor,120000.0,3.0,transferencia,2025-09-08,4.0
+31,matías morales,21.0,f,santiago,medicina,609000.0,webcam,20000.0,3.0,debito,2025-03-22,1.0
+164,catalina araya,30.0,m,temuco,diseño,824000.0,teclado,15000.0,1.0,débito,2025-03-16,5.0
+204,amanda espinoza,17.0,femenino,temuco,ingeniería industrial,619000.0,mouse,9000.0,3.0,crédito,2025-09-29,5.0
+225,diego valenzuela,20.0,m,puerto montt,ingeniería industrial,417000.0,audífonos,25000.0,3.0,débito,2025-02-25,4.0
+26,matías lópez,25.0,m,temuco,arquitectura,565000.0,monitor,120000.0,1.0,crédito,2025-10-02,3.0
+68,javiera hernández,18.0,m,santiago,derecho,991000.0,impresora,95000.0,2.0,crédito,2025-08-21,5.0
+186,camila morales,24.0,f,puerto montt,diseño,760000.0,teclado,15000.0,1.0,débito,2025-05-27,3.0
+66,joaquín torres,17.0,f,rancagua,diseño,665000.0,impresora,95000.0,3.0,crédito,2025-08-28,3.0
+196,fernanda sepúlveda,18.0,f,rancagua,pedagogía,758000.0,webcam,20000.0,2.0,débito,2025-04-08,5.0
+241,amanda lópez,23.0,femenino,concepción,derecho,440000.0,notebook,270000.0,2.0,credito,2025-02-10,5.0
+285,constanza pérez,17.0,f,la serena,pedagogía,573000.0,webcam,20000.0,2.0,débito,2025-09-05,3.0
+119,josefa martínez,17.0,masculino,antofagasta,ingeniería civil informática,691000.0,webcam,20000.0,2.0,credito,2025-10-07,3.0
+208,maximiliano morales,25.0,f,temuco,ingeniería comercial,485000.0,disco externo,45000.0,3.0,efectivo,2025-06-03,3.0
+169,ignacio valenzuela,19.0,f,rancagua,ingeniería industrial,579000.0,router,30000.0,3.0,credito,2025-01-22,3.0
+257,felipe valenzuela,22.0,f,puerto montt,ingeniería industrial,450000.0,disco externo,45000.0,3.0,efectivo,2025-02-09,2.0
+69,fernanda lópez,19.0,f,rancagua,derecho,579000.0,mouse,9000.0,2.0,débito,2025-10-04,1.0
+103,matías contreras,17.0,f,temuco,medicina,444000.0,webcam,20000.0,3.0,transferencia,2025-01-27,4.0
+116,emilia díaz,19.0,masculino,concepción,derecho,698000.0,notebook,270000.0,1.0,efectivo,2025-01-29,5.0
+263,emilia pérez,19.0,m,puerto montt,arquitectura,253000.0,tablet,180000.0,2.0,transferencia,2025-07-13,4.0
+160,gabriel muñoz,25.0,f,santiago,ingeniería industrial,621000.0,mouse,9000.0,2.0,debito,2025-08-08,4.0
+206,catalina lópez,28.0,f,valparaíso,arquitectura,403000.0,audífonos,25000.0,3.0,transferencia,2025-04-20,5.0
+59,josefa pérez,23.0,masculino,puerto montt,arquitectura,393000.0,disco externo,45000.0,3.0,efectivo,2025-08-15,4.0
+230,matías pérez,20.0,m,temuco,ingeniería industrial,386000.0,disco externo,45000.0,2.0,crédito,2025-09-21,3.0
+43,amanda muñoz,24.0,femenino,la serena,enfermería,540000.0,mouse,9000.0,2.0,debito,2025-07-28,3.0
+5,valentina lópez,24.0,f,temuco,diseño,769000.0,router,30000.0,2.0,débito,2025-08-24,4.0
+41,agustín hernández,22.0,f,rancagua,pedagogía,729000.0,notebook,270000.0,1.0,débito,2025-03-18,4.0
+260,amanda espinoza,24.0,f,rancagua,ingeniería industrial,815000.0,router,30000.0,1.0,debito,2025-08-25,5.0
+135,martina martínez,21.0,m,valparaíso,ingeniería industrial,679000.0,mouse,9000.0,3.0,crédito,2025-01-11,1.0
+199,agustín fuentes,17.0,f,rancagua,medicina,948000.0,teclado,15000.0,3.0,débito,2025-06-14,2.0
+104,isidora flores,27.0,m,antofagasta,ingeniería industrial,763000.0,webcam,20000.0,1.0,débito,2025-05-03,3.0
+78,amanda hernández,25.0,m,talca,medicina,493000.0,router,30000.0,3.0,débito,2025-06-22,1.0
+178,javiera pérez,23.0,f,antofagasta,ingeniería comercial,429000.0,disco externo,45000.0,3.0,credito,2025-09-27,1.0
+231,fernanda valenzuela,35.0,femenino,concepción,arquitectura,635500.0,router,30000.0,3.0,efectivo,2025-06-22,4.0
+71,benjamín pérez,25.0,masculino,puerto montt,ingeniería comercial,938000.0,router,30000.0,1.0,transferencia,2025-05-12,5.0
+7,matías silva,25.0,femenino,valparaíso,enfermería,229000.0,mouse,9000.0,2.0,efectivo,2025-08-21,5.0
+189,sebastián muñoz,29.0,m,rancagua,medicina,690000.0,webcam,20000.0,1.0,débito,2025-09-13,4.0
+92,emilia contreras,17.0,m,la serena,derecho,756000.0,mouse,9000.0,1.0,crédito,2025-03-30,4.0
+248,tomás espinoza,33.0,f,valparaíso,diseño,769000.0,audífonos,25000.0,2.0,credito,2025-10-06,4.0
+154,agustín morales,31.0,f,iquique,ingeniería comercial,520000.0,notebook,270000.0,1.0,crédito,2025-01-26,2.0
+110,josefa morales,21.0,m,la serena,medicina,635500.0,impresora,95000.0,1.0,transferencia,2025-01-23,5.0
+24,vicente pérez,21.0,m,iquique,medicina,883000.0,webcam,20000.0,1.0,transferencia,2025-07-28,4.0
+194,javiera muñoz,26.0,femenino,puerto montt,diseño,1063000.0,teclado,15000.0,3.0,débito,2025-09-03,3.0
+212,fernanda rojas,22.0,masculino,talca,pedagogía,864000.0,tablet,180000.0,1.0,debito,2025-10-28,3.0
+4,emilia soto,33.0,m,rancagua,diseño,819000.0,audífonos,25000.0,1.0,crédito,2025-06-22,2.0
+14,maximiliano fuentes,17.0,f,valparaíso,arquitectura,733000.0,impresora,95000.0,3.0,transferencia,2025-09-28,5.0
+123,sofía sepúlveda,17.0,m,iquique,diseño,576000.0,monitor,120000.0,3.0,crédito,2025-05-09,3.0
+79,diego morales,35.0,m,talca,enfermería,754000.0,tablet,180000.0,2.0,efectivo,2025-05-24,5.0
+65,emilia lópez,24.0,masculino,puerto montt,arquitectura,539000.0,router,30000.0,1.0,débito,2025-04-23,5.0
+19,amanda espinoza,25.0,f,valparaíso,ingeniería industrial,219000.0,mouse,9000.0,3.0,crédito,2025-03-07,3.0
+255,trinidad sepúlveda,37.5,femenino,iquique,enfermería,467000.0,monitor,120000.0,1.0,transferencia,2025-03-20,3.0
+44,rodrigo silva,29.0,m,concepción,arquitectura,722000.0,notebook,270000.0,1.0,credito,2025-06-20,4.0
+252,javiera torres,17.0,femenino,la serena,ingeniería civil informática,774000.0,audífonos,25000.0,2.0,crédito,2025-08-17,5.0
+111,agustín torres,37.0,m,rancagua,arquitectura,239000.0,teclado,15000.0,2.0,débito,2025-03-06,4.0
+293,nicolás morales,25.0,f,la serena,medicina,705000.0,teclado,15000.0,3.0,transferencia,2025-02-09,5.0
+258,matías flores,20.0,f,la serena,medicina,816000.0,disco externo,45000.0,1.0,crédito,2025-06-17,4.0
+190,camila araya,37.0,f,la serena,psicología,635500.0,audífonos,25000.0,2.0,débito,2025-06-30,4.0
+214,nicolás morales,24.0,m,la serena,diseño,801000.0,disco externo,45000.0,2.0,débito,2025-05-09,4.0
+46,sofía hernández,24.0,femenino,antofagasta,enfermería,863000.0,monitor,120000.0,1.0,credito,2025-04-09,4.0
+251,ignacio lópez,29.0,masculino,puerto montt,diseño,1070000.0,mouse,9000.0,2.0,credito,2025-02-18,3.0
+144,ignacio fuentes,23.0,f,valparaíso,pedagogía,779000.0,monitor,120000.0,2.0,transferencia,2025-04-27,4.0
+274,vicente araya,27.0,m,rancagua,enfermería,605000.0,audífonos,25000.0,1.0,efectivo,2025-02-10,3.0
+181,benjamín flores,24.0,m,antofagasta,arquitectura,987000.0,monitor,120000.0,2.0,credito,2025-10-20,3.0
+205,martina morales,24.0,m,antofagasta,enfermería,763000.0,mouse,9000.0,1.0,credito,2025-04-06,3.0
+22,camila espinoza,23.0,f,la serena,medicina,584000.0,monitor,120000.0,1.0,débito,2025-01-31,4.0
+109,gabriel pérez,19.0,masculino,puerto montt,ingeniería industrial,598000.0,tablet,180000.0,2.0,debito,2025-10-06,4.0
+58,emilia fuentes,9.5,m,concepción,pedagogía,716000.0,webcam,20000.0,1.0,debito,2025-05-08,2.0
+232,sofía araya,19.0,f,talca,medicina,697000.0,audífonos,25000.0,2.0,débito,2025-07-08,5.0
+13,cristóbal silva,20.0,m,puerto montt,ingeniería industrial,674000.0,mouse,9000.0,1.0,débito,2025-03-20,3.0
+30,joaquín flores,25.0,m,talca,psicología,865000.0,monitor,120000.0,2.0,crédito,2025-01-30,4.0
+150,emilia martínez,28.0,f,la serena,arquitectura,789000.0,disco externo,45000.0,3.0,debito,2025-10-13,1.0
+95,sebastián flores,18.0,m,puerto montt,psicología,317000.0,audífonos,25000.0,1.0,débito,2025-01-31,3.0
+177,cristóbal gonzález,29.0,femenino,antofagasta,psicología,615000.0,monitor,120000.0,2.0,débito,2025-04-09,4.0
+192,catalina araya,17.0,f,santiago,arquitectura,534000.0,webcam,20000.0,1.0,credito,2025-07-18,5.0
+133,amanda espinoza,22.0,masculino,iquique,arquitectura,375000.0,audífonos,25000.0,1.0,credito,2025-07-09,4.0
+90,benjamín díaz,22.0,f,rancagua,medicina,1217750.0,router,30000.0,3.0,crédito,2025-09-25,4.0
+188,antonia pérez,36.0,f,iquique,pedagogía,481000.0,impresora,95000.0,1.0,efectivo,2025-05-02,5.0
+35,josefa morales,26.0,f,santiago,ingeniería industrial,508000.0,router,30000.0,3.0,débito,2025-02-07,4.0
+73,florencia lópez,25.0,masculino,la serena,ingeniería comercial,635500.0,router,30000.0,3.0,débito,2025-05-05,2.0
+267,matías fuentes,23.0,f,santiago,enfermería,384000.0,monitor,120000.0,1.0,débito,2025-01-18,3.0
+261,agustín gonzález,17.0,masculino,antofagasta,arquitectura,770000.0,monitor,120000.0,3.0,débito,2025-01-24,4.0
+140,josefa rodríguez,24.0,f,iquique,ingeniería comercial,565000.0,webcam,20000.0,3.0,crédito,2025-01-23,4.0
+8,nicolás rodríguez,24.0,femenino,la serena,derecho,526000.0,mouse,9000.0,3.0,credito,2025-03-29,4.0
+28,matías flores,30.0,f,valparaíso,enfermería,855000.0,teclado,15000.0,2.0,transferencia,2025-09-04,4.0
+112,florencia morales,28.0,f,talca,ingeniería comercial,295000.0,disco externo,45000.0,2.0,débito,2025-03-15,4.0
+284,amanda espinoza,17.0,m,santiago,ingeniería civil informática,428000.0,impresora,95000.0,1.0,credito,2025-04-29,2.0
+88,josefa morales,25.0,m,santiago,derecho,832000.0,webcam,20000.0,1.0,débito,2025-07-25,3.0
+165,antonia soto,27.0,f,concepción,ingeniería comercial,788000.0,teclado,15000.0,3.0,transferencia,2025-08-26,3.0
+176,vicente lópez,25.0,m,temuco,psicología,975000.0,disco externo,45000.0,1.0,credito,2025-08-05,4.0
+198,amanda lópez,31.0,femenino,concepción,ingeniería industrial,547000.0,webcam,20000.0,2.0,debito,2025-05-17,2.0
+97,isidora araya,25.0,f,talca,ingeniería industrial,376000.0,mouse,9000.0,3.0,débito,2025-08-10,5.0
+290,martina lópez,17.0,masculino,puerto montt,ingeniería industrial,902000.0,notebook,270000.0,3.0,débito,2025-03-29,2.0
+42,matías rodríguez,32.0,f,puerto montt,psicología,536000.0,impresora,95000.0,1.0,débito,2025-06-07,5.0
+64,martina espinoza,18.0,m,santiago,medicina,525000.0,impresora,95000.0,2.0,débito,2025-06-30,5.0
+197,cristóbal muñoz,17.0,m,temuco,derecho,1053000.0,mouse,9000.0,2.0,transferencia,2025-07-24,3.0
+256,agustín valenzuela,25.0,femenino,rancagua,pedagogía,639000.0,webcam,20000.0,3.0,débito,2025-04-22,4.0
+180,agustín hernández,25.0,f,rancagua,diseño,468000.0,monitor,120000.0,2.0,debito,2025-05-26,3.0
+18,ignacio morales,28.0,masculino,santiago,ingeniería comercial,381000.0,tablet,180000.0,2.0,crédito,2025-01-30,4.0
+12,isidora pérez,24.0,m,puerto montt,pedagogía,635500.0,audífonos,25000.0,3.0,debito,2025-08-08,4.0
+215,trinidad flores,30.0,femenino,concepción,derecho,263000.0,router,30000.0,3.0,débito,2025-09-15,3.0
+91,josefa hernández,27.0,femenino,iquique,arquitectura,461000.0,audífonos,25000.0,3.0,debito,2025-01-31,2.0
+52,martina sepúlveda,21.0,f,concepción,enfermería,473000.0,impresora,95000.0,3.0,transferencia,2025-03-31,5.0
+86,nicolás sepúlveda,18.0,f,puerto montt,psicología,471000.0,audífonos,25000.0,1.0,débito,2025-10-11,5.0
+125,agustín pérez,34.0,f,antofagasta,diseño,739000.0,impresora,95000.0,1.0,crédito,2025-03-09,4.0
+162,valentina fuentes,19.0,f,la serena,arquitectura,1110000.0,router,30000.0,2.0,debito,2025-02-10,4.0
+89,valentina espinoza,24.0,m,puerto montt,ingeniería civil informática,970000.0,teclado,15000.0,1.0,debito,2025-06-05,2.0
+202,valentina lópez,24.0,femenino,puerto montt,psicología,660000.0,notebook,270000.0,1.0,debito,2025-08-13,1.0
+223,antonia soto,17.0,masculino,puerto montt,arquitectura,797000.0,webcam,20000.0,2.0,transferencia,2025-01-12,2.0
+246,tomás muñoz,23.0,f,puerto montt,medicina,976000.0,monitor,120000.0,3.0,credito,2025-01-20,3.0
+40,valentina fuentes,24.0,femenino,santiago,ingeniería civil informática,213000.0,tablet,180000.0,1.0,credito,2025-05-15,3.0
+87,constanza pérez,23.0,m,talca,ingeniería comercial,725000.0,notebook,270000.0,3.0,débito,2025-08-29,3.0
+182,josefa sepúlveda,23.0,masculino,puerto montt,pedagogía,738000.0,impresora,95000.0,1.0,crédito,2025-03-12,5.0
+219,josefa rojas,33.0,m,santiago,psicología,346000.0,webcam,20000.0,2.0,transferencia,2025-08-26,4.0
+117,cristóbal rodríguez,24.0,f,concepción,enfermería,507000.0,disco externo,45000.0,2.0,debito,2025-04-03,3.0
+146,javiera torres,22.0,f,valparaíso,ingeniería comercial,542000.0,mouse,9000.0,2.0,débito,2025-07-10,3.0
+159,javiera lópez,28.0,f,la serena,pedagogía,582000.0,disco externo,45000.0,3.0,efectivo,2025-02-06,4.0
+281,vicente espinoza,25.0,f,rancagua,derecho,1107000.0,teclado,15000.0,6.0,efectivo,2025-04-28,4.0
+253,fernanda sepúlveda,20.0,f,iquique,ingeniería civil informática,543000.0,audífonos,25000.0,3.0,efectivo,2025-05-01,1.0
+234,amanda espinoza,27.0,f,talca,psicología,817000.0,disco externo,45000.0,3.0,credito,2025-07-14,3.0
+201,constanza hernández,17.0,femenino,talca,ingeniería civil informática,518000.0,tablet,180000.0,3.0,transferencia,2025-05-21,1.0
+171,josefa díaz,19.0,femenino,valparaíso,pedagogía,704000.0,teclado,15000.0,1.0,crédito,2025-08-13,3.0
+126,amanda rodríguez,17.0,f,puerto montt,derecho,852000.0,teclado,15000.0,2.0,transferencia,2025-06-01,5.0
+283,nicolás rodríguez,31.0,m,concepción,pedagogía,560000.0,webcam,20000.0,1.0,debito,2025-01-31,4.0
+72,nicolás valenzuela,17.0,f,valparaíso,psicología,691000.0,audífonos,25000.0,1.0,debito,2025-01-14,5.0
+266,vicente lópez,27.0,m,la serena,ingeniería industrial,284000.0,tablet,180000.0,1.0,débito,2025-04-07,2.0
+288,benjamín contreras,28.0,f,puerto montt,derecho,164000.0,tablet,180000.0,2.0,transferencia,2025-02-10,5.0
+244,benjamín silva,20.0,f,valparaíso,arquitectura,412000.0,tablet,180000.0,3.0,transferencia,2025-02-21,3.0
+273,diego silva,17.0,m,antofagasta,psicología,475000.0,webcam,20000.0,1.0,debito,2025-07-31,4.0
+82,martina silva,30.0,femenino,puerto montt,arquitectura,469000.0,tablet,180000.0,2.0,debito,2025-09-29,5.0
+221,amanda espinoza,26.0,femenino,la serena,ingeniería industrial,643000.0,mouse,9000.0,2.0,transferencia,2025-05-07,3.0
+96,maximiliano sepúlveda,21.0,f,iquique,derecho,838000.0,webcam,20000.0,1.0,transferencia,2025-06-05,4.0
+269,javiera araya,18.0,femenino,la serena,medicina,565000.0,tablet,180000.0,3.0,debito,2025-06-14,4.0
+134,josefa hernández,33.0,m,temuco,ingeniería comercial,335000.0,tablet,180000.0,3.0,credito,2025-07-03,1.0
+262,cristóbal rojas,20.0,f,santiago,ingeniería comercial,776000.0,webcam,20000.0,1.0,efectivo,2025-07-29,3.0
+185,joaquín muñoz,24.0,masculino,puerto montt,diseño,480000.0,monitor,120000.0,2.0,débito,2025-07-11,4.0
+138,isidora soto,18.0,f,puerto montt,ingeniería civil informática,752000.0,teclado,15000.0,1.0,efectivo,2025-05-02,5.0
+101,amanda espinoza,26.0,femenino,puerto montt,arquitectura,773000.0,disco externo,45000.0,1.0,transferencia,2025-02-15,5.0
+20,vicente soto,17.0,femenino,puerto montt,medicina,693000.0,impresora,95000.0,1.0,debito,2025-04-13,5.0
+243,constanza martínez,19.0,m,valparaíso,medicina,337000.0,router,30000.0,1.0,crédito,2025-01-26,4.0
+168,valentina sepúlveda,29.0,masculino,talca,ingeniería civil informática,618000.0,notebook,270000.0,2.0,efectivo,2025-02-09,2.0
+237,catalina contreras,17.0,f,temuco,arquitectura,951000.0,disco externo,45000.0,2.0,efectivo,2025-03-30,3.0
+148,gabriel fuentes,26.0,m,santiago,derecho,498000.0,router,30000.0,2.0,efectivo,2025-02-23,4.0
+9,agustín silva,17.0,m,talca,arquitectura,719000.0,audífonos,25000.0,3.0,credito,2025-10-13,4.0
+108,isidora fuentes,22.0,femenino,puerto montt,derecho,635500.0,notebook,270000.0,2.0,credito,2025-06-02,3.0
+54,josefa hernández,35.0,m,la serena,pedagogía,688000.0,webcam,20000.0,3.0,crédito,2025-02-13,5.0
+145,fernanda hernández,25.0,masculino,rancagua,ingeniería comercial,513000.0,tablet,180000.0,2.0,efectivo,2025-05-11,5.0
+61,diego silva,28.0,femenino,talca,ingeniería comercial,450000.0,audífonos,25000.0,1.0,efectivo,2025-06-21,5.0
+93,valentina soto,22.0,f,rancagua,ingeniería industrial,807000.0,router,30000.0,2.0,efectivo,2025-01-17,4.0
+33,amanda espinoza,28.0,m,iquique,medicina,948000.0,notebook,270000.0,3.0,débito,2025-08-03,4.0
+226,javiera martínez,23.0,m,temuco,arquitectura,860000.0,tablet,180000.0,1.0,transferencia,2025-01-27,4.0
+136,maximiliano morales,32.0,m,concepción,medicina,334000.0,monitor,120000.0,1.0,debito,2025-04-17,4.0
+295,catalina rodríguez,24.0,f,valparaíso,arquitectura,462000.0,monitor,120000.0,1.0,efectivo,2025-07-23,5.0
+23,valentina muñoz,17.0,femenino,valparaíso,pedagogía,492000.0,monitor,120000.0,2.0,credito,2025-09-06,4.0
+210,camila rodríguez,31.0,f,iquique,arquitectura,665000.0,webcam,20000.0,3.0,crédito,2025-02-14,2.0
+63,valentina fuentes,27.0,masculino,temuco,pedagogía,1132000.0,webcam,20000.0,2.0,débito,2025-04-16,4.0
+228,sofía valenzuela,20.0,m,iquique,ingeniería comercial,476000.0,teclado,15000.0,1.0,transferencia,2025-07-11,5.0
+216,florencia espinoza,17.0,m,concepción,medicina,201000.0,router,30000.0,2.0,debito,2025-01-22,1.0
+53,martina flores,23.0,f,antofagasta,derecho,739000.0,monitor,120000.0,2.0,debito,2025-06-14,3.0
+286,camila gonzález,24.0,f,puerto montt,arquitectura,1019000.0,notebook,270000.0,1.0,debito,2025-05-21,4.0
+174,tomás martínez,17.0,m,puerto montt,medicina,340000.0,teclado,15000.0,2.0,débito,2025-10-26,3.0
+36,antonia araya,26.0,femenino,concepción,diseño,988000.0,mouse,9000.0,1.0,efectivo,2025-05-26,3.0
+179,felipe morales,23.0,f,concepción,medicina,586000.0,impresora,95000.0,1.0,crédito,2025-04-03,3.0
+227,antonia rodríguez,18.0,f,antofagasta,ingeniería comercial,635500.0,impresora,95000.0,3.0,transferencia,2025-10-09,5.0
+121,antonia lópez,19.0,masculino,valparaíso,arquitectura,625000.0,impresora,95000.0,3.0,efectivo,2025-10-22,5.0
+45,maximiliano silva,20.0,femenino,concepción,ingeniería comercial,763000.0,impresora,95000.0,1.0,transferencia,2025-04-24,4.0
+77,emilia torres,19.0,masculino,rancagua,medicina,701000.0,audífonos,25000.0,2.0,crédito,2025-02-14,5.0
+209,constanza soto,33.0,femenino,puerto montt,enfermería,675000.0,mouse,9000.0,1.0,crédito,2025-05-02,3.0
+213,emilia pérez,27.0,masculino,puerto montt,ingeniería civil informática,951000.0,mouse,9000.0,3.0,crédito,2025-06-05,3.0
+268,ignacio muñoz,20.0,m,santiago,arquitectura,660000.0,webcam,20000.0,1.0,debito,2025-04-22,1.0
+217,valentina muñoz,22.0,m,iquique,derecho,808000.0,monitor,120000.0,3.0,transferencia,2025-01-16,3.0
+299,camila sepúlveda,22.0,f,temuco,derecho,435000.0,mouse,9000.0,1.0,débito,2025-04-06,4.0
+10,felipe morales,18.0,f,la serena,ingeniería civil informática,339000.0,tablet,180000.0,2.0,efectivo,2025-02-03,4.0
+280,cristóbal morales,26.0,masculino,santiago,medicina,557000.0,monitor,120000.0,3.0,crédito,2025-01-09,5.0
+292,amanda espinoza,27.0,masculino,antofagasta,ingeniería civil informática,1150000.0,mouse,9000.0,3.0,efectivo,2025-10-06,1.0
+105,tomás flores,27.0,f,puerto montt,arquitectura,1217750.0,mouse,9000.0,1.0,débito,2025-08-25,2.0
+298,isidora pérez,30.0,masculino,puerto montt,psicología,538000.0,impresora,95000.0,2.0,efectivo,2025-02-24,2.0
+183,matías torres,28.0,femenino,puerto montt,ingeniería comercial,562000.0,disco externo,45000.0,1.0,efectivo,2025-02-12,3.0
+173,felipe valenzuela,21.0,f,puerto montt,diseño,701000.0,mouse,9000.0,2.0,débito,2025-10-13,4.0
+233,felipe díaz,23.0,masculino,iquique,derecho,601000.0,notebook,270000.0,3.0,transferencia,2025-05-16,4.0
+37,josefa flores,23.0,m,antofagasta,medicina,994000.0,disco externo,45000.0,1.0,credito,2025-10-11,5.0
+157,felipe sepúlveda,28.0,f,la serena,arquitectura,829000.0,router,30000.0,1.0,débito,2025-04-15,5.0
+3,vicente contreras,22.0,m,puerto montt,pedagogía,598000.0,impresora,95000.0,1.0,transferencia,2025-05-23,1.0
+49,agustín morales,25.0,masculino,iquique,pedagogía,707000.0,mouse,9000.0,2.0,debito,2025-04-08,5.0
+142,amanda espinoza,33.0,f,valparaíso,diseño,378000.0,router,30000.0,1.0,débito,2025-03-06,5.0
+224,martina araya,26.0,masculino,la serena,enfermería,443000.0,router,30000.0,2.0,débito,2025-01-26,5.0
+184,isidora hernández,25.0,f,concepción,arquitectura,653000.0,mouse,9000.0,1.0,transferencia,2025-06-28,1.0
+107,josefa flores,29.0,m,rancagua,enfermería,793000.0,router,30000.0,3.0,credito,2025-03-11,2.0
+161,constanza fuentes,24.0,f,valparaíso,arquitectura,781000.0,notebook,270000.0,2.0,crédito,2025-08-24,5.0
+220,fernanda valenzuela,17.0,m,temuco,diseño,638000.0,tablet,180000.0,2.0,crédito,2025-07-09,4.0
+100,valentina torres,24.0,femenino,rancagua,diseño,399000.0,tablet,180000.0,3.0,débito,2025-03-24,5.0
+236,javiera fuentes,22.0,m,la serena,arquitectura,150000.0,disco externo,45000.0,3.0,transferencia,2025-02-01,3.0
+118,nicolás rojas,36.0,f,rancagua,medicina,789000.0,monitor,120000.0,2.0,debito,2025-03-15,4.0
+2,valentina espinoza,27.0,masculino,santiago,ingeniería civil informática,985000.0,mouse,9000.0,1.0,crédito,2025-09-16,1.0
+114,gabriel morales,24.0,f,puerto montt,arquitectura,413000.0,tablet,180000.0,3.0,credito,2025-09-07,4.0
+175,rodrigo rodríguez,19.0,f,puerto montt,arquitectura,603000.0,teclado,15000.0,3.0,credito,2025-02-13,5.0
+254,felipe díaz,20.0,masculino,antofagasta,psicología,460000.0,impresora,95000.0,3.0,debito,2025-06-09,2.0
+166,felipe espinoza,23.0,m,puerto montt,medicina,453000.0,tablet,180000.0,3.0,débito,2025-03-19,3.0
+275,gabriel rodríguez,26.0,f,puerto montt,enfermería,517000.0,notebook,270000.0,2.0,débito,2025-01-21,2.0
+193,isidora gonzález,24.0,f,valparaíso,diseño,683000.0,monitor,120000.0,3.0,credito,2025-02-23,5.0
+1,amanda espinoza,26.0,f,antofagasta,enfermería,620000.0,monitor,120000.0,1.0,credito,2025-02-22,4.0
+55,catalina valenzuela,25.0,femenino,valparaíso,enfermería,634000.0,audífonos,25000.0,1.0,crédito,2025-03-17,1.0
+29,gabriel lópez,18.0,f,concepción,arquitectura,582000.0,notebook,270000.0,2.0,efectivo,2025-08-21,5.0
+207,constanza torres,17.0,m,valparaíso,psicología,931000.0,mouse,9000.0,2.0,crédito,2025-08-16,2.0
+50,matías fuentes,24.0,f,puerto montt,pedagogía,598000.0,monitor,120000.0,2.0,transferencia,2025-02-05,5.0
+21,martina rodríguez,28.0,masculino,puerto montt,ingeniería industrial,688000.0,mouse,9000.0,1.0,débito,2025-02-02,5.0
+294,nicolás espinoza,21.0,m,iquique,arquitectura,463000.0,disco externo,45000.0,2.0,transferencia,2025-03-13,2.0
+34,fernanda martínez,23.0,m,puerto montt,diseño,871000.0,monitor,120000.0,2.0,transferencia,2025-03-09,5.0
+172,amanda espinoza,25.0,f,concepción,diseño,635500.0,tablet,180000.0,2.0,transferencia,2025-07-29,5.0
+98,ignacio martínez,25.0,f,valparaíso,enfermería,735000.0,router,30000.0,3.0,débito,2025-05-18,1.0
+70,cristóbal silva,28.0,m,valparaíso,ingeniería civil informática,379000.0,notebook,270000.0,1.0,crédito,2025-01-11,3.0
+130,rodrigo valenzuela,26.0,m,puerto montt,ingeniería comercial,820000.0,webcam,20000.0,3.0,efectivo,2025-07-29,2.0
+259,josefa díaz,24.0,m,la serena,medicina,435000.0,webcam,20000.0,1.0,debito,2025-08-17,1.0
+151,ignacio martínez,19.0,f,concepción,derecho,69750.0,audífonos,25000.0,2.0,efectivo,2025-01-04,3.0
+27,javiera fuentes,19.0,m,antofagasta,ingeniería industrial,785000.0,monitor,120000.0,1.0,transferencia,2025-10-09,2.0
+94,tomás sepúlveda,26.0,m,talca,ingeniería comercial,634000.0,monitor,120000.0,2.0,credito,2025-04-12,4.0
+149,antonia pérez,29.0,m,talca,enfermería,635500.0,mouse,9000.0,2.0,debito,2025-07-08,2.0
+120,valentina hernández,20.0,f,iquique,derecho,838000.0,impresora,95000.0,3.0,efectivo,2025-08-22,5.0
+139,camila soto,25.0,femenino,santiago,psicología,518000.0,impresora,95000.0,3.0,débito,2025-02-02,3.0
+170,rodrigo espinoza,26.0,m,la serena,diseño,526000.0,router,30000.0,2.0,debito,2025-03-19,1.0
+203,javiera rojas,21.0,m,puerto montt,diseño,787000.0,tablet,180000.0,2.0,debito,2025-01-17,3.0
+278,rodrigo silva,26.0,f,temuco,derecho,559000.0,impresora,95000.0,2.0,debito,2025-07-03,5.0
+132,martina hernández,17.0,femenino,puerto montt,pedagogía,425000.0,impresora,95000.0,3.0,credito,2025-03-21,4.0
+250,trinidad martínez,18.0,m,concepción,ingeniería civil informática,346000.0,tablet,180000.0,2.0,debito,2025-04-09,3.0
+153,agustín araya,23.0,m,rancagua,arquitectura,676000.0,webcam,20000.0,2.0,crédito,2025-07-09,5.0
