@@ -15,12 +15,12 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 
 # Se agrega la función de limpieza de datos desde el módulo Analisis.limpieza 05-11-2026
 # [NUEVO - 05-11-2026] se importa la función del árbol
-from Analisis.limpieza import limpiar_datos
-from Analisis.arbol_decision import entrenar_arbol
+from Analisis.preprocesamiento.limpieza import limpiar_datos
+from Analisis.algoritmos.arbol_decision import entrenar_arbol
 #Nuevo 25-11-2026 Se importa la función de reglas de asociación
-from Analisis.asociacion import generar_reglas
+from Analisis.algoritmos.asociacion import generar_reglas
 #Nuevo 25-11-2026 se importa la función de dashboard
-from Analisis.dashboard import generar_graficos
+from Analisis.visualizacion.dashboard import generar_graficos
 # ------------------------------------------------------------
 # 1) CONFIGURACIÓN BASE DE LA APLICACIÓN
 # ------------------------------------------------------------
@@ -75,14 +75,14 @@ def leer_csv_robusto(filepath):
             df = pd.read_csv(filepath, encoding=enc, sep=None, engine='python')
             if len(df.columns) > 1:
                 return df
-        except:
+        except Exception:
             pass
         try:
             # Intento con punto y coma (Excel en español)
             df = pd.read_csv(filepath, encoding=enc, sep=';')
             if len(df.columns) > 1:
                 return df
-        except:
+        except Exception:
             pass
             
     # Plan de rescate
@@ -173,7 +173,7 @@ def leer_csv_robusto(filepath):
 @app.route('/')
 def index():
     """Muestra el formulario de subida."""
-    return render_template('index.html')
+    return render_template('datos/index.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -214,21 +214,18 @@ def upload_file():
             reemplazos_dict = {}
             
             if texto_reemplazos:
-                # Separo por comas
-                pares = texto_reemplazos.split(',')
-                for par in pares:
-                    if '=' in par:
-                        buscar, reemplazar = par.split('=')
-                        # Limpio los espacios, paso todo a minúsculas y guardo en el diccionario
-                        reemplazos_dict[buscar.strip().lower()] = reemplazar.strip().lower()
+                        # Separo por comas
+                        pares = texto_reemplazos.split(',')
+                        for par in pares:
+                            if '=' in par:
+                                buscar, reemplazar = par.split('=')
+                                # Limpio los espacios, paso todo a minúsculas y guardo en el diccionario
+                                reemplazos_dict[buscar.strip().lower()] = reemplazar.strip().lower()
 
-            # Y AHORA SÍ, LLAMO A LA FUNCIÓN DE LIMPIEZA CON EL DICCIONARIO INCLUIDO
+                    # Y AHORA SÍ, LLAMO A LA FUNCIÓN DE LIMPIEZA CON EL DICCIONARIO INCLUIDO
             df_limpio, resumen_limpieza = limpiar_datos(df_crudo, opciones_usuario, reemplazos_dict)
 
-            # 2. Llamo a la función de limpieza pasándole el diccionario
-            df_limpio, resumen_limpieza = limpiar_datos(df_crudo, opciones_usuario)
-
-            # 3. Preparamos los datos LIMPIOS para la vista
+            # Preparamos los datos LIMPIOS para la vista
             preview_data = df_limpio.head(50).to_dict(orient='records')
             columnas = list(df_limpio.columns)
             total_filas = len(df_limpio)
@@ -278,7 +275,7 @@ def preview():
 
     #05-11-2026 Enviamos el resumen al HTML
     # Renderiza la plantilla HTML con los datos ya cargados.
-    return render_template('preview.html', 
+    return render_template('datos/preview.html',
                            data=preview_data, 
                            columnas=columnas, 
                            total_filas=total_filas,
@@ -298,7 +295,7 @@ def arbol():
         return redirect(url_for('index'))
     
     # Le pasamos las columnas al HTML para que el usuario elija en los menús desplegables
-    return render_template('arbol.html', columnas=columnas)
+    return render_template('arbol/arbol.html', columnas=columnas)
 
 
 @app.route('/entrenar_arbol', methods=['POST'])
@@ -334,7 +331,7 @@ def entrenar():
         )
 
         # 4. Enviar los resultados a la plantilla HTML
-        return render_template('arbol_resultado.html', 
+        return render_template('arbol/arbol_resultado.html',
                                resultado=resultado, 
                                variable_objetivo=variable_objetivo)
 
@@ -343,7 +340,7 @@ def entrenar():
         return redirect(url_for('arbol'))
 
 
-# NUEVO - 12-11-2026 RUTAS PARA GESTIÓN DE MODELOS
+#12-11-2026 RUTAS PARA GESTIÓN DE MODELOS
 @app.route('/guardar_modelo', methods=['POST'])
 def guardar_modelo():
     import datetime
@@ -353,6 +350,11 @@ def guardar_modelo():
     resumen = session.get('resumen', {})
     exactitud = request.form.get('exactitud')
     objetivo = request.form.get('variable_objetivo')
+    
+    # [NUEVO 26-11-2026] Recibo la imagen y las métricas para guardarlas en el JSON
+    imagen_base64 = request.form.get('imagen_base64')
+    matriz = request.form.get('matriz_confusion')
+    clases = request.form.get('clases')
     
     if not exactitud:
         flash('No hay modelo para guardar.')
@@ -364,7 +366,10 @@ def guardar_modelo():
         'fecha': datetime.datetime.now().strftime("%d-%m-%Y %H:%M"),
         'variable_objetivo': objetivo,
         'exactitud': exactitud,
-        'filas_entrenadas': resumen.get('filas_despues', 0)
+        'filas_entrenadas': resumen.get('filas_despues', 0),
+        'imagen_base64': imagen_base64, # [NUEVO 26-11-2026] Guardamos la imagen
+        'matriz_confusion': matriz,     # [NUEVO 26-11-2026] Guardamos la matriz (como texto JSON)
+        'clases': clases                # [NUEVO 26-11-2026] Guardamos las clases
     }
 
     # 3. Leer los modelos existentes y agregar el nuevo
@@ -389,8 +394,16 @@ def listar_modelos():
     if os.path.exists(ruta_modelos):
         with open(ruta_modelos, 'r', encoding='utf-8') as f:
             modelos = json.load(f)
+            
+        # [NUEVO 26-11-2026] Convierto los textos JSON de vuelta a listas de Python 
+        # para que el HTML pueda recorrer la matriz de confusión y las clases.
+        for m in modelos:
+            if m.get('matriz_confusion'):
+                m['matriz_confusion'] = json.loads(m['matriz_confusion'])
+            if m.get('clases'):
+                m['clases'] = json.loads(m['clases'])
     
-    return render_template('modelos.html', modelos=modelos)
+    return render_template('modelos/modelos.html', modelos=modelos)
 
 @app.route('/eliminar_modelo/<modelo_id>', methods=['POST'])
 def eliminar_modelo(modelo_id):
@@ -422,7 +435,7 @@ def asociacion():
     
     # Le paso las reglas guardadas en sesión (si es que hay) para mostrarlas
     reglas = session.get('reglas_asociacion', [])
-    return render_template('asociacion.html', columnas=columnas, reglas=reglas)
+    return render_template('asociacion/asociacion.html', columnas=columnas, reglas=reglas)
 
 
 @app.route('/generar_asociacion', methods=['POST'])
@@ -458,7 +471,7 @@ def generar_asociacion():
 
         # 5. Renderizo el HTML pasando solo las 100 reglas
         columnas = session.get('columnas')
-        return render_template('asociacion.html', columnas=columnas, reglas=reglas_mostrar)
+        return render_template('asociacion/asociacion.html', columnas=columnas, reglas=reglas_mostrar)
 
     except Exception as e:
         flash(f'Error al generar reglas: {str(e)}')
@@ -489,29 +502,6 @@ def descargar_reglas():
         mimetype="text/csv",
         headers={"Content-disposition": "attachment; filename=reglas_asociacion.csv"}
     )
-# ============================================================
-# RUTA PARA EL DASHBOARD (RF6)
-# ============================================================
-@app.route('/dashboard')
-def dashboard():
-    """Muestra los gráficos interactivos."""
-    cleaned_filepath = session.get('cleaned_filepath')
-    if not cleaned_filepath or not os.path.exists(cleaned_filepath):
-        flash('Primero debes subir un archivo CSV.')
-        return redirect(url_for('index'))
-
-    try:
-        # Leo el CSV limpio
-        df_limpio = pd.read_csv(cleaned_filepath)
-        
-        # Genero los gráficos llamando a mi módulo
-        graficos = generar_graficos(df_limpio)
-        
-        return render_template('dashboard.html', graficos=graficos)
-        
-    except Exception as e:
-        flash(f'Error al generar el dashboard: {str(e)}')
-        return redirect(url_for('index'))
 
 # RUTA PARA DESCARGAR EL INFORME EN HTML (RF5)
 # ============================================================
@@ -537,7 +527,7 @@ def informe():
         }
         resumen_limpieza = session.get('resumen', {})
 
-        return render_template('informe.html', 
+        return render_template('informes/informe.html',
                                info_dataset=info_dataset, 
                                resumen=resumen_limpieza,
                                filename=session.get('filename'))
@@ -566,8 +556,9 @@ def descargar_informe():
         }
         resumen_limpieza = session.get('resumen', {})
 
-        # Renderizamos el HTML a texto y lo enviamos como descarga
-        html_content = render_template('informe.html', 
+                # Renderizamos el HTML a texto y lo enviamos como descarga
+        # [CAMBIO 26-11-2026] Uso la plantilla export para que no tenga menús de navegación
+        html_content = render_template('informes/informe_export.html',
                                        info_dataset=info_dataset, 
                                        resumen=resumen_limpieza,
                                        filename=session.get('filename'))
@@ -581,6 +572,59 @@ def descargar_informe():
 
     except Exception as e:
         flash(f'Error al descargar el informe: {str(e)}')
+        return redirect(url_for('index'))
+
+    # ============================================================
+# RUTA PARA EL DASHBOARD (RF6)
+# ============================================================
+@app.route('/dashboard')
+def dashboard():
+    """Muestra los gráficos interactivos con filtros dinámicos."""
+    cleaned_filepath = session.get('cleaned_filepath')
+    if not cleaned_filepath or not os.path.exists(cleaned_filepath):
+        flash('Primero debes subir un archivo CSV.')
+        return redirect(url_for('index'))
+
+    try:
+        # Leo el CSV limpio
+        df_limpio = pd.read_csv(cleaned_filepath)
+        
+        # [NUEVO 26-11-2026] Lógica para Filtros Dinámicos
+        # Capturo los parámetros que vienen por la URL (GET)
+        col_filtro = request.args.get('col_filtro', '')
+        val_filtro = request.args.get('val_filtro', '')
+
+        # Busco qué columnas sirven para filtrar (las que tienen menos de 15 valores únicos, como categorías)
+        cols_filtrables = [c for c in df_limpio.columns if df_limpio[c].nunique() < 15]
+        
+        opciones_valores = []
+        
+        # Si el usuario seleccionó una columna, aplico el filtro
+        if col_filtro and col_filtro in df_limpio.columns:
+            # Saco los valores únicos de esa columna para el segundo dropdown
+            opciones_valores = df_limpio[col_filtro].dropna().unique().tolist()
+            
+            # Si además seleccionó un valor específico, filtro el DataFrame
+            if val_filtro:
+                # Convierto a string para evitar errores si el valor es numérico
+                df_limpio = df_limpio[df_limpio[col_filtro].astype(str) == str(val_filtro)]
+
+        if df_limpio.empty:
+            flash('El filtro aplicado no arrojó resultados.')
+            return redirect(url_for('dashboard'))
+
+        # Genero los gráficos llamando a mi módulo (con los datos ya filtrados)
+        graficos = generar_graficos(df_limpio)
+        
+        return render_template('dashboard/dashboard.html', 
+                               graficos=graficos,
+                               cols_filtrables=cols_filtrables,
+                               col_filtro=col_filtro,
+                               val_filtro=val_filtro,
+                               opciones_valores=opciones_valores)
+        
+    except Exception as e:
+        flash(f'Error al generar el dashboard: {str(e)}')
         return redirect(url_for('index'))
 # ------------------------------------------------------------
 # PUNTO DE ENTRADA

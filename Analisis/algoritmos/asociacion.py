@@ -3,16 +3,18 @@
 # ============================================================
 
 import pandas as pd
+
 # Cambiamos Apriori por FP-Growth, que es mucho más rápido y estable
 from mlxtend.frequent_patterns import fpgrowth, association_rules
 from mlxtend.preprocessing import TransactionEncoder
+
 
 def generar_reglas(df, min_support=0.05, min_confidence=0.5):
     """
     Toma el DataFrame limpio, convierte los números en categorías
     (Alto/Bajo) y aplica el algoritmo FP-Growth para encontrar reglas.
     """
-    
+
     df_cat = df.copy()
 
     for col in df_cat.columns:
@@ -27,7 +29,7 @@ def generar_reglas(df, min_support=0.05, min_confidence=0.5):
 
     # Convertimos a dummies (0 y 1)
     df_dummies = pd.get_dummies(df_cat)
-    
+
     # OBLIGATORIO PARA MLXTEND: Asegurarnos de que los datos sean booleanos (True/False)
     # Si no hacemos esto, a veces lanza errores silenciosos o consume mucha memoria.
     df_dummies = df_dummies.astype(bool)
@@ -44,7 +46,7 @@ def generar_reglas(df, min_support=0.05, min_confidence=0.5):
     for _, row in reglas.iterrows():
         antecedentes = ", ".join(list(row['antecedents']))
         consecuentes = ", ".join(list(row['consequents']))
-        
+
         reglas_formateadas.append({
             'antecedentes': antecedentes,
             'consecuentes': consecuentes,

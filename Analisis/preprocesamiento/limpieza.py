@@ -16,6 +16,7 @@ import re
 import pandas as pd        # Manipulación de datos tabulares
 import numpy as np         # Operaciones numéricas
 
+
 # ------------------------------------------------------------
 # FUNCIÓN PRINCIPAL: cargar_csv
 # ------------------------------------------------------------

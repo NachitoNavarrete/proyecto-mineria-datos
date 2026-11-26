@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Modelos Guardados</h2>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Volver al Inicio</a>
+</div>
+
+{% if modelos %}
+<div class="accordion" id="accordionModelos">
+    {% for m in modelos %}
+    <div class="accordion-item mb-2 shadow-sm border-0">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ m.id }}">
+                <div class="d-flex w-100 justify-content-between pe-3">
+                    <span><strong>Modelo:</strong> {{ m.variable_objetivo }}</span>
+                    <span class="badge bg-success me-3">Exactitud: {{ m.exactitud }}%</span>
+                    <span class="text-muted small">{{ m.fecha }}</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapse{{ m.id }}" class="accordion-collapse collapse" data-bs-parent="#accordionModelos">
+            <div class="accordion-body">
+                <div class="row">
+                    <!-- Imagen del árbol -->
+                    <div class="col-md-8">
+                        <h6 class="fw-bold mb-3">Visualización del Árbol</h6>
+                        {% if m.imagen_base64 %}
+                            <img src="data:image/png;base64,{{ m.imagen_base64 }}" class="img-fluid border rounded" alt="Árbol">
+                        {% else %}
+                            <p class="text-muted">Este modelo antiguo no tiene imagen guardada.</p>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Matriz de confusión y botón de eliminar -->
+                    <div class="col-md-4">
+                        <h6 class="fw-bold mb-3">Matriz de Confusión</h6>
+                        {% if m.matriz_confusion and m.clases %}
+                        <table class="table table-sm table-bordered text-center">
+                            <thead class="table-light">
+                                <tr>
+                                    <th></th>
+                                    {% for c in m.clases %}<th>{{ c }}</th>{% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for fila in m.matriz_confusion %}
+                                <tr>
+                                    <th class="table-light">{{ m.clases[loop.index0] }}</th>
+                                    {% for val in fila %}<td>{{ val }}</td>{% endfor %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% endif %}
+                        
+                        <form action="{{ url_for('eliminar_modelo', modelo_id=m.id) }}" method="POST" class="mt-4">
+                            <button type="submit" class="btn btn-danger w-100">
+                                <i class="fa-solid fa-trash me-1"></i> Eliminar Modelo
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info">No hay modelos guardados aún. Ve al módulo de Árbol para entrenar y guardar uno.</div>
+{% endif %}
+
+{% endblock %}

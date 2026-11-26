@@ -17,12 +17,18 @@
         
         <!-- Botón único para guardar -->
         <form action="{{ url_for('guardar_modelo') }}" method="POST" class="d-inline">
-            <input type="hidden" name="exactitud" value="{{ resultado.exactitud }}">
-            <input type="hidden" name="variable_objetivo" value="{{ variable_objetivo }}">
-            <button type="submit" class="btn btn-primary ms-2">
-                <i class="fa-solid fa-floppy-disk me-1"></i> Guardar Modelo
-            </button>
-        </form>
+    <input type="hidden" name="exactitud" value="{{ resultado.exactitud }}">
+    <input type="hidden" name="variable_objetivo" value="{{ variable_objetivo }}">
+    
+    <!-- [NUEVO 26-11-2026] Envío la imagen y los datos al backend -->
+    <input type="hidden" name="imagen_base64" value="{{ resultado.imagen_base64 }}">
+    <input type="hidden" name="matriz_confusion" value="{{ resultado.matriz_confusion | tojson | forceescape }}">
+    <input type="hidden" name="clases" value="{{ resultado.clases | tojson | forceescape }}">
+    
+    <button type="submit" class="btn btn-primary ms-2">
+        <i class="fa-solid fa-floppy-disk me-1"></i> Guardar Modelo
+    </button>
+</form>
     </div>
 </div>
 
@@ -61,8 +67,8 @@
                             <th class="table-light">Real: {{ resultado.clases[loop.index0] }}</th>
                             <!-- Recorremos cada número dentro de la fila -->
                             {% for valor in fila %}
-<td>
-                                        {{ valor }}
+                                <td>
+                                    {{ valor }}
                                 </td>
                             {% endfor %}
                         </tr>

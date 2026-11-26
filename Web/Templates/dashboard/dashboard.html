@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fa-solid fa-chart-pie text-primary me-2"></i> Dashboard Analítico</h2>
+    <span class="badge bg-secondary p-2">Dataset: {{ session.get('filename') }}</span>
+</div>
+
+<!-- [NUEVO 26-11-2026] Filtros Dinámicos (RF6) -->
+<!-- Este formulario recarga la página con los parámetros GET para filtrar los gráficos -->
+<form method="GET" action="{{ url_for('dashboard') }}" class="mb-4 card card-body bg-light shadow-sm border-0">
+    <div class="row align-items-end">
+        <div class="col-md-4">
+            <label class="form-label fw-bold small text-secondary">Filtrar por Columna:</label>
+            <select name="col_filtro" class="form-select" onchange="this.form.submit()">
+                <option value="">-- Dataset Completo --</option>
+                {% for c in cols_filtrables %}
+                    <!-- Mantengo la opción seleccionada si el usuario ya la eligió -->
+                    <option value="{{ c }}" {% if c == col_filtro %}selected{% endif %}>{{ c }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <!-- El segundo select solo aparece si ya se eligió una columna -->
+        {% if col_filtro %}
+        <div class="col-md-4">
+            <label class="form-label fw-bold small text-secondary">Seleccionar Valor:</label>
+            <select name="val_filtro" class="form-select" onchange="this.form.submit()">
+                <option value="">-- Todos --</option>
+                {% for v in opciones_valores %}
+                    <option value="{{ v }}" {% if v|string == val_filtro|string %}selected{% endif %}>{{ v }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <!-- Botón para limpiar y volver a ver todo el dataset -->
+            <a href="{{ url_for('dashboard') }}" class="btn btn-outline-danger w-100">
+                <i class="fa-solid fa-eraser me-1"></i> Limpiar Filtro
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</form>
+
+<div class="row">
+    <!-- Gráfico 1: Histograma -->
+    {% if graficos.histograma %}
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <!-- El filtro | safe permite inyectar código HTML de Plotly -->
+                {{ graficos.histograma | safe }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Gráfico 2: Barras -->
+    {% if graficos.barras %}
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                {{ graficos.barras | safe }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Gráfico 3: Correlación -->
+    {% if graficos.correlacion %}
+    <div class="col-md-12 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                {{ graficos.correlacion | safe }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% if not graficos %}
+<div class="alert alert-warning">No hay suficientes datos numéricos o categóricos para graficar.</div>
+{% endif %}
+{% endblock %}

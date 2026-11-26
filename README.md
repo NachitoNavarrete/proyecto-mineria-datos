@@ -10,10 +10,53 @@ Aplicación web desarrollada con Flask y Python que permite la carga, validació
 
 ## Estructura
 - `app.py`: Punto de entrada y rutas de Flask.
-- `Analisis/`: Módulos de procesamiento (limpieza.py y arbol_decision.py).
-- `Web/Templates/`: Vistas HTML.
+- `Analisis/algoritmos/`: Árbol de decisión y reglas de asociación.
+- `Analisis/preprocesamiento/`: Limpieza y preparación de datos.
+- `Analisis/visualizacion/`: Gráficos del dashboard.
+- `Web/Templates/`: Plantillas en `arbol/`, `asociacion/`, `dashboard/`, `datos/`, `informes/` y `modelos/`; `base.html` es compartida.
 - `Data/Uploads/`: Archivos CSV subidos.
 - `Data/modelos.json`: Persistencia de modelos guardados.
+
+### Mapa de carpetas
+```text
+Proyecto Minería de Datos/
+├── app.py
+├── Analisis/
+│   ├── __init__.py
+│   ├── algoritmos/
+│   │   ├── arbol_decision.py
+│   │   └── asociacion.py
+│   ├── preprocesamiento/
+│   │   └── limpieza.py
+│   └── visualizacion/
+│       └── dashboard.py
+├── Data/
+│   ├── Uploads/
+│   │   └── Archivos CSV
+│   └── modelos.json
+├── Web/
+│   ├── Static/
+│   │   ├── css/
+│   │   └── js/
+│   └── Templates/
+│       ├── arbol/
+│       │   ├── arbol.html
+│       │   └── arbol_resultado.html
+│       ├── asociacion/
+│       │   └── asociacion.html
+│       ├── dashboard/
+│       │   └── dashboard.html
+│       ├── datos/
+│       │   ├── index.html
+│       │   └── preview.html
+│       ├── informes/
+│       │   └── informe.html
+│       ├── modelos/
+│       │   └── modelos.html
+│       └── base.html
+├── README.md
+└── requirements.txt.txt
+```
 
 ## Instalación y Uso
 1. Activar entorno: `.venv\Scripts\activate`
